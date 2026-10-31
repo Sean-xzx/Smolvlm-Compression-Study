@@ -1,0 +1,73 @@
+name: Finish anonymous public download verification
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-public-downloads.yml']
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fully download public assets without auth and record SHA checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PYTHON'
+          """Verify public repository/release and stream-download every expected asset.
+          
+          No token or browser cookie is used. A receipt records only checks actually run.
+          """
+          import argparse,datetime,hashlib,json,urllib.request,urllib.parse
+          from pathlib import Path
+          from types import SimpleNamespace
+          a=SimpleNamespace(repo='Sean-xzx/Smolvlm-Compression-Study',tag='autonomous-20261031-release',manifest=Path('ASSETS.json'))
+          manifest_url='https://github.com/'+a.repo+'/releases/download/'+a.tag+'/ASSETS.json'
+          with urllib.request.urlopen(manifest_url,timeout=90) as f:manifest_data=f.read()
+          assert hashlib.sha256(manifest_data).hexdigest()=='7c4761f3bbebf1b27b52242759cbda191f6653feeeaff6a1a4b414bb46bc1fc1'
+          a.manifest.write_bytes(manifest_data)
+          with urllib.request.urlopen('https://github.com/'+a.repo+'/releases/download/'+a.tag+'/SHA256SUMS.txt',timeout=90) as f:Path('SHA256SUMS.txt').write_bytes(f.read())
+          started=datetime.datetime.now(datetime.timezone.utc).isoformat();result=dict(passed=False,started_at=started,downloads=[],verification_host='GitHub-hosted ubuntu-latest; download requests have no token/cookie/Authorization header')
+          target=a.manifest.parent/'PUBLIC_DOWNLOAD_RECEIPT.json'
+          def get(url):return urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Sean-xzx-scientific-delivery'}),timeout=90)
+          def js(url):
+              with get(url) as r:return json.load(r)
+          try:
+              repo=js('https://api.github.com/repos/'+a.repo);assert not repo['private']
+              rel=js('https://api.github.com/repos/'+a.repo+'/releases/tags/'+urllib.parse.quote(a.tag,safe=''))
+              commit=js('https://api.github.com/repos/'+a.repo+'/commits/'+urllib.parse.quote(a.tag,safe=''))['sha']
+              assert commit==json.loads(a.manifest.read_text())['commit'], 'Release tag does not point to manifest commit'
+              result.update(repository_url=repo['html_url'],release_url=rel['html_url'],default_branch=repo['default_branch'],commit=commit,tag=a.tag)
+              with get(repo['html_url']) as r:assert r.status==200
+              assets={x['name']:x for x in rel['assets']}
+              for expected in json.loads(a.manifest.read_text())['assets']:
+                  asset=assets[expected['name']];assert asset['size']==expected['bytes']
+                  h=hashlib.sha256();size=0
+                  with get(asset['browser_download_url']) as r:
+                      assert r.status==200
+                      while chunk:=r.read(2**20):
+                          h.update(chunk);size+=len(chunk)
+                          if size%(32*2**20)==0:print('Downloading',asset['name'],size,'/',expected['bytes'],flush=True)
+                  assert size==expected['bytes'] and h.hexdigest()==expected['sha256']
+                  result['downloads'].append(dict(name=asset['name'],url=asset['browser_download_url'],bytes=size,sha256=h.hexdigest(),verified_by='unauthenticated full streamed download'))
+                  print('Verified',asset['name'],size,h.hexdigest(),flush=True)
+              for local in [a.manifest,a.manifest.parent/'SHA256SUMS.txt']:
+                  asset=assets[local.name];data=local.read_bytes();expected=hashlib.sha256(data).hexdigest()
+                  with get(asset['browser_download_url']) as r:downloaded=r.read()
+                  assert len(downloaded)==len(data) and hashlib.sha256(downloaded).hexdigest()==expected
+                  result['downloads'].append(dict(name=asset['name'],url=asset['browser_download_url'],bytes=len(downloaded),sha256=expected,verified_by='unauthenticated full download; compared with local manifest/checksum file'))
+              result['passed']=True
+          except Exception as exc:
+              result['error']=repr(exc);raise
+          finally:
+              result['finished_at']=datetime.datetime.now(datetime.timezone.utc).isoformat();target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+          
+          assert result['passed']
+          import base64,subprocess
+          body={'message':'Record complete anonymous public Release download verification','content':base64.b64encode(target.read_bytes()).decode(),'branch':'main'}
+          Path('receipt-upload.json').write_text(json.dumps(body))
+          subprocess.run(['gh','api','--method','PUT','repos/Sean-xzx/Smolvlm-Compression-Study/contents/verification/PUBLIC_DOWNLOAD_RECEIPT.json','--input','receipt-upload.json'],check=True,stdout=subprocess.DEVNULL)
+          print('Public receipt committed after all full anonymous download SHA checks passed',flush=True)
+          PYTHON
