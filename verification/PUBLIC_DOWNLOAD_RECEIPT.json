@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "started_at": "2026-10-31T12:44:38.158263+00:00",
+  "downloads": [
+    {
+      "name": "Shen-Wu-Challenge-postday3-v3.tar.gz",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/Shen-Wu-Challenge-postday3-v3.tar.gz",
+      "bytes": 455733348,
+      "sha256": "d95a7774653f0b35f5e7cb37619807c27b0d295e0494d29b90b4be22bcec0d4d",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "Smolvlm-Compression-Study-Autonomous-20261031.zip",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/Smolvlm-Compression-Study-Autonomous-20261031.zip",
+      "bytes": 10172906,
+      "sha256": "e72d8f2763867186fb7902c06afd6162049520a9d99ba387320d974d1cce6c5e",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "Smolvlm-Compression-Study-Autonomous-20261031.bundle",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/Smolvlm-Compression-Study-Autonomous-20261031.bundle",
+      "bytes": 10120877,
+      "sha256": "cd2153acea8cd70e8150cea218f8581ea9ebea4700b26d91f28cb9b3e4d7309b",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "new24-verification-20261031.tar.gz",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/new24-verification-20261031.tar.gz",
+      "bytes": 8484215,
+      "sha256": "112ad84cf71c9866befbf9260ef31c7ae5e8f8562ccb5f0f7e215a23edfaa7ff",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "REPORT.zh.pdf",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/REPORT.zh.pdf",
+      "bytes": 2126744,
+      "sha256": "cebe7cc68085c24c2f0937da29301b13e7681f886411efc590a0a9a1228188bb",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "REPORT.zh.docx",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/REPORT.zh.docx",
+      "bytes": 2255342,
+      "sha256": "d2ededbdb1fc41d5c7e9201627393a447c2d7bc79c8f0d17bb175ea220797f0b",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "REPORT.zh.md",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/REPORT.zh.md",
+      "bytes": 32859,
+      "sha256": "4a04edec5be5b87790f4fb96b4ee3e900a19bd855f9dc556ce9d14e2bf1a09a1",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "DEFENSE.zh.pptx",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/DEFENSE.zh.pptx",
+      "bytes": 2291265,
+      "sha256": "1d365702c0ceded1b9530d20100387ba67ceb2947f05ad931294485ce1fb115a",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "DEFENSE.zh.pdf",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/DEFENSE.zh.pdf",
+      "bytes": 1477684,
+      "sha256": "af7c2bff470f3595bac55c507ea93d196e342858b44cd71a0524a16dd0c597ad",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "CODE_MAP.zh.pdf",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/CODE_MAP.zh.pdf",
+      "bytes": 40821,
+      "sha256": "3c5c45e12599e3e32187190ae8425316a17e6e1c70912b49243b394108b087c9",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "AUTONOMOUS_HANDOFF.zh.md",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/AUTONOMOUS_HANDOFF.zh.md",
+      "bytes": 2437,
+      "sha256": "85b8c47114c9deeb88442b09ea9bab1ac2b98e1e8eae050525fd4354078ec972",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "TASK_STATUS.json",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/TASK_STATUS.json",
+      "bytes": 3556,
+      "sha256": "eadc7b7acdc8c98308efbbf0871c666398997983443e1ee8747d8bae3295ceb5",
+      "verified_by": "unauthenticated full streamed download"
+    },
+    {
+      "name": "ASSETS.json",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/ASSETS.json",
+      "bytes": 3883,
+      "sha256": "7c4761f3bbebf1b27b52242759cbda191f6653feeeaff6a1a4b414bb46bc1fc1",
+      "verified_by": "unauthenticated full download; compared with local manifest/checksum file"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/SHA256SUMS.txt",
+      "bytes": 1098,
+      "sha256": "6c92402b2861db45edf393360efcf1adf1de64d5809d8565f6684655755da089",
+      "verified_by": "unauthenticated full download; compared with local manifest/checksum file"
+    }
+  ],
+  "verification_host": "GitHub-hosted ubuntu-latest; download requests have no token/cookie/Authorization header",
+  "repository_url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study",
+  "release_url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/tag/autonomous-20261031-release",
+  "default_branch": "main",
+  "commit": "c8c31283aa066f5a0dc9036e7b9d56e93bde1386",
+  "tag": "autonomous-20261031-release",
+  "finished_at": "2026-10-31T12:44:44.464311+00:00"
+}
