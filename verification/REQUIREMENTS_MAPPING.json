@@ -232,7 +232,7 @@
   },
   {
     "id": "A14",
-    "requirement": "pre-hook证明当前FFN和后层没有丢弃token",
+    "requirement": "pre-hook证明被丢弃token未进入当前FFN和后层",
     "report_section": "12",
     "code_file": "scripts/profile_context.py",
     "code_function": "main",
@@ -535,8 +535,8 @@
     "code_function": "main",
     "line": 18,
     "evidence": "E7/E8",
-    "verified_scope": "本地完整候选；公开GitHub/附件阻塞",
-    "status": "local_done_publication_blocked"
+    "verified_scope": "公开main与固定Release已发布；当前状态见PUBLICATION；两者版本不同",
+    "status": "published_with_scope"
   },
   {
     "id": "S2",

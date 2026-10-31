@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-31T13:16:42.825138+00:00",
+  "base_commit": "0c5df8a59b0695b3f5c3a8d40b88fbc768bf0183",
+  "scope": "repository presentation, read-only check safety, CLI syntax and file protection; no model inference or new scientific validation",
+  "checks": {
+    "local_links_and_heading_line_anchors": 208,
+    "scientific_file_bindings_read_only": 19,
+    "requirement_source_lines_checked": 67,
+    "old_scientific_assertions_preserved": true,
+    "historical_default_and_output_overwrite_refused": true,
+    "bad_link_bad_json_missing_external_inputs_detected": true,
+    "checks_leave_inputs_unchanged": true,
+    "workflow_no_push_and_execution_disabled_original_steps_preserved": true,
+    "reproduction_bash_syntax_valid": true,
+    "unchanged_prior_tracked_files": 145,
+    "report_slides_figures_configs_data_core_science_licenses_receipts_unchanged": true
+  },
+  "changed_existing_files": [
+    ".github/workflows/publish-delivery.yml",
+    ".github/workflows/verify-public-downloads.yml",
+    "README.md",
+    "docs/EVIDENCE_INDEX.zh.md",
+    "docs/PUBLICATION.zh.md",
+    "docs/REPRODUCTION.zh.md",
+    "docs/REQUIREMENTS_MAPPING.zh.md",
+    "scripts/build_mapping.py",
+    "scripts/validate_delivery.py",
+    "verification/REQUIREMENTS_MAPPING.json"
+  ],
+  "not_verified": [
+    "cold installation/cross-machine/new entry full256",
+    "GPU scientific correctness/performance rerun",
+    "Flash/SDPA and v3 first/stages",
+    "every upstream external reference availability",
+    "report/slides editorial revision or user mastery"
+  ],
+  "details": "Detailed command outputs are retained locally with the repository refactor handoff; this record is presentation/tool safety validation, not a new scientific receipt."
+}

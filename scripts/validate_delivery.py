@@ -1,8 +1,27 @@
-"""Final local acceptance. No model load or mutation of scientific assets."""
+"""HISTORICAL LOCAL DELIVERY TOOL -- not the receiver check or current publication audit.
+
+Depends on the original outer verification/new24 and historical ACCESS_BLOCKER.
+Default invocation refuses execution. Use check_repository.py for read-only reading
+checks. Historical execution requires explicit acknowledgement and a NEW output
+file outside both the repository and scientific root; never replaces old receipts.
+"""
 from pathlib import Path
 import argparse,ast,datetime,hashlib,json,re,subprocess,sys,zipfile
+p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--historical-local-only', action='store_true', help='Acknowledge historical outer-directory dependencies and old publication scope')
+p.add_argument('--artifact-root', type=Path)
+p.add_argument('--output', type=Path, help='Required NEW JSON file outside repository and scientific root')
+a=p.parse_args()
+if not a.historical_local_only:
+    p.error('Historical local tool; use python3 -B scripts/check_repository.py. No evidence was written.')
+if a.artifact_root is None or a.output is None:
+    p.error('Historical mode requires --artifact-root and --output; no default output is allowed')
+repo=Path(__file__).resolve().parents[1];science=a.artifact_root.resolve();target=a.output.resolve()
+if any(target==root or root in target.parents for root in [repo,science]):
+    p.error('--output must be outside repository and scientific root')
+if target.exists() or not target.parent.is_dir():
+    p.error('--output must be a new file in an existing directory; existing evidence is preserved')
 from pypdf import PdfReader
-p=argparse.ArgumentParser();p.add_argument('--artifact-root',type=Path,required=True);a=p.parse_args()
 started=datetime.datetime.now(datetime.timezone.utc).isoformat();R=Path(__file__).resolve().parents[1];U=a.artifact_root.resolve();A=R.parent
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 checks={}
@@ -84,5 +103,7 @@ for rel in tracked:
 checks['git_candidate_no_large_asset_or_credential_signature']=True
 result=dict(passed=True,started_at=started,finished_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),argv=sys.argv,cwd=str(Path.cwd()),checks=checks,
             not_verified=['public repository/Release/downloads (authentication/capability block)','cold installation/cross-machine','new entry full256','v3 first/stages','Flash/SDPA','user review/independent practice/technical exchange'])
-(R/'verification/FINAL_ACCEPTANCE.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+result['tool_scope']='historical local delivery checks; current publication status is in docs/PUBLICATION.zh.md'
+with target.open('x',encoding='utf-8') as stream:
+    stream.write(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(result,ensure_ascii=False,indent=2))

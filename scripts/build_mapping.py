@@ -52,7 +52,7 @@ spec={
 'V9':('7/8','analyze_costs.py:components','E6','主要矩阵Conv乘加2，辅助范围明示'),
 'V10':('10/16','benchmark_efficiency.py:stage_block','E6','自然G/选择回填开销；独立median不相加减'),
 'V11':('6/16','check_scores.py:score_response','E1/E6','保留Multi/Skip负结果与无存储收益'),
-'S1':('14/15','evaluate_release.py:main','E7/E8','本地完整候选；公开GitHub/附件阻塞'),
+'S1':('14/15','evaluate_release.py:main','E7/E8','公开main与固定Release已发布；当前状态见PUBLICATION；两者版本不同'),
 'S2':('2/3/5','experiment_runtime.py:patch_for','E1/E8','源码六配置/依赖锁/版本齐全'),
 'S3':('14','inspect_data.py:prepare_manifests','E1/E7','两数据路径职责明确；冷HF重建未测'),
 'S4':('14','evaluate_release.py:main','E8','新24预测与聚合已测；limit256未跑'),
@@ -76,15 +76,17 @@ rows=[]
 for line in a.audit.read_text().splitlines():
     m=re.match(r'^\|([DABCVST]\d+)\|([^|]+)\|',line)
     if m:
-        ident,requirement=m.groups();section,code,evidence,scope=spec[ident];file,func=code.split(':');text=(R/'scripts'/file).read_text();matches=list(re.finditer(r'^\s*(?:def|class) '+re.escape(func)+r'\b',text,re.M))
+        ident,requirement=m.groups()
+        if ident=='A14':requirement='pre-hook证明被丢弃token未进入当前FFN和后层'
+        section,code,evidence,scope=spec[ident];file,func=code.split(':');text=(R/'scripts'/file).read_text();matches=list(re.finditer(r'^\s*(?:def|class) '+re.escape(func)+r'\b',text,re.M))
         assert matches,(ident,code)
         line_no=text[:matches[0].start()].count('\n')+1
         # For indentation matches the regex may consume a preceding newline.
         while not text.splitlines()[line_no-1].strip().startswith(('def ','class ')):line_no+=1
-        status='not_assessed' if ident=='T4' else 'prepared_future_event_unverified' if ident in ['T5','T6'] else 'local_done_publication_blocked' if ident=='S1' else 'covered_with_scope'
+        status='not_assessed' if ident=='T4' else 'prepared_future_event_unverified' if ident in ['T5','T6'] else 'published_with_scope' if ident=='S1' else 'covered_with_scope'
         rows.append(dict(id=ident,requirement=requirement,report_section=section,code_file='scripts/'+file,code_function=func,line=line_no,evidence=evidence,verified_scope=scope,status=status))
 assert len(rows)==67 and set(spec)=={r['id'] for r in rows},(len(rows),set(spec)-{r['id'] for r in rows})
-header='# 教授原文67项最终映射\n\n报告以节号定位，图/表在相应节内；代码行号从本轮实际文件读取。E编号见[证据索引](EVIDENCE_INDEX.zh.md)。原文[原字节副本](ASSIGNMENT.zh.md)。covered_with_scope表示有实现/已保存实验及本轮只读核对，不表示本轮重跑全部历史实验。个人独立能力、未来交流与公开发布分别标记，不以自动检查替代。\n\n|编号|原文要求|报告节/图表|实际代码及行|证据/命令|范围与未验证边界|状态|\n|---|---|---|---|---|---|---|\n'
+header='# 教授原文67项最终映射\n\n报告以节号定位，图/表在相应节内；代码行号从本轮实际文件读取。E编号见[证据索引](EVIDENCE_INDEX.zh.md)。原文[原字节副本](ASSIGNMENT.zh.md)。covered_with_scope表示有实现/已保存实验及本轮只读核对，不表示本轮重跑全部历史实验。个人独立能力、未来交流与公开发布分别标记，不以自动检查替代。S1按[当前发布状态](PUBLICATION.zh.md)更新；历史验收原结论保留。\n\n|编号|原文要求|报告节/图表|实际代码及行|证据/命令|范围与未验证边界|状态|\n|---|---|---|---|---|---|---|\n'
 for r in rows:
     header+=f"|{r['id']}|{r['requirement']}|§{r['report_section']}|[{r['code_function']}](../{r['code_file']}#L{r['line']})|{r['evidence']}；见REPRODUCTION命令|{r['verified_scope']}|{r['status']}|\n"
 (R/'docs/REQUIREMENTS_MAPPING.zh.md').write_text(header)

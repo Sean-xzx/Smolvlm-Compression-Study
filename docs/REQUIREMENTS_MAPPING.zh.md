@@ -1,6 +1,6 @@
 # 教授原文67项最终映射
 
-报告以节号定位，图/表在相应节内；代码行号从本轮实际文件读取。E编号见[证据索引](EVIDENCE_INDEX.zh.md)。原文[原字节副本](ASSIGNMENT.zh.md)。covered_with_scope表示有实现/已保存实验及本轮只读核对，不表示本轮重跑全部历史实验。个人独立能力、未来交流与公开发布分别标记，不以自动检查替代。
+报告以节号定位，图/表在相应节内；代码行号从本轮实际文件读取。E编号见[证据索引](EVIDENCE_INDEX.zh.md)。原文[原字节副本](ASSIGNMENT.zh.md)。covered_with_scope表示有实现/已保存实验及本轮只读核对，不表示本轮重跑全部历史实验。个人独立能力、未来交流与公开发布分别标记，不以自动检查替代。S1按[当前发布状态](PUBLICATION.zh.md)更新；历史验收原结论保留。
 
 |编号|原文要求|报告节/图表|实际代码及行|证据/命令|范围与未验证边界|状态|
 |---|---|---|---|---|---|---|
@@ -25,7 +25,7 @@
 |A11|参数量、权重文件大小、逐层token及指标区别|§4/5|[connect](../scripts/encoder_topk.py#L180)|E1/E3；见REPRODUCTION命令|参数/文件不变；完整12层Na/Nf|covered_with_scope|
 |A12|Encoder和全模型FLOPs公式与实际长度|§7/8 图4|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|Encoder及全模型，实际G/G16分开|covered_with_scope|
 |A13|打分、选择等额外开销|§8/16|[select_tokens](../scripts/encoder_topk.py#L34)|E6；见REPRODUCTION命令|score/cast/排序/移动/同步单列范围|covered_with_scope|
-|A14|pre-hook证明当前FFN和后层没有丢弃token|§12|[main](../scripts/profile_context.py#L21)|E3；见REPRODUCTION命令|Text5 prehook当前/下一层|covered_with_scope|
+|A14|pre-hook证明被丢弃token未进入当前FFN和后层|§12|[main](../scripts/profile_context.py#L21)|E3；见REPRODUCTION命令|Text5 prehook当前/下一层|covered_with_scope|
 |A15|profiler矩阵shape与耗时；Multi每阶段覆盖|§12|[encoder_trace](../scripts/release_profile.py#L24)|E3/E7；见REPRODUCTION命令|Multi三阶段shape与CPU/CUDA时间|covered_with_scope|
 |A16|从视觉到Projector到LLM的实际传递|§5 图1|[connect](../scripts/encoder_topk.py#L180)|E3；见REPRODUCTION命令|Text5 13块→832视觉位置保持|covered_with_scope|
 |B1|Linear特征映射与token数量|§5|[connect](../scripts/encoder_topk.py#L180)|E3；见REPRODUCTION命令|Linear pointwise通常保持N；概念说明|covered_with_scope|
@@ -52,7 +52,7 @@
 |V9|FLOPs约定与范围、Encoder/prefill/decode分开|§7/8|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|主要矩阵Conv乘加2，辅助范围明示|covered_with_scope|
 |V10|理论量与实测不一致的证据分析|§10/16|[stage_block](../scripts/benchmark_efficiency.py#L137)|E6；见REPRODUCTION命令|自然G/选择回填开销；独立median不相加减|covered_with_scope|
 |V11|结果如实，不强求精度/速度提升|§6/16|[score_response](../scripts/check_scores.py#L59)|E1/E6；见REPRODUCTION命令|保留Multi/Skip负结果与无存储收益|covered_with_scope|
-|S1|代码仓库或压缩包|§14/15|[main](../scripts/evaluate_release.py#L18)|E7/E8；见REPRODUCTION命令|本地完整候选；公开GitHub/附件阻塞|local_done_publication_blocked|
+|S1|代码仓库或压缩包|§14/15|[main](../scripts/evaluate_release.py#L18)|E7/E8；见REPRODUCTION命令|公开main与固定Release已发布；当前状态见PUBLICATION；两者版本不同|published_with_scope|
 |S2|完整PyTorch实现、六配置、依赖、模型版本|§2/3/5|[patch_for](../scripts/experiment_runtime.py#L63)|E1/E8；见REPRODUCTION命令|源码六配置/依赖锁/版本齐全|covered_with_scope|
 |S3|数据准备命令与固定样本清单|§14|[prepare_manifests](../scripts/inspect_data.py#L71)|E1/E7；见REPRODUCTION命令|两数据路径职责明确；冷HF重建未测|covered_with_scope|
 |S4|评估运行命令|§14|[main](../scripts/evaluate_release.py#L18)|E8；见REPRODUCTION命令|新24预测与聚合已测；limit256未跑|covered_with_scope|

@@ -1,15 +1,15 @@
+# Historical one-off publication/download evidence, NOT scientific test CI.
+# Execution disabled: old transfer is closed and receipts must remain immutable.
 name: Publish verified delivery attachments
-on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/publish-delivery.yml']
+on: workflow_dispatch
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: publish-delivery-20261031
   cancel-in-progress: false
 jobs:
   publish:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
