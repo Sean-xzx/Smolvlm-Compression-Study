@@ -1,0 +1,12 @@
+{
+  "stopped_at": "2026-10-31T12:45:47.222918+00:00",
+  "temporary_transfer_processes_stopped": [
+    414184,
+    411825
+  ],
+  "public_assets_verified": 14,
+  "publication_run": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/actions/runs/41201440762",
+  "anonymous_download_run": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/actions/runs/41202446542",
+  "public_download_verification_host": "GitHub-hosted ubuntu-latest; download requests have no token/cookie/Authorization header",
+  "local_download_scope": "Local repository archive 148/148 and direct report PDF fully checked. Local original-tar download stopped after at least 335544320 bytes; the full anonymous 455733348-byte download and all 14 hashes passed on GitHub-hosted Ubuntu."
+}

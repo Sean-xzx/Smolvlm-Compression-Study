@@ -1,0 +1,107 @@
+{
+  "version": "autonomous-20261031",
+  "overall": "autonomous_delivery_published_and_public_downloads_verified",
+  "updated_at": "2026-10-31T12:45:47.251002+00:00",
+  "scientific_root": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/unpacked_final/Shen-Wu-Challenge",
+  "stages": [
+    {
+      "id": "S0",
+      "status": "done",
+      "artifacts": [
+        "publication/ACCESS_BLOCKER.json"
+      ],
+      "validation": "four operation files, professor original, latest audit and v3 sources read; existing assets/account/repos inspected"
+    },
+    {
+      "id": "S1",
+      "status": "done",
+      "artifacts": [
+        "repo/scripts/evaluate_release.py",
+        "repo/docs/REPRODUCTION.zh.md",
+        "verification/commands.json",
+        "verification/NEW24_ACCEPTANCE.json"
+      ],
+      "verified": "24 new predictions, 12 partial dataset summaries, 6 serial model loads; final entry SHA matches",
+      "unverified": [
+        "full256 via new entry",
+        "cold install",
+        "cross machine"
+      ]
+    },
+    {
+      "id": "S2",
+      "status": "done",
+      "artifacts": [
+        "repo/figures",
+        "repo/docs/EVIDENCE_INDEX.zh.md",
+        "repo/docs/REQUIREMENTS_MAPPING.zh.md"
+      ],
+      "verified": "67 requirement IDs; raw quality/cost/performance extraction; Text/Science/Projector distinctions"
+    },
+    {
+      "id": "S3",
+      "status": "done",
+      "artifacts": [
+        "repo/report/REPORT.zh.md",
+        "repo/report/REPORT.zh.docx",
+        "repo/report/REPORT.zh.pdf",
+        "repo/verification/REPORT_RENDER_QA.json"
+      ],
+      "verified": "17 pages rendered and visually inspected"
+    },
+    {
+      "id": "S4",
+      "status": "done",
+      "local_candidate_complete": true,
+      "artifacts": [
+        "repo",
+        "publication/PUBLISH.sh",
+        "publication/verify_publication.py",
+        "publication/ASSETS.json"
+      ],
+      "reason": "Created through signed-in Edge; exact source tree pushed through authenticated connector; SHA-pinned attachments published through repository Actions; anonymously downloaded in full and SHA checked.",
+      "online_urls": {
+        "repository": "https://github.com/Sean-xzx/Smolvlm-Compression-Study",
+        "release": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/tag/autonomous-20261031-release",
+        "report": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/REPORT.zh.pdf"
+      },
+      "upload_done": true,
+      "download_verified": true,
+      "previous_reason": "Authenticated connector has no create-repository/Release-asset operation; browser stored-credential sign-in rejected; official gh installed locally but auth status not logged in",
+      "commit": "c8c31283aa066f5a0dc9036e7b9d56e93bde1386",
+      "tag": "autonomous-20261031-release",
+      "public_download_receipt": "verification/PUBLIC_DOWNLOAD_RECEIPT.json"
+    },
+    {
+      "id": "S5",
+      "status": "done",
+      "artifacts": [
+        "repo/talk/DEFENSE.zh.pptx",
+        "repo/talk/DEFENSE.zh.pdf",
+        "repo/talk/SCRIPT.zh.md",
+        "repo/talk/CODE_MAP.zh.md",
+        "repo/talk/CODE_MAP.zh.pdf",
+        "repo/talk/EXERCISES_AND_SOLUTIONS.zh.md",
+        "repo/talk/QA_CARDS.zh.md",
+        "repo/talk/OFFLINE_CHEATSHEET.zh.md"
+      ],
+      "verified": "12 pages, 30 target minutes, full notes; CPU75% helper demonstration K768",
+      "unverified": [
+        "user review",
+        "independent practice",
+        "future technical exchange"
+      ]
+    },
+    {
+      "id": "S6",
+      "status": "done",
+      "artifacts": [
+        "repo/verification/FINAL_ACCEPTANCE.json",
+        "TASK_STATUS.json",
+        "AUTONOMOUS_HANDOFF.zh.md"
+      ],
+      "verified": "Local scope mapping and final public repository/release/download handoff complete; scientific and personal mastery boundaries retained."
+    }
+  ],
+  "project_name": "Smolvlm-Compression-Study"
+}

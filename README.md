@@ -37,3 +37,7 @@ d95a7774653f0b35f5e7cb37619807c27b0d295e0494d29b90b4be22bcec0d4d
 ## 验证边界
 
 旧3072质量、旧780正式/312预热、v3迁移120正式/48预热与本轮24新预测分别登记。已测同机Linux、BF16/eager/batch1及共享解释器/HF热缓存；未测冷安装、跨机、Flash/SDPA、新入口全256和v3 first/stages。Text聚合独立而normalizer同源，Science采用官方索引准确率定义加本地文本解析；失败保留分母。详见报告及[24条验收](verification/NEW24_ACCEPTANCE.json)。
+
+## 公开交付验收
+
+[正式Release](https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/tag/autonomous-20261031-release) · [报告PDF下载](https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/REPORT.zh.pdf) · [最终交接](docs/FINAL_HANDOFF.zh.md)。匿名源码ZIP 148/148文件与发布快照相同，14个初始附件已完整匿名下载核SHA；详见[发布验收](docs/PUBLICATION.zh.md)。
