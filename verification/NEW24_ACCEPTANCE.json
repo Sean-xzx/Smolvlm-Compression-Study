@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "at": "2026-10-31T08:05:38.111200+00:00",
+  "count": 24,
+  "groups": [
+    {
+      "configuration": "baseline",
+      "dataset": "textvqa",
+      "indices": [
+        5,
+        19
+      ],
+      "count": 2,
+      "partial_mean_score": 0.5,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "baseline",
+      "dataset": "scienceqa",
+      "indices": [
+        2,
+        9
+      ],
+      "count": 2,
+      "partial_mean_score": 1.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "early",
+      "dataset": "textvqa",
+      "indices": [
+        5,
+        19
+      ],
+      "count": 2,
+      "partial_mean_score": 0.5,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "early",
+      "dataset": "scienceqa",
+      "indices": [
+        2,
+        9
+      ],
+      "count": 2,
+      "partial_mean_score": 1.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "middle",
+      "dataset": "textvqa",
+      "indices": [
+        5,
+        19
+      ],
+      "count": 2,
+      "partial_mean_score": 0.5,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "middle",
+      "dataset": "scienceqa",
+      "indices": [
+        2,
+        9
+      ],
+      "count": 2,
+      "partial_mean_score": 1.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "late",
+      "dataset": "textvqa",
+      "indices": [
+        5,
+        19
+      ],
+      "count": 2,
+      "partial_mean_score": 0.5,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "late",
+      "dataset": "scienceqa",
+      "indices": [
+        2,
+        9
+      ],
+      "count": 2,
+      "partial_mean_score": 1.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "multi",
+      "dataset": "textvqa",
+      "indices": [
+        5,
+        19
+      ],
+      "count": 2,
+      "partial_mean_score": 0.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "multi",
+      "dataset": "scienceqa",
+      "indices": [
+        2,
+        9
+      ],
+      "count": 2,
+      "partial_mean_score": 1.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "skip",
+      "dataset": "textvqa",
+      "indices": [
+        5,
+        19
+      ],
+      "count": 2,
+      "partial_mean_score": 0.5,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    },
+    {
+      "configuration": "skip",
+      "dataset": "scienceqa",
+      "indices": [
+        2,
+        9
+      ],
+      "count": 2,
+      "partial_mean_score": 1.0,
+      "parse": {
+        "ok": 2
+      },
+      "all_historical_fields_equal": true
+    }
+  ],
+  "scope": "24 new real predictions; not a formal quality-table addition; same interpreter/hot cache; six serial model loads",
+  "core_patch_changed": false
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "exercise-only-not-frozen-protocol",
+  "parent_relative_path": "configs/context_v2/encoder_early.json",
+  "parent_sha256": "32965bc5026d724ca3dcdb0fedceeefa72d4e5c7aa60629582d986de5c095a04",
+  "layers_1based": [
+    3
+  ],
+  "keep_rates": [
+    0.75
+  ],
+  "note": "No production binding/hash is changed; CPU helper fixture only"
+}

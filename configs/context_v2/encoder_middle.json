@@ -1,0 +1,21 @@
+{
+  "configuration": "encoder_middle",
+  "version": "encoder-topk-context-v2",
+  "status": "frozen",
+  "contract_path": "configs/context_v2/encoder_topk_contract.json",
+  "contract_sha256": "24602aeee284e45735fa592e40be82bdfa2ff3f0a4c7ddaf02b72b7571bd6a58",
+  "base_protocol_sha256": "7c7f4a6f9b8fa4f164d196da1a3306c35691decbb9bcf857645d41416c1bdb48",
+  "environment_id": "98f15960cb99ee3d7bae5d7713b1bc7c44471dde0831dab1aa2d7a1729b91531",
+  "layers_1based": [
+    6
+  ],
+  "indices_0based": [
+    5
+  ],
+  "keep_rates": [
+    0.5
+  ],
+  "llm_ffn_skip": false,
+  "parent_config_sha256": "9b84b66758516fdc22d61923f4befaed9aa00a4ef2ffc76bbf28034ff0f60c5b",
+  "algorithm_change": "none; protocol and contract binding only"
+}

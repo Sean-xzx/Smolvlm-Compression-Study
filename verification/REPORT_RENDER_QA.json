@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "pages": 17,
+  "outputs": {
+    "report/REPORT.zh.md": "4a04edec5be5b87790f4fb96b4ee3e900a19bd855f9dc556ce9d14e2bf1a09a1",
+    "report/REPORT.zh.pdf": "cebe7cc68085c24c2f0937da29301b13e7681f886411efc590a0a9a1228188bb",
+    "report/REPORT.zh.docx": "d2ededbdb1fc41d5c7e9201627393a447c2d7bc79c8f0d17bb175ea220797f0b"
+  },
+  "renderer": "canonical render_docx.py with task-local wrapper to bundled LibreOfficeDev 26.8; task-local official Ubuntu libc2.39/libstdc++ compat libraries; system Poppler rasterization",
+  "renderer_compatibility": "No system library, managed runtime or experiment environment modified. Original render failed GLIBC_2.38/GLIBCXX_3.4.31; retained in tool history.",
+  "checked_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "review": "Visual inspection of every page; final pages4/12 re-inspected after width/marker fixes. Other final pages byte-identical to inspected v2 PNGs. Page1 title border removed, blank page removed, matrix table wrapped labels repaired.",
+  "page_images": {
+    "page-17.png": "166e2dce8884fdef4eaed97f56c46c22c4524bfd2733834d9d6b4ec898beeea0",
+    "page-3.png": "fe976c74a7c9744af68bd7369a451d93421718439884919920dce7ef2ea4a60e",
+    "page-1.png": "e7207a561b210149889ae507be38534402ae87e1729f38bcc6fdae25df36e90b",
+    "page-11.png": "23655f93edb8891df6cddf563e95142877f210fa887341d3577b4fc2c533e5d4",
+    "page-15.png": "f44c7cbe20f27bb151ff6336c64bc32fe62cdeaea9d5a34af6c34dcc4916e94c",
+    "page-13.png": "10d4f0de4f6992ae685ec68945f48f8f3035f04e7f39d3546a76c5af874a84e1",
+    "page-12.png": "cf3b8eabb436130161ff7f0b8611eefe127db1ace73e30119895e26aa574838c",
+    "page-9.png": "9fdf04bf14b2ffd8241bb69d688a9169d08a8479c125e2c3031465bf57449498",
+    "page-7.png": "847395c815e84fcde214e115515103874cf2a98131fceae0e8e4898e775f1753",
+    "page-5.png": "9a3e05bda4c771c1c9d454483bb6f8e776f3cd7118e89c5077b9a92bf73e071e",
+    "page-6.png": "fc285abfb253856dddd204ed2760837ee53b73a428af7a608ac46eff2ac10328",
+    "page-16.png": "71e4c8fe2f73f257bebe4425b48426acc46f3e7f5f7b487a8a402a8d5dcfacd6",
+    "page-8.png": "d69a15c4be083b053c2f5e228e56790ed58f09b591c47d7aa67bd2b045da1d4d",
+    "page-2.png": "732130b094d9bb8cc211d151402cae1d93ecdc912dcabfe5add2714f8234384a",
+    "page-4.png": "3d4dfd44c3d051994d812a506ef680ac9756a65a69ae44b5a9747de7a801a08e",
+    "page-14.png": "91bf49e7a4ecc35e78b2a0487171ea9d91e7ff28ccef696e744b6c1efca97b78",
+    "page-10.png": "bc7637a3321d62f4241d7bd7876fd5ce8115b5bbabbf7e407bae4aaa3ce7bc14"
+  },
+  "limitations": "No claim of inspection in Microsoft Word; PDF rendered by bundled LibreOffice. Markdown remains editable source.",
+  "at": "2026-10-31T08:18:57.546533+00:00"
+}

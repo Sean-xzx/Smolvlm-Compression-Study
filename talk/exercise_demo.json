@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "at": "2026-10-31T08:21:41.622765+00:00",
+  "command": [
+    "publishing/20261031/autonomous/repo/scripts/exercise_demo.py",
+    "--artifact-root",
+    "delivery/postday3_v3/unpacked_final/Shen-Wu-Challenge",
+    "--output-dir",
+    "publishing/20261031/autonomous/verification/exercise-early75"
+  ],
+  "cwd": "/home/zx/Documents/Shen-Wu-Challenge",
+  "configuration_sha256": "a72e2d165621fdca29e692d77cb78f81777f9ba5071c8e1cdaee10bfbf7265d9",
+  "helper_sha256": "3f01f9153b81f3c80e2a6c32f1b926d7a698fed70a34f36f0acfc74b805baf2d",
+  "device": "cpu",
+  "input_shape": [
+    1,
+    1024,
+    768
+  ],
+  "output_shape": [
+    1,
+    768,
+    768
+  ],
+  "K": [
+    768
+  ],
+  "restored_shape": [
+    1,
+    1024,
+    768
+  ],
+  "selected_original_positions_range": [
+    256,
+    1023
+  ],
+  "original_config_unchanged": true,
+  "scope": "AI-run CPU deterministic selection/grid helper fixture; no model forward, quality/latency or user independent exercise claim"
+}

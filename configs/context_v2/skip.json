@@ -1,0 +1,36 @@
+{
+  "configuration": "llm_ffn_skip",
+  "version": "llm-ffn-skip-context-v2",
+  "status": "frozen",
+  "baseline_protocol_path": "configs/eval_protocol_context_v2.json",
+  "baseline_protocol_sha256": "7c7f4a6f9b8fa4f164d196da1a3306c35691decbb9bcf857645d41416c1bdb48",
+  "layers_1based": [
+    8,
+    16,
+    24
+  ],
+  "indices_0based": [
+    7,
+    15,
+    23
+  ],
+  "skip_scope": [
+    "post_attention_layernorm",
+    "mlp"
+  ],
+  "return": "attention residual a",
+  "preserve": [
+    "attention",
+    "input_layernorm",
+    "kv_cache",
+    "model_final_norm",
+    "all_weights"
+  ],
+  "selection_reason": "predeclared uniform interior layers; no validation-score search",
+  "llama_source_sha256": "31bf660a663259134324bc65da4e155951dc89c5ca46471d2325a9938e859e26",
+  "transformers_version": "4.57.6",
+  "created_at": "2026-10-30T08:43:27.452950+08:00",
+  "parent_config_sha256": "cdcd719c31bf16eac565e24fe1c97481e71b7339d0b87d4113296cf3169dff63",
+  "algorithm_change": "none; protocol binding only",
+  "environment_id": "98f15960cb99ee3d7bae5d7713b1bc7c44471dde0831dab1aa2d7a1729b91531"
+}

@@ -1,0 +1,10 @@
+.venv*/
+.hf-cache/
+artifacts/
+runs/
+__pycache__/
+node_modules/
+*.pyc
+*.tar.gz
+*.zip
+.DS_Store

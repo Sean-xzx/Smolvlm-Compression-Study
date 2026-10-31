@@ -1,0 +1,1795 @@
+{
+  "passed": true,
+  "at": "2026-10-30T10:01:28.122804+00:00",
+  "name": "full-model major matrix/conv FLOPs estimate; multiply-add=2",
+  "groups": {
+    "actual_G": {
+      "baseline/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2903330783232.0,
+            "min": 1913407930368,
+            "max": 3614214979584,
+            "sum": 743252680507392
+          },
+          "vision_with_patch": {
+            "mean": 2919826980864.0,
+            "min": 1924279566336,
+            "max": 3634750291968,
+            "sum": 747475707101184
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 1181821050.0,
+            "min": 511142400,
+            "max": 4117132800,
+            "sum": 302546188800
+          },
+          "output_head": {
+            "mean": 299376000.0,
+            "min": 170311680,
+            "max": 908328960,
+            "sum": 76640256000
+          },
+          "total_major_flops": {
+            "mean": 3192163044948.0,
+            "min": 2092526479872,
+            "max": 3991694524416,
+            "sum": 817193739506688
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 1.0,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "baseline/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2986378002432.0,
+            "min": 1063004405760,
+            "max": 3614214979584,
+            "sum": 764512768622592
+          },
+          "vision_with_patch": {
+            "mean": 3003346059264.0,
+            "min": 1069044203520,
+            "max": 3634750291968,
+            "sum": 768856591171584
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 984689460.0,
+            "min": 238602240,
+            "max": 17561940480,
+            "sum": 252080501760
+          },
+          "output_head": {
+            "mean": 255467520.0,
+            "min": 113541120,
+            "max": 3633315840,
+            "sum": 65399685120
+          },
+          "total_major_flops": {
+            "mean": 3305729448648.0,
+            "min": 1164330247680,
+            "max": 4081619091456,
+            "sum": 846266738853888
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 1.0,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "skip/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2903330783232.0,
+            "min": 1913407930368,
+            "max": 3614214979584,
+            "sum": 743252680507392
+          },
+          "vision_with_patch": {
+            "mean": 2919826980864.0,
+            "min": 1924279566336,
+            "max": 3634750291968,
+            "sum": 747475707101184
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 243654633306.0,
+            "min": 148909307904,
+            "max": 321916018176,
+            "sum": 62375586126336
+          },
+          "llm_decode": {
+            "mean": 1283290452.0,
+            "min": 479153664,
+            "max": 17525362176,
+            "sum": 328522355712
+          },
+          "output_head": {
+            "mean": 335301120.0,
+            "min": 170311680,
+            "max": 3633315840,
+            "sum": 85837086720
+          },
+          "total_major_flops": {
+            "mean": 3177472353966.0,
+            "min": 2082274532352,
+            "max": 3988950211584,
+            "sum": 813432922615296
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 0.9953978882735173,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "skip/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2986378002432.0,
+            "min": 1063004405760,
+            "max": 3614214979584,
+            "sum": 764512768622592
+          },
+          "vision_with_patch": {
+            "mean": 3003346059264.0,
+            "min": 1069044203520,
+            "max": 3634750291968,
+            "sum": 768856591171584
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 272335799700.0,
+            "min": 84368383488,
+            "max": 408113952768,
+            "sum": 69717964723200
+          },
+          "llm_decode": {
+            "mean": 978814908.0,
+            "min": 222676992,
+            "max": 16554295296,
+            "sum": 250576616448
+          },
+          "output_head": {
+            "mean": 266112000.0,
+            "min": 113541120,
+            "max": 3633315840,
+            "sum": 68124672000
+          },
+          "total_major_flops": {
+            "mean": 3289652828496.0,
+            "min": 1158278653440,
+            "max": 4058672103936,
+            "sum": 842151124094976
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 0.995136740498054,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "early/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1649619763200.0,
+            "min": 1087163596800,
+            "max": 2053531238400,
+            "sum": 422302659379200
+          },
+          "vision_with_patch": {
+            "mean": 1666115960832.0,
+            "min": 1098035232768,
+            "max": 2074066550784,
+            "sum": 426525685972992
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 1192011390.0,
+            "min": 511142400,
+            "max": 3840238080,
+            "sum": 305154915840
+          },
+          "output_head": {
+            "mean": 301371840.0,
+            "min": 170311680,
+            "max": 851558400,
+            "sum": 77151191040
+          },
+          "total_major_flops": {
+            "mean": 1938464211096.0,
+            "min": 1266282146304,
+            "max": 2431360553472,
+            "sum": 496246838040576
+          },
+          "score_fp32_arithmetic": {
+            "mean": 200474624.0,
+            "min": 132120576,
+            "max": 249561088,
+            "sum": 51321503744
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1031012352.0,
+            "min": 679477248,
+            "max": 1283457024,
+            "sum": 263939162112
+          },
+          "stable_argsort_calls": {
+            "mean": 40.96875,
+            "min": 27,
+            "max": 51,
+            "sum": 10488
+          }
+        },
+        "total_ratio_to_baseline": 0.6072572684418058,
+        "encoder_ratio_to_baseline": 0.5681818181818182
+      },
+      "early/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1696805683200.0,
+            "min": 603979776000,
+            "max": 2053531238400,
+            "sum": 434382254899200
+          },
+          "vision_with_patch": {
+            "mean": 1713773740032.0,
+            "min": 610019573760,
+            "max": 2074066550784,
+            "sum": 438726077448192
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 822253680.0,
+            "min": 256227840,
+            "max": 3038238720,
+            "sum": 210496942080
+          },
+          "output_head": {
+            "mean": 222203520.0,
+            "min": 113541120,
+            "max": 681246720,
+            "sum": 56884101120
+          },
+          "total_major_flops": {
+            "mean": 2015961429636.0,
+            "min": 705896570880,
+            "max": 2520935350272,
+            "sum": 516086125986816
+          },
+          "score_fp32_arithmetic": {
+            "mean": 206209024.0,
+            "min": 73400320,
+            "max": 249561088,
+            "sum": 52789510144
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1060503552.0,
+            "min": 377487360,
+            "max": 1283457024,
+            "sum": 271488909312
+          },
+          "stable_argsort_calls": {
+            "mean": 42.140625,
+            "min": 15,
+            "max": 51,
+            "sum": 10788
+          }
+        },
+        "total_ratio_to_baseline": 0.6098386032349083,
+        "encoder_ratio_to_baseline": 0.5681818181818182
+      },
+      "middle/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2045528506368.0,
+            "min": 1348082860032,
+            "max": 2546378735616,
+            "sum": 523655297630208
+          },
+          "vision_with_patch": {
+            "mean": 2062024704000.0,
+            "min": 1358954496000,
+            "max": 2566914048000,
+            "sum": 527878324224000
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 1144530270.0,
+            "min": 273646080,
+            "max": 4667258880,
+            "sum": 292999749120
+          },
+          "output_head": {
+            "mean": 291392640.0,
+            "min": 113541120,
+            "max": 1021870080,
+            "sum": 74596515840
+          },
+          "total_major_flops": {
+            "mean": 2334315493944.0,
+            "min": 1526902742016,
+            "max": 2923858280448,
+            "sum": 597584766449664
+          },
+          "score_fp32_arithmetic": {
+            "mean": 200474624.0,
+            "min": 132120576,
+            "max": 249561088,
+            "sum": 51321503744
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1031012352.0,
+            "min": 679477248,
+            "max": 1283457024,
+            "sum": 263939162112
+          },
+          "stable_argsort_calls": {
+            "mean": 40.96875,
+            "min": 27,
+            "max": 51,
+            "sum": 10488
+          }
+        },
+        "total_ratio_to_baseline": 0.7312644940359009,
+        "encoder_ratio_to_baseline": 0.7045454545454546
+      },
+      "middle/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2104039047168.0,
+            "min": 748934922240,
+            "max": 2546378735616,
+            "sum": 538633996075008
+          },
+          "vision_with_patch": {
+            "mean": 2121007104000.0,
+            "min": 754974720000,
+            "max": 2566914048000,
+            "sum": 542977818624000
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 826937640.0,
+            "min": 256227840,
+            "max": 6466176000,
+            "sum": 211696035840
+          },
+          "output_head": {
+            "mean": 223534080.0,
+            "min": 113541120,
+            "max": 1476034560,
+            "sum": 57224724480
+          },
+          "total_major_flops": {
+            "mean": 2423200808124.0,
+            "min": 850851717120,
+            "max": 3013782847488,
+            "sum": 620339406879744
+          },
+          "score_fp32_arithmetic": {
+            "mean": 206209024.0,
+            "min": 73400320,
+            "max": 249561088,
+            "sum": 52789510144
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1060503552.0,
+            "min": 377487360,
+            "max": 1283457024,
+            "sum": 271488909312
+          },
+          "stable_argsort_calls": {
+            "mean": 42.140625,
+            "min": 15,
+            "max": 51,
+            "sum": 10788
+          }
+        },
+        "total_ratio_to_baseline": 0.7330305900003575,
+        "encoder_ratio_to_baseline": 0.7045454545454546
+      },
+      "late/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2441437249536.0,
+            "min": 1609002123264,
+            "max": 3039226232832,
+            "sum": 625007935881216
+          },
+          "vision_with_patch": {
+            "mean": 2457933447168.0,
+            "min": 1619873759232,
+            "max": 3059761545216,
+            "sum": 629230962475008
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 1317513060.0,
+            "min": 273507840,
+            "max": 17383403520,
+            "sum": 337283343360
+          },
+          "output_head": {
+            "mean": 326652480.0,
+            "min": 113541120,
+            "max": 3633315840,
+            "sum": 83623034880
+          },
+          "total_major_flops": {
+            "mean": 2730432479742.0,
+            "min": 1788134381568,
+            "max": 3420233685504,
+            "sum": 698990714813952
+          },
+          "score_fp32_arithmetic": {
+            "mean": 200474624.0,
+            "min": 132120576,
+            "max": 249561088,
+            "sum": 51321503744
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1031012352.0,
+            "min": 679477248,
+            "max": 1283457024,
+            "sum": 263939162112
+          },
+          "stable_argsort_calls": {
+            "mean": 40.96875,
+            "min": 27,
+            "max": 51,
+            "sum": 10488
+          }
+        },
+        "total_ratio_to_baseline": 0.8553549556509192,
+        "encoder_ratio_to_baseline": 0.8409090909090909
+      },
+      "late/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2511272411136.0,
+            "min": 893890068480,
+            "max": 3039226232832,
+            "sum": 642885737250816
+          },
+          "vision_with_patch": {
+            "mean": 2528240467968.0,
+            "min": 899929866240,
+            "max": 3059761545216,
+            "sum": 647229559799808
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 914231610.0,
+            "min": 256227840,
+            "max": 8868372480,
+            "sum": 234043292160
+          },
+          "output_head": {
+            "mean": 241274880.0,
+            "min": 113541120,
+            "max": 1873428480,
+            "sum": 61766369280
+          },
+          "total_major_flops": {
+            "mean": 2830539206862.0,
+            "min": 995806863360,
+            "max": 3506630344704,
+            "sum": 724618036956672
+          },
+          "score_fp32_arithmetic": {
+            "mean": 206209024.0,
+            "min": 73400320,
+            "max": 249561088,
+            "sum": 52789510144
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1060503552.0,
+            "min": 377487360,
+            "max": 1283457024,
+            "sum": 271488909312
+          },
+          "stable_argsort_calls": {
+            "mean": 42.140625,
+            "min": 15,
+            "max": 51,
+            "sum": 10788
+          }
+        },
+        "total_ratio_to_baseline": 0.8562525308959127,
+        "encoder_ratio_to_baseline": 0.8409090909090909
+      },
+      "multi/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1173292056576.0,
+            "min": 773245108224,
+            "max": 1460574093312,
+            "sum": 300362766483456
+          },
+          "vision_with_patch": {
+            "mean": 1189788254208.0,
+            "min": 784116744192,
+            "max": 1481109405696,
+            "sum": 304585793077248
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 1473484770.0,
+            "min": 273507840,
+            "max": 18515589120,
+            "sum": 377212101120
+          },
+          "output_head": {
+            "mean": 358585920.0,
+            "min": 113541120,
+            "max": 3633315840,
+            "sum": 91797995520
+          },
+          "total_major_flops": {
+            "mean": 1462475191932.0,
+            "min": 952064990208,
+            "max": 1853515782144,
+            "sum": 374393649134592
+          },
+          "score_fp32_arithmetic": {
+            "mean": 263122944.0,
+            "min": 173408256,
+            "max": 327548928,
+            "sum": 67359473664
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1353203712.0,
+            "min": 891813888,
+            "max": 1684537344,
+            "sum": 346420150272
+          },
+          "stable_argsort_calls": {
+            "mean": 122.90625,
+            "min": 81,
+            "max": 153,
+            "sum": 31464
+          }
+        },
+        "total_ratio_to_baseline": 0.4581455180513261,
+        "encoder_ratio_to_baseline": 0.4041193181818182
+      },
+      "multi/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1206853042176.0,
+            "min": 429580615680,
+            "max": 1460574093312,
+            "sum": 308954378797056
+          },
+          "vision_with_patch": {
+            "mean": 1223821099008.0,
+            "min": 435620413440,
+            "max": 1481109405696,
+            "sum": 313298201346048
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 879040350.0,
+            "min": 238602240,
+            "max": 18624453120,
+            "sum": 225034329600
+          },
+          "output_head": {
+            "mean": 231739200.0,
+            "min": 113541120,
+            "max": 3633315840,
+            "sum": 59325235200
+          },
+          "total_major_flops": {
+            "mean": 1526075110962.0,
+            "min": 530906457600,
+            "max": 1927978205184,
+            "sum": 390675228406272
+          },
+          "score_fp32_arithmetic": {
+            "mean": 270649344.0,
+            "min": 96337920,
+            "max": 327548928,
+            "sum": 69286232064
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1391910912.0,
+            "min": 495452160,
+            "max": 1684537344,
+            "sum": 356329193472
+          },
+          "stable_argsort_calls": {
+            "mean": 126.421875,
+            "min": 45,
+            "max": 153,
+            "sum": 32364
+          }
+        },
+        "total_ratio_to_baseline": 0.461645495999724,
+        "encoder_ratio_to_baseline": 0.4041193181818182
+      }
+    },
+    "G16": {
+      "baseline/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2903330783232.0,
+            "min": 1913407930368,
+            "max": 3614214979584,
+            "sum": 743252680507392
+          },
+          "vision_with_patch": {
+            "mean": 2919826980864.0,
+            "min": 1924279566336,
+            "max": 3634750291968,
+            "sum": 747475707101184
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 4158714150.0,
+            "min": 3838233600,
+            "max": 4399142400,
+            "sum": 1064630822400
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 3195748891008.0,
+            "min": 2095994668032,
+            "max": 3995896329216,
+            "sum": 818111716098048
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 1.0,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "baseline/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2986378002432.0,
+            "min": 1063004405760,
+            "max": 3614214979584,
+            "sum": 764512768622592
+          },
+          "vision_with_patch": {
+            "mean": 3003346059264.0,
+            "min": 1069044203520,
+            "max": 3634750291968,
+            "sum": 768856591171584
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 4240309500.0,
+            "min": 3586291200,
+            "max": 4638643200,
+            "sum": 1085519232000
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 3309637930128.0,
+            "min": 1168472724480,
+            "max": 4086012496896,
+            "sum": 847267310112768
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 1.0,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "skip/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2903330783232.0,
+            "min": 1913407930368,
+            "max": 3614214979584,
+            "sum": 743252680507392
+          },
+          "vision_with_patch": {
+            "mean": 2919826980864.0,
+            "min": 1924279566336,
+            "max": 3634750291968,
+            "sum": 747475707101184
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 243654633306.0,
+            "min": 148909307904,
+            "max": 321916018176,
+            "sum": 62375586126336
+          },
+          "llm_decode": {
+            "mean": 3919835430.0,
+            "min": 3599354880,
+            "max": 4160263680,
+            "sum": 1003477870080
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 3180681926784.0,
+            "min": 2085850285056,
+            "max": 3977136387072,
+            "sum": 814254573256704
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 0.9952853103488842,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "skip/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2986378002432.0,
+            "min": 1063004405760,
+            "max": 3614214979584,
+            "sum": 764512768622592
+          },
+          "vision_with_patch": {
+            "mean": 3003346059264.0,
+            "min": 1069044203520,
+            "max": 3634750291968,
+            "sum": 768856591171584
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 272335799700.0,
+            "min": 84368383488,
+            "max": 408113952768,
+            "sum": 69717964723200
+          },
+          "llm_decode": {
+            "mean": 4001430780.0,
+            "min": 3347412480,
+            "max": 4399764480,
+            "sum": 1024366279680
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 3293317661328.0,
+            "min": 1162198176768,
+            "max": 4063573822464,
+            "sum": 843089321299968
+          },
+          "score_fp32_arithmetic": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          },
+          "stable_argsort_calls": {
+            "mean": 0.0,
+            "min": 0,
+            "max": 0,
+            "sum": 0
+          }
+        },
+        "total_ratio_to_baseline": 0.9950688657960333,
+        "encoder_ratio_to_baseline": 1.0
+      },
+      "early/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1649619763200.0,
+            "min": 1087163596800,
+            "max": 2053531238400,
+            "sum": 422302659379200
+          },
+          "vision_with_patch": {
+            "mean": 1666115960832.0,
+            "min": 1098035232768,
+            "max": 2074066550784,
+            "sum": 426525685972992
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 4158714150.0,
+            "min": 3838233600,
+            "max": 4399142400,
+            "sum": 1064630822400
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 1942037870976.0,
+            "min": 1269750334464,
+            "max": 2435212588032,
+            "sum": 497161694969856
+          },
+          "score_fp32_arithmetic": {
+            "mean": 200474624.0,
+            "min": 132120576,
+            "max": 249561088,
+            "sum": 51321503744
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1031012352.0,
+            "min": 679477248,
+            "max": 1283457024,
+            "sum": 263939162112
+          },
+          "stable_argsort_calls": {
+            "mean": 40.96875,
+            "min": 27,
+            "max": 51,
+            "sum": 10488
+          }
+        },
+        "total_ratio_to_baseline": 0.6076941390609211,
+        "encoder_ratio_to_baseline": 0.5681818181818182
+      },
+      "early/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1696805683200.0,
+            "min": 603979776000,
+            "max": 2053531238400,
+            "sum": 434382254899200
+          },
+          "vision_with_patch": {
+            "mean": 1713773740032.0,
+            "min": 610019573760,
+            "max": 2074066550784,
+            "sum": 438726077448192
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 4240309500.0,
+            "min": 3586291200,
+            "max": 4638643200,
+            "sum": 1085519232000
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 2020065610896.0,
+            "min": 709448094720,
+            "max": 2525328755712,
+            "sum": 517136796389376
+          },
+          "score_fp32_arithmetic": {
+            "mean": 206209024.0,
+            "min": 73400320,
+            "max": 249561088,
+            "sum": 52789510144
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1060503552.0,
+            "min": 377487360,
+            "max": 1283457024,
+            "sum": 271488909312
+          },
+          "stable_argsort_calls": {
+            "mean": 42.140625,
+            "min": 15,
+            "max": 51,
+            "sum": 10788
+          }
+        },
+        "total_ratio_to_baseline": 0.6103584904279467,
+        "encoder_ratio_to_baseline": 0.5681818181818182
+      },
+      "middle/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2045528506368.0,
+            "min": 1348082860032,
+            "max": 2546378735616,
+            "sum": 523655297630208
+          },
+          "vision_with_patch": {
+            "mean": 2062024704000.0,
+            "min": 1358954496000,
+            "max": 2566914048000,
+            "sum": 527878324224000
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 4158714150.0,
+            "min": 3838233600,
+            "max": 4399142400,
+            "sum": 1064630822400
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 2337946614144.0,
+            "min": 1530669597696,
+            "max": 2928060085248,
+            "sum": 598514333220864
+          },
+          "score_fp32_arithmetic": {
+            "mean": 200474624.0,
+            "min": 132120576,
+            "max": 249561088,
+            "sum": 51321503744
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1031012352.0,
+            "min": 679477248,
+            "max": 1283457024,
+            "sum": 263939162112
+          },
+          "stable_argsort_calls": {
+            "mean": 40.96875,
+            "min": 27,
+            "max": 51,
+            "sum": 10488
+          }
+        },
+        "total_ratio_to_baseline": 0.731580200410104,
+        "encoder_ratio_to_baseline": 0.7045454545454546
+      },
+      "middle/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2104039047168.0,
+            "min": 748934922240,
+            "max": 2546378735616,
+            "sum": 538633996075008
+          },
+          "vision_with_patch": {
+            "mean": 2121007104000.0,
+            "min": 754974720000,
+            "max": 2566914048000,
+            "sum": 542977818624000
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 4240309500.0,
+            "min": 3586291200,
+            "max": 4638643200,
+            "sum": 1085519232000
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 2427298974864.0,
+            "min": 854403240960,
+            "max": 3018176252928,
+            "sum": 621388537565184
+          },
+          "score_fp32_arithmetic": {
+            "mean": 206209024.0,
+            "min": 73400320,
+            "max": 249561088,
+            "sum": 52789510144
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1060503552.0,
+            "min": 377487360,
+            "max": 1283457024,
+            "sum": 271488909312
+          },
+          "stable_argsort_calls": {
+            "mean": 42.140625,
+            "min": 15,
+            "max": 51,
+            "sum": 10788
+          }
+        },
+        "total_ratio_to_baseline": 0.7334031776612266,
+        "encoder_ratio_to_baseline": 0.7045454545454546
+      },
+      "late/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2441437249536.0,
+            "min": 1609002123264,
+            "max": 3039226232832,
+            "sum": 625007935881216
+          },
+          "vision_with_patch": {
+            "mean": 2457933447168.0,
+            "min": 1619873759232,
+            "max": 3059761545216,
+            "sum": 629230962475008
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 4158714150.0,
+            "min": 3838233600,
+            "max": 4399142400,
+            "sum": 1064630822400
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 2733855357312.0,
+            "min": 1791588860928,
+            "max": 3420907582464,
+            "sum": 699866971471872
+          },
+          "score_fp32_arithmetic": {
+            "mean": 200474624.0,
+            "min": 132120576,
+            "max": 249561088,
+            "sum": 51321503744
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1031012352.0,
+            "min": 679477248,
+            "max": 1283457024,
+            "sum": 263939162112
+          },
+          "stable_argsort_calls": {
+            "mean": 40.96875,
+            "min": 27,
+            "max": 51,
+            "sum": 10488
+          }
+        },
+        "total_ratio_to_baseline": 0.8554662617592868,
+        "encoder_ratio_to_baseline": 0.8409090909090909
+      },
+      "late/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 2511272411136.0,
+            "min": 893890068480,
+            "max": 3039226232832,
+            "sum": 642885737250816
+          },
+          "vision_with_patch": {
+            "mean": 2528240467968.0,
+            "min": 899929866240,
+            "max": 3059761545216,
+            "sum": 647229559799808
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 4240309500.0,
+            "min": 3586291200,
+            "max": 4638643200,
+            "sum": 1085519232000
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 2834532338832.0,
+            "min": 999358387200,
+            "max": 3511023750144,
+            "sum": 725640278740992
+          },
+          "score_fp32_arithmetic": {
+            "mean": 206209024.0,
+            "min": 73400320,
+            "max": 249561088,
+            "sum": 52789510144
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1060503552.0,
+            "min": 377487360,
+            "max": 1283457024,
+            "sum": 271488909312
+          },
+          "stable_argsort_calls": {
+            "mean": 42.140625,
+            "min": 15,
+            "max": 51,
+            "sum": 10788
+          }
+        },
+        "total_ratio_to_baseline": 0.8564478648945066,
+        "encoder_ratio_to_baseline": 0.8409090909090909
+      },
+      "multi/textvqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1173292056576.0,
+            "min": 773245108224,
+            "max": 1460574093312,
+            "sum": 300362766483456
+          },
+          "vision_with_patch": {
+            "mean": 1189788254208.0,
+            "min": 784116744192,
+            "max": 1481109405696,
+            "sum": 304585793077248
+          },
+          "patch_conv": {
+            "mean": 16496197632.0,
+            "min": 10871635968,
+            "max": 20535312384,
+            "sum": 4223026593792
+          },
+          "connector": {
+            "mean": 12372148224.0,
+            "min": 8153726976,
+            "max": 15401484288,
+            "sum": 3167269945344
+          },
+          "llm_prefill": {
+            "mean": 258482718810.0,
+            "min": 158814812160,
+            "max": 340437081600,
+            "sum": 66171576015360
+          },
+          "llm_decode": {
+            "mean": 4158714150.0,
+            "min": 3838233600,
+            "max": 4399142400,
+            "sum": 1064630822400
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 1465710164352.0,
+            "min": 955831845888,
+            "max": 1842255442944,
+            "sum": 375221802074112
+          },
+          "score_fp32_arithmetic": {
+            "mean": 263122944.0,
+            "min": 173408256,
+            "max": 327548928,
+            "sum": 67359473664
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1353203712.0,
+            "min": 891813888,
+            "max": 1684537344,
+            "sum": 346420150272
+          },
+          "stable_argsort_calls": {
+            "mean": 122.90625,
+            "min": 81,
+            "max": 153,
+            "sum": 31464
+          }
+        },
+        "total_ratio_to_baseline": 0.45864372150018556,
+        "encoder_ratio_to_baseline": 0.4041193181818182
+      },
+      "multi/scienceqa": {
+        "count": 256,
+        "components": {
+          "encoder_matrices": {
+            "mean": 1206853042176.0,
+            "min": 429580615680,
+            "max": 1460574093312,
+            "sum": 308954378797056
+          },
+          "vision_with_patch": {
+            "mean": 1223821099008.0,
+            "min": 435620413440,
+            "max": 1481109405696,
+            "sum": 313298201346048
+          },
+          "patch_conv": {
+            "mean": 16968056832.0,
+            "min": 6039797760,
+            "max": 20535312384,
+            "sum": 4343822548992
+          },
+          "connector": {
+            "mean": 12726042624.0,
+            "min": 4529848320,
+            "max": 15401484288,
+            "sum": 3257866911744
+          },
+          "llm_prefill": {
+            "mean": 288417189780.0,
+            "min": 90404052480,
+            "max": 430313748480,
+            "sum": 73834800583680
+          },
+          "llm_decode": {
+            "mean": 4240309500.0,
+            "min": 3586291200,
+            "max": 4638643200,
+            "sum": 1085519232000
+          },
+          "output_head": {
+            "mean": 908328960.0,
+            "min": 908328960,
+            "max": 908328960,
+            "sum": 232532213760
+          },
+          "total_major_flops": {
+            "mean": 1530112969872.0,
+            "min": 535048934400,
+            "max": 1932371610624,
+            "sum": 391708920287232
+          },
+          "score_fp32_arithmetic": {
+            "mean": 270649344.0,
+            "min": 96337920,
+            "max": 327548928,
+            "sum": 69286232064
+          },
+          "score_cast_read_write_bytes": {
+            "mean": 1391910912.0,
+            "min": 495452160,
+            "max": 1684537344,
+            "sum": 356329193472
+          },
+          "stable_argsort_calls": {
+            "mean": 126.421875,
+            "min": 45,
+            "max": 153,
+            "sum": 32364
+          }
+        },
+        "total_ratio_to_baseline": 0.46232035110040665,
+        "encoder_ratio_to_baseline": 0.4041193181818182
+      }
+    }
+  },
+  "checks": {
+    "encoder_rows_exact_to_old_csv": 24576,
+    "skip_projection_difference_checks": 512,
+    "fixed_G_llm_connector_equal": true,
+    "head_and_vision_call_scope_empirically_confirmed": true
+  },
+  "binding": {
+    "script_sha256": "6bed0f10d180fc0e8f4ebd5687d9ee2eba6c33bce41e2942732b7c8e6a037120",
+    "model_config_sha256": "7c26cf692944dbe637dc00b9732e0c2cebf25a12554cde6c7065642bcc92a103",
+    "old_encoder_csv_sha256": "047efd4b30190ac4cb77f814ca99b497fe5ee3d5fa6bf5b171badba7d07e3b1c",
+    "probes": {
+      "evidence/day2_evening/cost_perf_v1/probe/baseline/probe_textvqa.json": "759739ff3334f732ad31a542cffa601bd6ae5230a654ad9293c44a6f6963603c",
+      "evidence/day2_evening/cost_perf_v1/probe/baseline/probe_scienceqa.json": "75f3c4af18d47241a2a79ab6dc07a0a339e3c09de99c97a37dd8f70b41bc2378",
+      "evidence/day2_evening/cost_perf_v1/probe/skip/probe_textvqa.json": "dc9900e17a39dd16b51f3793c72016c2385bf3303ae1be819bf5e0d8257ad81d",
+      "evidence/day2_evening/cost_perf_v1/probe/skip/probe_scienceqa.json": "bfd1aa8368ed674448beb2caa9e5eae2d58ee232782b553ae92cf267e0f1b7bd",
+      "evidence/day2_evening/cost_perf_v1/probe/early/probe_textvqa.json": "7aaaffc445fb80dcb4245b02906b3b3d36c180b6effb489a04f66d2077d28a8a",
+      "evidence/day2_evening/cost_perf_v1/probe/early/probe_scienceqa.json": "f197cf8f79c6ef0bb5d3e19f573e8c3c64e90f397ed461499926e84b91262b7b",
+      "evidence/day2_evening/cost_perf_v1/probe/middle/probe_textvqa.json": "f685d5a4532ffced9c35caa2f6540866989d0dd56995edbc746a438f2a3b965b",
+      "evidence/day2_evening/cost_perf_v1/probe/middle/probe_scienceqa.json": "a6290fd16f1ac1c0d7ef6b338052ab13e8f0efd85ee9f06d6c3fb9e9a6b21fe1",
+      "evidence/day2_evening/cost_perf_v1/probe/late/probe_textvqa.json": "80c4901b0b7dc19ab00be33727c3f995afbdd789e8943615d2636ffe259be774",
+      "evidence/day2_evening/cost_perf_v1/probe/late/probe_scienceqa.json": "15a3bf4123e0ad6912b2346937f5d9401c9cf383b9970893173dfcbbbdca7a03",
+      "evidence/day2_evening/cost_perf_v1/probe/multi/probe_textvqa.json": "717f32d4a394f74137110b28153dce032fff13f8ace8ce76a560d1e57a04297f",
+      "evidence/day2_evening/cost_perf_v1/probe/multi/probe_scienceqa.json": "055c7c84c00a8f744c5924069ca2afa5e20968ac41ee2c46deac01fd80d311bf"
+    },
+    "performance_config_sha256": "7d44c803f78dad6a739e7f3b99e6d1757315ec2774e752ed8966e4a1046b5487"
+  },
+  "scope": {
+    "main": "patch convolution + all vision QKV/O,QK/AV,fc1/fc2 + original Connector Linear + LLM GQA projections/dense attention/gated FFN prefill and G-1 cached decodes + one-position head each call",
+    "auxiliary": "FP32 score arithmetic B*N^2*(H+2), division counted1; casts6 bytes/element (BF16 read + FP32 write), 3 stable sorts/block/stage, bias adds, activation evaluation counts, LLM gating multiply and RMS basic arithmetic/rsqrt, dense softmax exp count",
+    "excluded_from_main": "bias/norm/gelu/silu/softmax/rope/mask/position/score/guards/comparisons/sorting/gather/scatter/CPU loops and synchronization/KV movement/token lookup/sampling/control/preprocess/H2D/I/O; aux convention counts are not added to matrix total or claimed hardware instructions",
+    "standardized_G": "G*=16 offline standardized workload, not 512 additional fixed-length inference runs"
+  }
+}

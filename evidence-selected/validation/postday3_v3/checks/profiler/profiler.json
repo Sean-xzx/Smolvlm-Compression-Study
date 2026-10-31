@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "at": "2026-10-30T13:26:13.944510+00:00",
+  "sample": {
+    "dataset": "textvqa",
+    "row_index": 5,
+    "stable_id": "lmms-lab-encoder/textvqa@9c0699cd19768ac5ab97568f6b3cbac4c0062884:validation:5",
+    "image_sha256": "e8d2b96d8403223d4ac1971afd349ec1f71584ae380654355c2cdf510d9772c7"
+  },
+  "multi_three_stages": true,
+  "baseline_and_skip_prefill_decode": true,
+  "all_named_module_hooks_restored": true,
+  "scope": "separate diagnostic traces; nested CPU/device times overlap, no benchmark claim"
+}

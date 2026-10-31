@@ -1,0 +1,625 @@
+{
+  "selection": "minimum original row_index per dataset/category, categories fixed before selecting examples; none kept explicit",
+  "cases": [
+    {
+      "dataset": "textvqa",
+      "category": "baseline_higher_late",
+      "status": "selected",
+      "row_index": 330,
+      "configuration": "late",
+      "image_file": "data/baseline_inputs/textvqa/row_00330.png",
+      "question": "how many easton brand bags are shown here?",
+      "choices": null,
+      "references": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "2",
+        "two",
+        "two",
+        "2",
+        "2"
+      ],
+      "baseline_raw": " 2.",
+      "variant_raw": " 1.",
+      "baseline_score": 1.0,
+      "variant_score": 0.0,
+      "baseline_parse": "ok",
+      "variant_parse": "ok",
+      "T": 889,
+      "baseline_G": 4,
+      "variant_G": 4,
+      "variant_stages": [
+        {
+          "layer": 9,
+          "attention_shape": [
+            13,
+            12,
+            1024,
+            1024
+          ],
+          "effective_before": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "effective_k": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "physical_k": 512,
+          "mask_shape_before": [
+            13,
+            1,
+            1024,
+            1024
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 1,
+          "next_mask_shape": [
+            13,
+            1,
+            512,
+            512
+          ]
+        }
+      ],
+      "observation": "Saved score/raw/parse changed under fixed input",
+      "supported_explanation": "Variant changes the computation; formal inputs and scoring identical; detailed local/path evidence in afternoon proofs",
+      "unverified_hypothesis": "Which discarded patch corresponded to crucial text/semantic evidence has not been established by attention visualization"
+    },
+    {
+      "dataset": "textvqa",
+      "category": "baseline_higher_multi",
+      "status": "selected",
+      "row_index": 5,
+      "configuration": "multi",
+      "image_file": "data/baseline_inputs/textvqa/row_00005.png",
+      "question": "what number is on the player's jersey?",
+      "choices": null,
+      "references": [
+        "22",
+        "22",
+        "22",
+        "22",
+        "22",
+        "22",
+        "22",
+        "22",
+        "22",
+        "22"
+      ],
+      "baseline_raw": " 22.",
+      "variant_raw": " 2.",
+      "baseline_score": 1.0,
+      "variant_score": 0.0,
+      "baseline_parse": "ok",
+      "variant_parse": "ok",
+      "T": 889,
+      "baseline_G": 5,
+      "variant_G": 4,
+      "variant_stages": [
+        {
+          "layer": 3,
+          "attention_shape": [
+            13,
+            12,
+            1024,
+            1024
+          ],
+          "effective_before": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "effective_k": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "physical_k": 512,
+          "mask_shape_before": [
+            13,
+            1,
+            1024,
+            1024
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 1,
+          "next_mask_shape": [
+            13,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 6,
+          "attention_shape": [
+            13,
+            12,
+            512,
+            512
+          ],
+          "effective_before": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "effective_k": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256
+          ],
+          "physical_k": 256,
+          "mask_shape_before": [
+            13,
+            1,
+            512,
+            512
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 2,
+          "next_mask_shape": [
+            13,
+            1,
+            256,
+            256
+          ]
+        },
+        {
+          "layer": 9,
+          "attention_shape": [
+            13,
+            12,
+            256,
+            256
+          ],
+          "effective_before": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256
+          ],
+          "effective_k": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "physical_k": 128,
+          "mask_shape_before": [
+            13,
+            1,
+            256,
+            256
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 3,
+          "next_mask_shape": [
+            13,
+            1,
+            128,
+            128
+          ]
+        }
+      ],
+      "observation": "Saved score/raw/parse changed under fixed input",
+      "supported_explanation": "Variant changes the computation; formal inputs and scoring identical; detailed local/path evidence in afternoon proofs",
+      "unverified_hypothesis": "Which discarded patch corresponded to crucial text/semantic evidence has not been established by attention visualization"
+    },
+    {
+      "dataset": "textvqa",
+      "category": "baseline_ok_skip_unparsed",
+      "status": "none"
+    },
+    {
+      "dataset": "scienceqa",
+      "category": "baseline_higher_late",
+      "status": "selected",
+      "row_index": 165,
+      "configuration": "late",
+      "image_file": "data/baseline_inputs/scienceqa/row_00165.png",
+      "question": "What is the capital of Missouri?",
+      "choices": [
+        "Pierre",
+        "Kansas City",
+        "Jefferson City",
+        "Saint Louis"
+      ],
+      "references": 2,
+      "baseline_raw": " Answer: C",
+      "variant_raw": " Answer: A",
+      "baseline_score": 1.0,
+      "variant_score": 0.0,
+      "baseline_parse": "ok",
+      "variant_parse": "ok",
+      "T": 904,
+      "baseline_G": 4,
+      "variant_G": 4,
+      "variant_stages": [
+        {
+          "layer": 9,
+          "attention_shape": [
+            13,
+            12,
+            1024,
+            1024
+          ],
+          "effective_before": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "effective_k": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "physical_k": 512,
+          "mask_shape_before": [
+            13,
+            1,
+            1024,
+            1024
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 1,
+          "next_mask_shape": [
+            13,
+            1,
+            512,
+            512
+          ]
+        }
+      ],
+      "observation": "Saved score/raw/parse changed under fixed input",
+      "supported_explanation": "Variant changes the computation; formal inputs and scoring identical; detailed local/path evidence in afternoon proofs",
+      "unverified_hypothesis": "Which discarded patch corresponded to crucial text/semantic evidence has not been established by attention visualization"
+    },
+    {
+      "dataset": "scienceqa",
+      "category": "baseline_higher_multi",
+      "status": "selected",
+      "row_index": 42,
+      "configuration": "multi",
+      "image_file": "data/baseline_inputs/scienceqa/row_00042.png",
+      "question": "Which of the following could Emilio's test show?",
+      "choices": [
+        "if at least 20% of the park would be shaded by trees in each design",
+        "which design would have the least traffic noise in the concert area",
+        "which design would have the greatest distance between the concert area and the road"
+      ],
+      "references": 2,
+      "baseline_raw": " Answer: C",
+      "variant_raw": " Answer: B",
+      "baseline_score": 1.0,
+      "variant_score": 0.0,
+      "baseline_parse": "ok",
+      "variant_parse": "ok",
+      "T": 1394,
+      "baseline_G": 4,
+      "variant_G": 4,
+      "variant_stages": [
+        {
+          "layer": 3,
+          "attention_shape": [
+            17,
+            12,
+            1024,
+            1024
+          ],
+          "effective_before": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "effective_k": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "physical_k": 512,
+          "mask_shape_before": [
+            17,
+            1,
+            1024,
+            1024
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 1,
+          "next_mask_shape": [
+            17,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 6,
+          "attention_shape": [
+            17,
+            12,
+            512,
+            512
+          ],
+          "effective_before": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "effective_k": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256
+          ],
+          "physical_k": 256,
+          "mask_shape_before": [
+            17,
+            1,
+            512,
+            512
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 2,
+          "next_mask_shape": [
+            17,
+            1,
+            256,
+            256
+          ]
+        },
+        {
+          "layer": 9,
+          "attention_shape": [
+            17,
+            12,
+            256,
+            256
+          ],
+          "effective_before": [
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256,
+            256
+          ],
+          "effective_k": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "physical_k": 128,
+          "mask_shape_before": [
+            17,
+            1,
+            256,
+            256
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 3,
+          "next_mask_shape": [
+            17,
+            1,
+            128,
+            128
+          ]
+        }
+      ],
+      "observation": "Saved score/raw/parse changed under fixed input",
+      "supported_explanation": "Variant changes the computation; formal inputs and scoring identical; detailed local/path evidence in afternoon proofs",
+      "unverified_hypothesis": "Which discarded patch corresponded to crucial text/semantic evidence has not been established by attention visualization"
+    },
+    {
+      "dataset": "scienceqa",
+      "category": "baseline_ok_skip_unparsed",
+      "status": "selected",
+      "row_index": 60,
+      "configuration": "skip",
+      "image_file": "data/baseline_inputs/scienceqa/row_00060.png",
+      "question": "Is the following statement about our solar system true or false?\n75% of the planets are made mainly of rock.",
+      "choices": [
+        "true",
+        "false"
+      ],
+      "references": 1,
+      "baseline_raw": " Answer: B. false.\n75% of the planets are made mainly of rock. Mercury, Venus, and Earth are made mainly of rock. Jupiter, Saturn, and Uranus are made mainly of gas. Uranus and Neptune are made mainly of ice.",
+      "variant_raw": " B. true\nB. no letter\nAnswer: false.",
+      "baseline_score": 1.0,
+      "variant_score": 0.0,
+      "baseline_parse": "ok",
+      "variant_parse": "parse_failure",
+      "T": 924,
+      "baseline_G": 53,
+      "variant_G": 14,
+      "variant_stages": null,
+      "observation": "Saved score/raw/parse changed under fixed input",
+      "supported_explanation": "Variant changes the computation; formal inputs and scoring identical; detailed local/path evidence in afternoon proofs",
+      "unverified_hypothesis": "Which discarded patch corresponded to crucial text/semantic evidence has not been established by attention visualization"
+    }
+  ],
+  "hint_example": "afternoon same-question diagnostic row166 A->C; separate from compression formal cases"
+}

@@ -1,0 +1,3627 @@
+{
+  "stable_id": "lmms-lab-encoder/textvqa@9c0699cd19768ac5ab97568f6b3cbac4c0062884:validation:5",
+  "input_length": 889,
+  "visual_positions": 832,
+  "layer_lengths": [
+    {
+      "layer": 1,
+      "B": 13,
+      "Nattn": 1024,
+      "Nffn": 1024,
+      "valid_before": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "valid_after": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 2,
+      "B": 13,
+      "Nattn": 1024,
+      "Nffn": 1024,
+      "valid_before": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "valid_after": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 3,
+      "B": 13,
+      "Nattn": 1024,
+      "Nffn": 1024,
+      "valid_before": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "valid_after": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 4,
+      "B": 13,
+      "Nattn": 1024,
+      "Nffn": 1024,
+      "valid_before": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "valid_after": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 5,
+      "B": 13,
+      "Nattn": 1024,
+      "Nffn": 1024,
+      "valid_before": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "valid_after": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 6,
+      "B": 13,
+      "Nattn": 1024,
+      "Nffn": 512,
+      "valid_before": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 7,
+      "B": 13,
+      "Nattn": 512,
+      "Nffn": 512,
+      "valid_before": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 8,
+      "B": 13,
+      "Nattn": 512,
+      "Nffn": 512,
+      "valid_before": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 9,
+      "B": 13,
+      "Nattn": 512,
+      "Nffn": 512,
+      "valid_before": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 10,
+      "B": 13,
+      "Nattn": 512,
+      "Nffn": 512,
+      "valid_before": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 11,
+      "B": 13,
+      "Nattn": 512,
+      "Nffn": 512,
+      "valid_before": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    },
+    {
+      "layer": 12,
+      "B": 13,
+      "Nattn": 512,
+      "Nffn": 512,
+      "valid_before": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "valid_after": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "padding_before": 0,
+      "padding_after": 0,
+      "hidden": 768,
+      "intermediate": 3072
+    }
+  ],
+  "module_input_shapes": {
+    "Vision.L01": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L01.attention.q_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L01.attention.k_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L01.attention.v_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L01.attention.out_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L01.mlp.fc1": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L01.mlp.fc2": [
+      13,
+      1024,
+      3072
+    ],
+    "Vision.L02": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L02.attention.q_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L02.attention.k_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L02.attention.v_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L02.attention.out_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L02.mlp.fc1": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L02.mlp.fc2": [
+      13,
+      1024,
+      3072
+    ],
+    "Vision.L03": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L03.attention.q_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L03.attention.k_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L03.attention.v_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L03.attention.out_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L03.mlp.fc1": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L03.mlp.fc2": [
+      13,
+      1024,
+      3072
+    ],
+    "Vision.L04": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L04.attention.q_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L04.attention.k_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L04.attention.v_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L04.attention.out_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L04.mlp.fc1": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L04.mlp.fc2": [
+      13,
+      1024,
+      3072
+    ],
+    "Vision.L05": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L05.attention.q_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L05.attention.k_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L05.attention.v_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L05.attention.out_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L05.mlp.fc1": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L05.mlp.fc2": [
+      13,
+      1024,
+      3072
+    ],
+    "Vision.L06": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L06.attention.q_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L06.attention.k_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L06.attention.v_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L06.attention.out_proj": [
+      13,
+      1024,
+      768
+    ],
+    "Vision.L06.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L06.mlp.fc2": [
+      13,
+      512,
+      3072
+    ],
+    "Vision.L07": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L07.attention.q_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L07.attention.k_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L07.attention.v_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L07.attention.out_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L07.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L07.mlp.fc2": [
+      13,
+      512,
+      3072
+    ],
+    "Vision.L08": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L08.attention.q_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L08.attention.k_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L08.attention.v_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L08.attention.out_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L08.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L08.mlp.fc2": [
+      13,
+      512,
+      3072
+    ],
+    "Vision.L09": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L09.attention.q_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L09.attention.k_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L09.attention.v_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L09.attention.out_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L09.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L09.mlp.fc2": [
+      13,
+      512,
+      3072
+    ],
+    "Vision.L10": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L10.attention.q_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L10.attention.k_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L10.attention.v_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L10.attention.out_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L10.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L10.mlp.fc2": [
+      13,
+      512,
+      3072
+    ],
+    "Vision.L11": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L11.attention.q_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L11.attention.k_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L11.attention.v_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L11.attention.out_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L11.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L11.mlp.fc2": [
+      13,
+      512,
+      3072
+    ],
+    "Vision.L12": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L12.attention.q_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L12.attention.k_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L12.attention.v_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L12.attention.out_proj": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L12.mlp.fc1": [
+      13,
+      512,
+      768
+    ],
+    "Vision.L12.mlp.fc2": [
+      13,
+      512,
+      3072
+    ]
+  },
+  "marker_counts": {
+    "Vision.L01": 1,
+    "Vision.L01.attention.q_proj": 1,
+    "Vision.L01.attention.k_proj": 1,
+    "Vision.L01.attention.v_proj": 1,
+    "Vision.L01.attention.out_proj": 1,
+    "Vision.L01.mlp.fc1": 1,
+    "Vision.L01.mlp.fc2": 1,
+    "Vision.L02": 1,
+    "Vision.L02.attention.q_proj": 1,
+    "Vision.L02.attention.k_proj": 1,
+    "Vision.L02.attention.v_proj": 1,
+    "Vision.L02.attention.out_proj": 1,
+    "Vision.L02.mlp.fc1": 1,
+    "Vision.L02.mlp.fc2": 1,
+    "Vision.L03": 1,
+    "Vision.L03.attention.q_proj": 1,
+    "Vision.L03.attention.k_proj": 1,
+    "Vision.L03.attention.v_proj": 1,
+    "Vision.L03.attention.out_proj": 1,
+    "Vision.L03.mlp.fc1": 1,
+    "Vision.L03.mlp.fc2": 1,
+    "Vision.L04": 1,
+    "Vision.L04.attention.q_proj": 1,
+    "Vision.L04.attention.k_proj": 1,
+    "Vision.L04.attention.v_proj": 1,
+    "Vision.L04.attention.out_proj": 1,
+    "Vision.L04.mlp.fc1": 1,
+    "Vision.L04.mlp.fc2": 1,
+    "Vision.L05": 1,
+    "Vision.L05.attention.q_proj": 1,
+    "Vision.L05.attention.k_proj": 1,
+    "Vision.L05.attention.v_proj": 1,
+    "Vision.L05.attention.out_proj": 1,
+    "Vision.L05.mlp.fc1": 1,
+    "Vision.L05.mlp.fc2": 1,
+    "Vision.L06": 1,
+    "Vision.L06.attention.q_proj": 1,
+    "Vision.L06.attention.k_proj": 1,
+    "Vision.L06.attention.v_proj": 1,
+    "Vision.L06.attention.out_proj": 1,
+    "Vision.L06.score_fp32": 1,
+    "Vision.L06.select_sort_gather": 1,
+    "Vision.L06.mlp.fc1": 1,
+    "Vision.L06.mlp.fc2": 1,
+    "Vision.L07": 1,
+    "Vision.L07.attention.q_proj": 1,
+    "Vision.L07.attention.k_proj": 1,
+    "Vision.L07.attention.v_proj": 1,
+    "Vision.L07.attention.out_proj": 1,
+    "Vision.L07.mlp.fc1": 1,
+    "Vision.L07.mlp.fc2": 1,
+    "Vision.L08": 1,
+    "Vision.L08.attention.q_proj": 1,
+    "Vision.L08.attention.k_proj": 1,
+    "Vision.L08.attention.v_proj": 1,
+    "Vision.L08.attention.out_proj": 1,
+    "Vision.L08.mlp.fc1": 1,
+    "Vision.L08.mlp.fc2": 1,
+    "Vision.L09": 1,
+    "Vision.L09.attention.q_proj": 1,
+    "Vision.L09.attention.k_proj": 1,
+    "Vision.L09.attention.v_proj": 1,
+    "Vision.L09.attention.out_proj": 1,
+    "Vision.L09.mlp.fc1": 1,
+    "Vision.L09.mlp.fc2": 1,
+    "Vision.L10": 1,
+    "Vision.L10.attention.q_proj": 1,
+    "Vision.L10.attention.k_proj": 1,
+    "Vision.L10.attention.v_proj": 1,
+    "Vision.L10.attention.out_proj": 1,
+    "Vision.L10.mlp.fc1": 1,
+    "Vision.L10.mlp.fc2": 1,
+    "Vision.L11": 1,
+    "Vision.L11.attention.q_proj": 1,
+    "Vision.L11.attention.k_proj": 1,
+    "Vision.L11.attention.v_proj": 1,
+    "Vision.L11.attention.out_proj": 1,
+    "Vision.L11.mlp.fc1": 1,
+    "Vision.L11.mlp.fc2": 1,
+    "Vision.L12": 1,
+    "Vision.L12.attention.q_proj": 1,
+    "Vision.L12.attention.k_proj": 1,
+    "Vision.L12.attention.v_proj": 1,
+    "Vision.L12.attention.out_proj": 1,
+    "Vision.L12.mlp.fc1": 1,
+    "Vision.L12.mlp.fc2": 1,
+    "Vision.scatter": 1
+  },
+  "matrix_operators": [
+    {
+      "marker": "Vision.L01.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 52.92200000000048,
+      "cuda_us": 212.76699999999983
+    },
+    {
+      "marker": "Vision.L01.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 35.31999999999971,
+      "cuda_us": 213.98200000000088
+    },
+    {
+      "marker": "Vision.L01.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 34.71299999999974,
+      "cuda_us": 213.6949999999997
+    },
+    {
+      "marker": "Vision.L01",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          64
+        ],
+        [
+          156,
+          64,
+          1024
+        ]
+      ],
+      "cpu_us": 29.050000000000182,
+      "cuda_us": 919.0969999999998
+    },
+    {
+      "marker": "Vision.L01",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          1024
+        ],
+        [
+          156,
+          1024,
+          64
+        ]
+      ],
+      "cpu_us": 27.184000000000196,
+      "cuda_us": 407.35699999999997
+    },
+    {
+      "marker": "Vision.L01.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 33.22100000000046,
+      "cuda_us": 211.8070000000007
+    },
+    {
+      "marker": "Vision.L01.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.85900000000038,
+      "cuda_us": 836.793999999998
+    },
+    {
+      "marker": "Vision.L01.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.84899999999925,
+      "cuda_us": 785.7209999999977
+    },
+    {
+      "marker": "Vision.L02.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.22900000000027,
+      "cuda_us": 212.3189999999995
+    },
+    {
+      "marker": "Vision.L02.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.850999999999658,
+      "cuda_us": 213.1830000000009
+    },
+    {
+      "marker": "Vision.L02.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.04699999999957,
+      "cuda_us": 212.47899999999936
+    },
+    {
+      "marker": "Vision.L02",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          64
+        ],
+        [
+          156,
+          64,
+          1024
+        ]
+      ],
+      "cpu_us": 25.698999999999614,
+      "cuda_us": 922.9049999999988
+    },
+    {
+      "marker": "Vision.L02",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          1024
+        ],
+        [
+          156,
+          1024,
+          64
+        ]
+      ],
+      "cpu_us": 24.69000000000051,
+      "cuda_us": 408.125
+    },
+    {
+      "marker": "Vision.L02.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.134000000000015,
+      "cuda_us": 211.29499999999825
+    },
+    {
+      "marker": "Vision.L02.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.620999999999185,
+      "cuda_us": 1132.7599999999984
+    },
+    {
+      "marker": "Vision.L02.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.513999999999214,
+      "cuda_us": 777.4020000000019
+    },
+    {
+      "marker": "Vision.L03.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.496000000001004,
+      "cuda_us": 212.09399999999732
+    },
+    {
+      "marker": "Vision.L03.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.36999999999898,
+      "cuda_us": 210.91100000000006
+    },
+    {
+      "marker": "Vision.L03.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.641999999999825,
+      "cuda_us": 211.0699999999997
+    },
+    {
+      "marker": "Vision.L03",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          64
+        ],
+        [
+          156,
+          64,
+          1024
+        ]
+      ],
+      "cpu_us": 25.532999999999447,
+      "cuda_us": 924.1849999999977
+    },
+    {
+      "marker": "Vision.L03",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          1024
+        ],
+        [
+          156,
+          1024,
+          64
+        ]
+      ],
+      "cpu_us": 24.368999999998778,
+      "cuda_us": 407.54899999999907
+    },
+    {
+      "marker": "Vision.L03.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.17499999999927,
+      "cuda_us": 211.39099999999598
+    },
+    {
+      "marker": "Vision.L03.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.939000000000306,
+      "cuda_us": 830.0110000000059
+    },
+    {
+      "marker": "Vision.L03.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.51800000000003,
+      "cuda_us": 778.778999999995
+    },
+    {
+      "marker": "Vision.L04.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.94499999999971,
+      "cuda_us": 210.0789999999979
+    },
+    {
+      "marker": "Vision.L04.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.52299999999923,
+      "cuda_us": 211.70999999999913
+    },
+    {
+      "marker": "Vision.L04.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.41899999999987,
+      "cuda_us": 211.9340000000011
+    },
+    {
+      "marker": "Vision.L04",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          64
+        ],
+        [
+          156,
+          64,
+          1024
+        ]
+      ],
+      "cpu_us": 25.054999999998472,
+      "cuda_us": 924.6979999999967
+    },
+    {
+      "marker": "Vision.L04",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          1024
+        ],
+        [
+          156,
+          1024,
+          64
+        ]
+      ],
+      "cpu_us": 24.65299999999843,
+      "cuda_us": 470.6849999999977
+    },
+    {
+      "marker": "Vision.L04.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.67500000000109,
+      "cuda_us": 256.1900000000023
+    },
+    {
+      "marker": "Vision.L04.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.710000000000946,
+      "cuda_us": 1013.4000000000087
+    },
+    {
+      "marker": "Vision.L04.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.311999999999898,
+      "cuda_us": 949.9449999999997
+    },
+    {
+      "marker": "Vision.L05.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.269000000000233,
+      "cuda_us": 256.3510000000024
+    },
+    {
+      "marker": "Vision.L05.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.929000000000087,
+      "cuda_us": 256.70300000000134
+    },
+    {
+      "marker": "Vision.L05.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.782999999999447,
+      "cuda_us": 256.41399999999703
+    },
+    {
+      "marker": "Vision.L05",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          64
+        ],
+        [
+          156,
+          64,
+          1024
+        ]
+      ],
+      "cpu_us": 24.674000000000888,
+      "cuda_us": 1060.6959999999963
+    },
+    {
+      "marker": "Vision.L05",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          1024
+        ],
+        [
+          156,
+          1024,
+          64
+        ]
+      ],
+      "cpu_us": 23.90600000000086,
+      "cuda_us": 478.71600000000035
+    },
+    {
+      "marker": "Vision.L05.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.684000000001106,
+      "cuda_us": 261.0529999999999
+    },
+    {
+      "marker": "Vision.L05.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.859999999998763,
+      "cuda_us": 1031.4809999999998
+    },
+    {
+      "marker": "Vision.L05.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 33.646999999999025,
+      "cuda_us": 968.1849999999977
+    },
+    {
+      "marker": "Vision.L06.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.838999999999942,
+      "cuda_us": 260.7980000000098
+    },
+    {
+      "marker": "Vision.L06.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.20800000000054,
+      "cuda_us": 261.2780000000057
+    },
+    {
+      "marker": "Vision.L06.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.311999999999898,
+      "cuda_us": 262.0469999999914
+    },
+    {
+      "marker": "Vision.L06",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          64
+        ],
+        [
+          156,
+          64,
+          1024
+        ]
+      ],
+      "cpu_us": 24.597999999999956,
+      "cuda_us": 1082.7770000000019
+    },
+    {
+      "marker": "Vision.L06",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          1024,
+          1024
+        ],
+        [
+          156,
+          1024,
+          64
+        ]
+      ],
+      "cpu_us": 24.18499999999949,
+      "cuda_us": 477.0529999999999
+    },
+    {
+      "marker": "Vision.L06.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          13312,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.603000000000975,
+      "cuda_us": 262.46199999999953
+    },
+    {
+      "marker": "Vision.L06.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 67.99600000001374,
+      "cuda_us": 527.580999999991
+    },
+    {
+      "marker": "Vision.L06.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 36.729000000006636,
+      "cuda_us": 494.3009999999922
+    },
+    {
+      "marker": "Vision.L07.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 41.44200000001001,
+      "cuda_us": 134.1750000000029
+    },
+    {
+      "marker": "Vision.L07.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 35.996999999988475,
+      "cuda_us": 134.7199999999866
+    },
+    {
+      "marker": "Vision.L07.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.411999999996624,
+      "cuda_us": 135.0390000000043
+    },
+    {
+      "marker": "Vision.L07",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          64
+        ],
+        [
+          156,
+          64,
+          512
+        ]
+      ],
+      "cpu_us": 34.29300000000512,
+      "cuda_us": 279.86999999999534
+    },
+    {
+      "marker": "Vision.L07",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          512
+        ],
+        [
+          156,
+          512,
+          64
+        ]
+      ],
+      "cpu_us": 27.493000000002212,
+      "cuda_us": 201.59900000000198
+    },
+    {
+      "marker": "Vision.L07.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.802000000010594,
+      "cuda_us": 134.52700000000186
+    },
+    {
+      "marker": "Vision.L07.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.56400000001304,
+      "cuda_us": 526.7160000000003
+    },
+    {
+      "marker": "Vision.L07.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.875,
+      "cuda_us": 493.59700000000885
+    },
+    {
+      "marker": "Vision.L08.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.171000000002095,
+      "cuda_us": 134.30299999999988
+    },
+    {
+      "marker": "Vision.L08.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.78299999999581,
+      "cuda_us": 134.55899999999383
+    },
+    {
+      "marker": "Vision.L08.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.86600000000908,
+      "cuda_us": 134.1750000000029
+    },
+    {
+      "marker": "Vision.L08",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          64
+        ],
+        [
+          156,
+          64,
+          512
+        ]
+      ],
+      "cpu_us": 34.154999999998836,
+      "cuda_us": 278.2380000000121
+    },
+    {
+      "marker": "Vision.L08",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          512
+        ],
+        [
+          156,
+          512,
+          64
+        ]
+      ],
+      "cpu_us": 27.180999999996857,
+      "cuda_us": 201.75899999999092
+    },
+    {
+      "marker": "Vision.L08.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 35.62300000000687,
+      "cuda_us": 134.2390000000014
+    },
+    {
+      "marker": "Vision.L08.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 32.88399999999092,
+      "cuda_us": 527.0040000000154
+    },
+    {
+      "marker": "Vision.L08.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.422999999995227,
+      "cuda_us": 495.1000000000058
+    },
+    {
+      "marker": "Vision.L09.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.561999999990803,
+      "cuda_us": 134.5610000000015
+    },
+    {
+      "marker": "Vision.L09.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.111000000004424,
+      "cuda_us": 134.59100000000035
+    },
+    {
+      "marker": "Vision.L09.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.56500000000233,
+      "cuda_us": 134.84799999999814
+    },
+    {
+      "marker": "Vision.L09",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          64
+        ],
+        [
+          156,
+          64,
+          512
+        ]
+      ],
+      "cpu_us": 24.85000000000582,
+      "cuda_us": 278.7820000000065
+    },
+    {
+      "marker": "Vision.L09",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          512
+        ],
+        [
+          156,
+          512,
+          64
+        ]
+      ],
+      "cpu_us": 23.963000000003376,
+      "cuda_us": 201.95100000000093
+    },
+    {
+      "marker": "Vision.L09.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.47500000000582,
+      "cuda_us": 134.5280000000057
+    },
+    {
+      "marker": "Vision.L09.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.489000000001397,
+      "cuda_us": 503.09999999999127
+    },
+    {
+      "marker": "Vision.L09.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.0740000000078,
+      "cuda_us": 447.67699999999604
+    },
+    {
+      "marker": "Vision.L10.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.01699999999255,
+      "cuda_us": 121.8229999999894
+    },
+    {
+      "marker": "Vision.L10.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.672000000005937,
+      "cuda_us": 122.33499999999185
+    },
+    {
+      "marker": "Vision.L10.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.335999999995693,
+      "cuda_us": 122.46299999998882
+    },
+    {
+      "marker": "Vision.L10",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          64
+        ],
+        [
+          156,
+          64,
+          512
+        ]
+      ],
+      "cpu_us": 24.50100000000384,
+      "cuda_us": 258.1100000000006
+    },
+    {
+      "marker": "Vision.L10",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          512
+        ],
+        [
+          156,
+          512,
+          64
+        ]
+      ],
+      "cpu_us": 23.529000000009546,
+      "cuda_us": 187.1030000000028
+    },
+    {
+      "marker": "Vision.L10.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.339999999996508,
+      "cuda_us": 121.69599999999627
+    },
+    {
+      "marker": "Vision.L10.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.710999999995693,
+      "cuda_us": 477.72499999999127
+    },
+    {
+      "marker": "Vision.L10.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.330999999991036,
+      "cuda_us": 448.28499999998894
+    },
+    {
+      "marker": "Vision.L11.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.421000000002095,
+      "cuda_us": 121.85600000001432
+    },
+    {
+      "marker": "Vision.L11.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.612999999997555,
+      "cuda_us": 122.17500000001746
+    },
+    {
+      "marker": "Vision.L11.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.770000000004075,
+      "cuda_us": 122.17500000000291
+    },
+    {
+      "marker": "Vision.L11",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          64
+        ],
+        [
+          156,
+          64,
+          512
+        ]
+      ],
+      "cpu_us": 24.33299999999872,
+      "cuda_us": 258.8139999999985
+    },
+    {
+      "marker": "Vision.L11",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          512
+        ],
+        [
+          156,
+          512,
+          64
+        ]
+      ],
+      "cpu_us": 22.948000000003958,
+      "cuda_us": 187.35800000000745
+    },
+    {
+      "marker": "Vision.L11.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.78299999999581,
+      "cuda_us": 121.88699999998789
+    },
+    {
+      "marker": "Vision.L11.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 39.35000000000582,
+      "cuda_us": 478.0770000000048
+    },
+    {
+      "marker": "Vision.L11.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.430999999996857,
+      "cuda_us": 447.3240000000078
+    },
+    {
+      "marker": "Vision.L12.attention.q_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.947000000000116,
+      "cuda_us": 122.04699999999139
+    },
+    {
+      "marker": "Vision.L12.attention.k_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.012000000002445,
+      "cuda_us": 122.07900000001246
+    },
+    {
+      "marker": "Vision.L12.attention.v_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 29.76699999999255,
+      "cuda_us": 121.9829999999929
+    },
+    {
+      "marker": "Vision.L12",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          64
+        ],
+        [
+          156,
+          64,
+          512
+        ]
+      ],
+      "cpu_us": 24.44399999998859,
+      "cuda_us": 257.56600000000617
+    },
+    {
+      "marker": "Vision.L12",
+      "operator": "aten::bmm",
+      "input_shapes": [
+        [
+          156,
+          512,
+          512
+        ],
+        [
+          156,
+          512,
+          64
+        ]
+      ],
+      "cpu_us": 23.78299999999581,
+      "cuda_us": 188.6710000000021
+    },
+    {
+      "marker": "Vision.L12.attention.out_proj",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 31.69000000000233,
+      "cuda_us": 122.30299999999988
+    },
+    {
+      "marker": "Vision.L12.mlp.fc1",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          3072
+        ],
+        [
+          6656,
+          768
+        ],
+        [
+          768,
+          3072
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.82600000000093,
+      "cuda_us": 478.0130000000063
+    },
+    {
+      "marker": "Vision.L12.mlp.fc2",
+      "operator": "aten::addmm",
+      "input_shapes": [
+        [
+          768
+        ],
+        [
+          6656,
+          3072
+        ],
+        [
+          3072,
+          768
+        ],
+        [],
+        []
+      ],
+      "cpu_us": 30.035000000003492,
+      "cuda_us": 448.0610000000015
+    }
+  ],
+  "marker_times": [
+    {
+      "name": "Vision.L01",
+      "cpu_us": 777.0479999999998,
+      "cuda_us": 12426.244999999994
+    },
+    {
+      "name": "Vision.L01.attention.q_proj",
+      "cpu_us": 87.60300000000007,
+      "cuda_us": 212.76699999999983
+    },
+    {
+      "name": "Vision.L01.attention.k_proj",
+      "cpu_us": 63.516999999999825,
+      "cuda_us": 213.98200000000088
+    },
+    {
+      "name": "Vision.L01.attention.v_proj",
+      "cpu_us": 50.85999999999967,
+      "cuda_us": 213.6949999999997
+    },
+    {
+      "name": "Vision.L01.attention.out_proj",
+      "cpu_us": 54.36899999999969,
+      "cuda_us": 211.8070000000007
+    },
+    {
+      "name": "Vision.L01.mlp.fc1",
+      "cpu_us": 50.762000000000626,
+      "cuda_us": 836.793999999998
+    },
+    {
+      "name": "Vision.L01.mlp.fc2",
+      "cpu_us": 47.573999999999614,
+      "cuda_us": 785.7209999999977
+    },
+    {
+      "name": "Vision.L02",
+      "cpu_us": 642.9599999999991,
+      "cuda_us": 12688.772999999997
+    },
+    {
+      "name": "Vision.L02.attention.q_proj",
+      "cpu_us": 47.22999999999956,
+      "cuda_us": 212.3189999999995
+    },
+    {
+      "name": "Vision.L02.attention.k_proj",
+      "cpu_us": 44.72400000000016,
+      "cuda_us": 213.1830000000009
+    },
+    {
+      "name": "Vision.L02.attention.v_proj",
+      "cpu_us": 43.02599999999984,
+      "cuda_us": 212.47899999999936
+    },
+    {
+      "name": "Vision.L02.attention.out_proj",
+      "cpu_us": 50.44999999999891,
+      "cuda_us": 211.29499999999825
+    },
+    {
+      "name": "Vision.L02.mlp.fc1",
+      "cpu_us": 49.33099999999831,
+      "cuda_us": 1132.7599999999984
+    },
+    {
+      "name": "Vision.L02.mlp.fc2",
+      "cpu_us": 44.638999999999214,
+      "cuda_us": 777.4020000000019
+    },
+    {
+      "name": "Vision.L03",
+      "cpu_us": 630.0889999999999,
+      "cuda_us": 12691.332999999995
+    },
+    {
+      "name": "Vision.L03.attention.q_proj",
+      "cpu_us": 47.07500000000073,
+      "cuda_us": 212.09399999999732
+    },
+    {
+      "name": "Vision.L03.attention.k_proj",
+      "cpu_us": 45.11899999999878,
+      "cuda_us": 210.91100000000006
+    },
+    {
+      "name": "Vision.L03.attention.v_proj",
+      "cpu_us": 42.611000000000786,
+      "cuda_us": 211.0699999999997
+    },
+    {
+      "name": "Vision.L03.attention.out_proj",
+      "cpu_us": 50.39600000000064,
+      "cuda_us": 211.39099999999598
+    },
+    {
+      "name": "Vision.L03.mlp.fc1",
+      "cpu_us": 48.64600000000064,
+      "cuda_us": 830.0110000000059
+    },
+    {
+      "name": "Vision.L03.mlp.fc2",
+      "cpu_us": 44.86499999999978,
+      "cuda_us": 778.778999999995
+    },
+    {
+      "name": "Vision.L04",
+      "cpu_us": 632.4030000000002,
+      "cuda_us": 13284.801999999989
+    },
+    {
+      "name": "Vision.L04.attention.q_proj",
+      "cpu_us": 57.21099999999933,
+      "cuda_us": 210.0789999999979
+    },
+    {
+      "name": "Vision.L04.attention.k_proj",
+      "cpu_us": 43.46299999999974,
+      "cuda_us": 211.70999999999913
+    },
+    {
+      "name": "Vision.L04.attention.v_proj",
+      "cpu_us": 41.486000000000786,
+      "cuda_us": 211.9340000000011
+    },
+    {
+      "name": "Vision.L04.attention.out_proj",
+      "cpu_us": 49.0729999999985,
+      "cuda_us": 256.1900000000023
+    },
+    {
+      "name": "Vision.L04.mlp.fc1",
+      "cpu_us": 47.315999999998894,
+      "cuda_us": 1013.4000000000087
+    },
+    {
+      "name": "Vision.L04.mlp.fc2",
+      "cpu_us": 44.37299999999959,
+      "cuda_us": 949.9449999999997
+    },
+    {
+      "name": "Vision.L05",
+      "cpu_us": 615.7639999999992,
+      "cuda_us": 13960.796999999977
+    },
+    {
+      "name": "Vision.L05.attention.q_proj",
+      "cpu_us": 46.293000000001484,
+      "cuda_us": 256.3510000000024
+    },
+    {
+      "name": "Vision.L05.attention.k_proj",
+      "cpu_us": 42.551000000001295,
+      "cuda_us": 256.70300000000134
+    },
+    {
+      "name": "Vision.L05.attention.v_proj",
+      "cpu_us": 41.995999999999185,
+      "cuda_us": 256.41399999999703
+    },
+    {
+      "name": "Vision.L05.attention.out_proj",
+      "cpu_us": 49.126000000000204,
+      "cuda_us": 261.0529999999999
+    },
+    {
+      "name": "Vision.L05.mlp.fc1",
+      "cpu_us": 47.35499999999956,
+      "cuda_us": 1031.4809999999998
+    },
+    {
+      "name": "Vision.L05.mlp.fc2",
+      "cpu_us": 47.125,
+      "cuda_us": 968.1849999999977
+    },
+    {
+      "name": "Vision.L06",
+      "cpu_us": 82101.83600000001,
+      "cuda_us": 18357.51299999983
+    },
+    {
+      "name": "Vision.L06.attention.q_proj",
+      "cpu_us": 46.12200000000121,
+      "cuda_us": 260.7980000000098
+    },
+    {
+      "name": "Vision.L06.attention.k_proj",
+      "cpu_us": 43.309000000001106,
+      "cuda_us": 261.2780000000057
+    },
+    {
+      "name": "Vision.L06.attention.v_proj",
+      "cpu_us": 41.45900000000074,
+      "cuda_us": 262.0469999999914
+    },
+    {
+      "name": "Vision.L06.attention.out_proj",
+      "cpu_us": 48.26000000000022,
+      "cuda_us": 262.46199999999953
+    },
+    {
+      "name": "Vision.L06.score_fp32",
+      "cpu_us": 76986.865,
+      "cuda_us": 3583.8450000000157
+    },
+    {
+      "name": "Vision.L06.select_sort_gather",
+      "cpu_us": 4278.7179999999935,
+      "cuda_us": 2270.744999999806
+    },
+    {
+      "name": "Vision.L06.mlp.fc1",
+      "cpu_us": 102.73399999999674,
+      "cuda_us": 527.580999999991
+    },
+    {
+      "name": "Vision.L06.mlp.fc2",
+      "cpu_us": 57.01600000000326,
+      "cuda_us": 494.3009999999922
+    },
+    {
+      "name": "Vision.L07",
+      "cpu_us": 705.1059999999998,
+      "cuda_us": 4367.651000000013
+    },
+    {
+      "name": "Vision.L07.attention.q_proj",
+      "cpu_us": 62.80100000000675,
+      "cuda_us": 134.1750000000029
+    },
+    {
+      "name": "Vision.L07.attention.k_proj",
+      "cpu_us": 52.45899999998801,
+      "cuda_us": 134.7199999999866
+    },
+    {
+      "name": "Vision.L07.attention.v_proj",
+      "cpu_us": 46.60000000000582,
+      "cuda_us": 135.0390000000043
+    },
+    {
+      "name": "Vision.L07.attention.out_proj",
+      "cpu_us": 51.6820000000007,
+      "cuda_us": 134.52700000000186
+    },
+    {
+      "name": "Vision.L07.mlp.fc1",
+      "cpu_us": 49.203000000008615,
+      "cuda_us": 526.7160000000003
+    },
+    {
+      "name": "Vision.L07.mlp.fc2",
+      "cpu_us": 45.49700000000303,
+      "cuda_us": 493.59700000000885
+    },
+    {
+      "name": "Vision.L08",
+      "cpu_us": 1290.1100000000006,
+      "cuda_us": 4368.705000000002
+    },
+    {
+      "name": "Vision.L08.attention.q_proj",
+      "cpu_us": 47.61600000000908,
+      "cuda_us": 134.30299999999988
+    },
+    {
+      "name": "Vision.L08.attention.k_proj",
+      "cpu_us": 43.9600000000064,
+      "cuda_us": 134.55899999999383
+    },
+    {
+      "name": "Vision.L08.attention.v_proj",
+      "cpu_us": 633.3059999999969,
+      "cuda_us": 134.1750000000029
+    },
+    {
+      "name": "Vision.L08.attention.out_proj",
+      "cpu_us": 58.48099999999977,
+      "cuda_us": 134.2390000000014
+    },
+    {
+      "name": "Vision.L08.mlp.fc1",
+      "cpu_us": 50.63299999998708,
+      "cuda_us": 527.0040000000154
+    },
+    {
+      "name": "Vision.L08.mlp.fc2",
+      "cpu_us": 45.6759999999922,
+      "cuda_us": 495.1000000000058
+    },
+    {
+      "name": "Vision.L09",
+      "cpu_us": 603.4349999999977,
+      "cuda_us": 4286.246999999974
+    },
+    {
+      "name": "Vision.L09.attention.q_proj",
+      "cpu_us": 47.04099999999744,
+      "cuda_us": 134.5610000000015
+    },
+    {
+      "name": "Vision.L09.attention.k_proj",
+      "cpu_us": 43.91400000000431,
+      "cuda_us": 134.59100000000035
+    },
+    {
+      "name": "Vision.L09.attention.v_proj",
+      "cpu_us": 42.845000000001164,
+      "cuda_us": 134.84799999999814
+    },
+    {
+      "name": "Vision.L09.attention.out_proj",
+      "cpu_us": 49.07300000000396,
+      "cuda_us": 134.5280000000057
+    },
+    {
+      "name": "Vision.L09.mlp.fc1",
+      "cpu_us": 46.56599999999162,
+      "cuda_us": 503.09999999999127
+    },
+    {
+      "name": "Vision.L09.mlp.fc2",
+      "cpu_us": 43.23500000000058,
+      "cuda_us": 447.67699999999604
+    },
+    {
+      "name": "Vision.L10",
+      "cpu_us": 589.6079999999929,
+      "cuda_us": 4060.1349999999366
+    },
+    {
+      "name": "Vision.L10.attention.q_proj",
+      "cpu_us": 44.48000000001048,
+      "cuda_us": 121.8229999999894
+    },
+    {
+      "name": "Vision.L10.attention.k_proj",
+      "cpu_us": 45.80599999999686,
+      "cuda_us": 122.33499999999185
+    },
+    {
+      "name": "Vision.L10.attention.v_proj",
+      "cpu_us": 43.59300000000803,
+      "cuda_us": 122.46299999998882
+    },
+    {
+      "name": "Vision.L10.attention.out_proj",
+      "cpu_us": 47.65600000000268,
+      "cuda_us": 121.69599999999627
+    },
+    {
+      "name": "Vision.L10.mlp.fc1",
+      "cpu_us": 45.1079999999929,
+      "cuda_us": 477.72499999999127
+    },
+    {
+      "name": "Vision.L10.mlp.fc2",
+      "cpu_us": 42.796999999991385,
+      "cuda_us": 448.28499999998894
+    },
+    {
+      "name": "Vision.L11",
+      "cpu_us": 605.4890000000014,
+      "cuda_us": 4063.0740000000515
+    },
+    {
+      "name": "Vision.L11.attention.q_proj",
+      "cpu_us": 45.812999999994645,
+      "cuda_us": 121.85600000001432
+    },
+    {
+      "name": "Vision.L11.attention.k_proj",
+      "cpu_us": 42.19999999999709,
+      "cuda_us": 122.17500000001746
+    },
+    {
+      "name": "Vision.L11.attention.v_proj",
+      "cpu_us": 42.49099999999453,
+      "cuda_us": 122.17500000000291
+    },
+    {
+      "name": "Vision.L11.attention.out_proj",
+      "cpu_us": 47.96799999999348,
+      "cuda_us": 121.88699999998789
+    },
+    {
+      "name": "Vision.L11.mlp.fc1",
+      "cpu_us": 54.560000000012224,
+      "cuda_us": 478.0770000000048
+    },
+    {
+      "name": "Vision.L11.mlp.fc2",
+      "cpu_us": 44.18100000001141,
+      "cuda_us": 447.3240000000078
+    },
+    {
+      "name": "Vision.L12",
+      "cpu_us": 589.041000000012,
+      "cuda_us": 4065.8600000000006
+    },
+    {
+      "name": "Vision.L12.attention.q_proj",
+      "cpu_us": 45.17699999999604,
+      "cuda_us": 122.04699999999139
+    },
+    {
+      "name": "Vision.L12.attention.k_proj",
+      "cpu_us": 43.25299999999697,
+      "cuda_us": 122.07900000001246
+    },
+    {
+      "name": "Vision.L12.attention.v_proj",
+      "cpu_us": 42.07499999999709,
+      "cuda_us": 121.9829999999929
+    },
+    {
+      "name": "Vision.L12.attention.out_proj",
+      "cpu_us": 48.27300000000105,
+      "cuda_us": 122.30299999999988
+    },
+    {
+      "name": "Vision.L12.mlp.fc1",
+      "cpu_us": 45.15299999999115,
+      "cuda_us": 478.0130000000063
+    },
+    {
+      "name": "Vision.L12.mlp.fc2",
+      "cpu_us": 43.669999999998254,
+      "cuda_us": 448.0610000000015
+    },
+    {
+      "name": "Vision.scatter",
+      "cpu_us": 8052.899999999994,
+      "cuda_us": 1569.196000000491
+    }
+  ],
+  "cuda_events": 4903,
+  "patch_trace": [
+    {
+      "installed": true,
+      "layers_1based": [
+        6
+      ],
+      "rates": [
+        0.5
+      ],
+      "bypass": false,
+      "score_calls": 1,
+      "scatter_calls": 1,
+      "patched_layer_calls": 1,
+      "original_encoder_input": [
+        13,
+        1024,
+        768
+      ],
+      "stages": [
+        {
+          "layer": 6,
+          "attention_shape": [
+            13,
+            12,
+            1024,
+            1024
+          ],
+          "effective_before": [
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024,
+            1024
+          ],
+          "effective_k": [
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512,
+            512
+          ],
+          "physical_k": 512,
+          "mask_shape_before": [
+            13,
+            1,
+            1024,
+            1024
+          ],
+          "score_dtype": "torch.float32",
+          "fresh_attention_score_call": 1,
+          "next_mask_shape": [
+            13,
+            1,
+            512,
+            512
+          ]
+        }
+      ],
+      "layer_lengths": [
+        {
+          "layer": 1,
+          "attention_physical_length": 1024,
+          "ffn_physical_length": 1024,
+          "mask_before": [
+            13,
+            1,
+            1024,
+            1024
+          ]
+        },
+        {
+          "layer": 2,
+          "attention_physical_length": 1024,
+          "ffn_physical_length": 1024,
+          "mask_before": [
+            13,
+            1,
+            1024,
+            1024
+          ]
+        },
+        {
+          "layer": 3,
+          "attention_physical_length": 1024,
+          "ffn_physical_length": 1024,
+          "mask_before": [
+            13,
+            1,
+            1024,
+            1024
+          ]
+        },
+        {
+          "layer": 4,
+          "attention_physical_length": 1024,
+          "ffn_physical_length": 1024,
+          "mask_before": [
+            13,
+            1,
+            1024,
+            1024
+          ]
+        },
+        {
+          "layer": 5,
+          "attention_physical_length": 1024,
+          "ffn_physical_length": 1024,
+          "mask_before": [
+            13,
+            1,
+            1024,
+            1024
+          ]
+        },
+        {
+          "layer": 6,
+          "attention_physical_length": 1024,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            1024,
+            1024
+          ]
+        },
+        {
+          "layer": 7,
+          "attention_physical_length": 512,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 8,
+          "attention_physical_length": 512,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 9,
+          "attention_physical_length": 512,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 10,
+          "attention_physical_length": 512,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 11,
+          "attention_physical_length": 512,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            512,
+            512
+          ]
+        },
+        {
+          "layer": 12,
+          "attention_physical_length": 512,
+          "ffn_physical_length": 512,
+          "mask_before": [
+            13,
+            1,
+            512,
+            512
+          ]
+        }
+      ],
+      "initial_valid_per_block": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "encoder_output": [
+        13,
+        512,
+        768
+      ],
+      "postnorm_output": [
+        13,
+        512,
+        768
+      ],
+      "connector_core_input": [
+        13,
+        1024,
+        768
+      ],
+      "dropped_positions_exact_zero": true,
+      "retained_scatter_exact": true
+    }
+  ],
+  "trace_file": "evidence/day2_afternoon/20261030_context_v2/b4/middle_trace.json",
+  "trace_sha256": "2caa796b21ff23cfa7e6a377ad56a34eb30ca7dfb5806f93d73b9c4dc2b00fb0",
+  "scope": "one diagnostic prefilling forward; record_shapes/hooks/CPU synchronization retained; nested times overlap; not a latency benchmark"
+}

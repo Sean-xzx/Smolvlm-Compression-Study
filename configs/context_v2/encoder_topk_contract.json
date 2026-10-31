@@ -1,0 +1,22 @@
+{
+  "version": "encoder-topk-context-v2",
+  "status": "frozen",
+  "base_protocol_sha256": "7c7f4a6f9b8fa4f164d196da1a3306c35691decbb9bcf857645d41416c1bdb48",
+  "environment_id": "98f15960cb99ee3d7bae5d7713b1bc7c44471dde0831dab1aa2d7a1729b91531",
+  "source_sha256": "ad09f603df7ec65d53ce8be4f32af774c4a98bc0e48b2dd4cf89de3e8b769870",
+  "selection_unit": "each real image block independently, including global thumbnail; no CLS",
+  "score": "native eager attention, float32 mean of heads and valid queries, one score per key; invalid keys excluded",
+  "k": "max(1,ceil(rate*current_valid_n)); reject empty valid block",
+  "tie": "descending score, then ascending original grid index; selection restored to ascending original index",
+  "mask": "valid keys masked in fresh native additive 4D mask; valid queries only in scoring",
+  "physical_padding": "each block effective K; pad batch to K_max; padded slots masked, never scatter; report actual lengths",
+  "mapping": "compose selection indices with current original-position map at every stage",
+  "insertion": "after native attention residual, before norm2 + current VisionMLP; gather residual as well",
+  "adapter": "retained features traverse all remaining Encoder layers and original vision.post_layernorm, then scatter into zero original grid before unchanged Connector",
+  "rate_1": "explicit bypass of extra scoring, selection, padding and scatter; native behavior including original padding",
+  "llm": "original, no FFN Skip",
+  "performance": "diagnostic only, no speed claim",
+  "created_at": "2026-10-30T06:29:20.187965+00:00",
+  "parent_contract_sha256": "dc5401936edfab1ac315d70b39a65ac4a7b567f810a08aec08ae3d61b469c7be",
+  "algorithm_change": "none; input protocol binding only"
+}

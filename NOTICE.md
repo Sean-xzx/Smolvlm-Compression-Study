@@ -1,0 +1,7 @@
+# 来源与许可说明
+
+本仓库不对混合工程统一声明MIT或Apache许可。自有代码未另行授权的部分保留其现有权利；公开可读不自动授予全部再许可权。
+
+Transformers模型/补丁适配沿用上游Apache-2.0义务，PyTorch依赖沿其自身许可。TextVQA vendor保留MMF BSD许可，ScienceQA定义参考的MIT许可位于scripts/vendor。模型、数据集及图片的权利分别归原权利人，使用时遵守来源条款。
+
+实际改动和上游固定版本见docs/SOURCES_AND_CHANGES.zh.md及完整证据包provenance。新增evaluate_release.py/build_figures.py和文档/汇报制作胶水由AI按本轮任务实现，未改封存科学补丁。AI贡献说明见报告。

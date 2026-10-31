@@ -1,0 +1,29 @@
+{
+  "version": "release-performance-v3",
+  "status": "frozen",
+  "quality_protocol_path": "configs/eval_protocol_context_v2.json",
+  "quality_protocol_sha256": "7c7f4a6f9b8fa4f164d196da1a3306c35691decbb9bcf857645d41416c1bdb48",
+  "order": [
+    "baseline",
+    "skip",
+    "early",
+    "middle",
+    "late",
+    "multi"
+  ],
+  "warmups": 2,
+  "repetitions": 5,
+  "natural": "native greedy generation; original max64/EOS/cache settings",
+  "first_token": "native generate max_new_tokens=1",
+  "fixed16": "native generate min_new_tokens=max_new_tokens=16; separate performance protocol",
+  "decode": "fresh prefill, fixed baseline first token, q=1 s=T+1; prefill outside timed boundary",
+  "timing": "preloaded GPU inputs -> native generate/decode return + CUDA synchronize; excludes processor/H2D/I/O/scoring/model load/profiler/external hooks",
+  "primary": "synchronized host perf_counter wall",
+  "cuda_event": "auxiliary stream elapsed including device idle between dependent launches; not pure kernel sum",
+  "memory": "after sync record start allocated and reset peaks; absolute max allocated primary; increment/reserved separate; no empty_cache in timed blocks",
+  "empty_cache_policy": "never empty_cache; fresh process per configuration/phase; two warmups per input",
+  "anchors": "baseline natural on both diagnostic inputs before and after; 2 warmups +5 formal each; separate from main 120/48",
+  "flops": "major matrix/conv multiply-add=2; elementwise/transcendentals/data movement separate; actual G and standardized G*=16",
+  "samples": "configs/release_validation_samples_v3.json",
+  "natural_samples": "same two diagnostic inputs as fixed16"
+}

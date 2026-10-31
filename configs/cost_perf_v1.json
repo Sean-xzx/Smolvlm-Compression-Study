@@ -1,0 +1,31 @@
+{
+  "version": "cost-perf-v1",
+  "status": "frozen",
+  "created_at": "2026-10-30T17:53:18.253301+08:00",
+  "quality_protocol_path": "configs/eval_protocol_context_v2.json",
+  "quality_protocol_sha256": "7c7f4a6f9b8fa4f164d196da1a3306c35691decbb9bcf857645d41416c1bdb48",
+  "environment_id": "98f15960cb99ee3d7bae5d7713b1bc7c44471dde0831dab1aa2d7a1729b91531",
+  "samples_sha256": "a87524973da7da49c0a61c9bbdc4fafc515c1efe5a664c3fc07434e67eab3501",
+  "order": [
+    "baseline",
+    "skip",
+    "early",
+    "middle",
+    "late",
+    "multi"
+  ],
+  "warmups": 2,
+  "repetitions": 5,
+  "natural": "native greedy generation; original max64/EOS/cache settings",
+  "first_token": "native generate max_new_tokens=1",
+  "fixed16": "native generate min_new_tokens=max_new_tokens=16; separate performance protocol",
+  "decode": "fresh prefill, fixed baseline first token, q=1 s=T+1; prefill outside timed boundary",
+  "timing": "preloaded GPU inputs -> native generate/decode return + CUDA synchronize; excludes processor/H2D/I/O/scoring/model load/profiler/external hooks",
+  "primary": "synchronized host perf_counter wall",
+  "cuda_event": "auxiliary stream elapsed including device idle between dependent launches; not pure kernel sum",
+  "memory": "after sync record start allocated and reset peaks; absolute max allocated primary; increment/reserved separate; no empty_cache in timed blocks",
+  "empty_cache_policy": "never empty_cache; separate fresh process per configuration/phase; allocator warmed twice per sample",
+  "anchors": "baseline diagnostic 2 samples at beginning/end, same warmups/reps; >10% median wall change triggers inspection and paired repeat",
+  "flops": "major matrix/conv multiply-add=2; elementwise/transcendentals/data movement separate; actual G and standardized G*=16",
+  "learning_nodes": "skip per explicit user request; no personal mastery assertion"
+}

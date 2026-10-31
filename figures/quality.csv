@@ -1,0 +1,13 @@
+configuration,dataset,n,score_percent,delta_pp,parse_failure,execution_errors,G_mean,G_min,G_max,truncated
+baseline,textvqa,256,54.4921875,0.0,0,0,5.2734375,3,16,0
+baseline,scienceqa,256,64.0625,0.0,1,0,4.5,2,64,1
+early,textvqa,256,43.5546875,-10.9375,0,0,5.30859375,3,15,0
+early,scienceqa,256,55.078125,-8.984375,1,0,3.9140625,2,12,0
+middle,textvqa,256,42.1484375,-12.34375,0,0,5.1328125,2,18,0
+middle,scienceqa,256,58.203125,-5.859375,1,0,3.9375,2,26,0
+late,textvqa,256,47.96875,-6.5234375,0,0,5.75390625,2,64,2
+late,scienceqa,256,60.546875,-3.515625,1,0,4.25,2,33,0
+multi,textvqa,256,13.6328125,-40.859375,0,0,6.31640625,2,64,5
+multi,scienceqa,256,32.8125,-31.25,28,0,4.08203125,2,64,2
+skip,textvqa,256,32.96875,-21.5234375,0,0,5.90625,3,64,2
+skip,scienceqa,256,32.421875,-31.640625,41,0,4.6875,2,64,2

@@ -1,0 +1,26 @@
+{
+  "version": "release-validation-v3",
+  "selection": "unchanged historical diagnostic samples; no outcome-based selection",
+  "diagnostic": [
+    {
+      "dataset": "textvqa",
+      "sorted_rank": 127,
+      "row_index": 1848,
+      "stable_id": "lmms-lab-encoder/textvqa@9c0699cd19768ac5ab97568f6b3cbac4c0062884:validation:1848",
+      "image_sha256": "4746c7569992a168b48f8d833811f1123cb756a35c67fff09e1c414415f89638",
+      "input_length": 888,
+      "valid_image_blocks": 13,
+      "visual_positions": 832
+    },
+    {
+      "dataset": "scienceqa",
+      "sorted_rank": 127,
+      "row_index": 211,
+      "stable_id": "lmms-lab/ScienceQA-IMG@b9984af01798586705cee1fbdfa80a6dcbef04f1:validation:211",
+      "image_sha256": "ec58684a62c79a9b6a4b234c2ebf79e56f1e6476d3623a20df002ced09b9a368",
+      "input_length": 949,
+      "valid_image_blocks": 13,
+      "visual_positions": 832
+    }
+  ]
+}

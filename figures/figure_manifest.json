@@ -1,0 +1,143 @@
+[
+  {
+    "id": "03_quality",
+    "outputs": [
+      "03_quality.svg",
+      "03_quality.png"
+    ],
+    "fields": [
+      "score",
+      "configuration",
+      "dataset"
+    ],
+    "n": 256,
+    "statistics": "mean of 256 saved sample scores; parse failures retain denominator",
+    "units": "percent",
+    "scientific_version": "context-v2 3072",
+    "input_manifest": "source_inputs.json",
+    "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "script": "scripts/build_figures.py",
+    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+  },
+  {
+    "id": "02_tokens",
+    "outputs": [
+      "02_tokens.svg",
+      "02_tokens.png"
+    ],
+    "fields": [
+      "layer",
+      "Nattn",
+      "Nffn"
+    ],
+    "n": 1,
+    "statistics": "TextVQA row5 direct observed per-block lengths; baseline=skip",
+    "units": "tokens/block",
+    "scientific_version": "context-v2 b4/b6",
+    "input_manifest": "source_inputs.json",
+    "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "script": "scripts/build_figures.py",
+    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+  },
+  {
+    "id": "04_cost",
+    "outputs": [
+      "04_cost.svg",
+      "04_cost.png"
+    ],
+    "fields": [
+      "encoder_matrices",
+      "total_major_flops",
+      "G"
+    ],
+    "n": 256,
+    "statistics": "ratio of per-dataset arithmetic means; G*=16 offline only",
+    "units": "baseline ratio",
+    "scientific_version": "cost-perf-v1",
+    "input_manifest": "source_inputs.json",
+    "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "script": "scripts/build_figures.py",
+    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+  },
+  {
+    "id": "05_fixed16",
+    "outputs": [
+      "05_fixed16.svg",
+      "05_fixed16.png"
+    ],
+    "fields": [
+      "wall_ms",
+      "warmup",
+      "sample",
+      "G"
+    ],
+    "n": 1,
+    "statistics": "median and IQR of 5 repeats; 2 warmups; all G=16",
+    "units": "milliseconds",
+    "scientific_version": "cost-perf-v1",
+    "input_manifest": "source_inputs.json",
+    "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "script": "scripts/build_figures.py",
+    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+  },
+  {
+    "id": "06_natural",
+    "outputs": [
+      "06_natural.svg",
+      "06_natural.png"
+    ],
+    "fields": [
+      "wall_ms",
+      "G",
+      "warmup",
+      "sample"
+    ],
+    "n": 4,
+    "statistics": "arithmetic mean of 4 per-sample five-repeat medians; 2 warmups",
+    "units": "milliseconds",
+    "scientific_version": "cost-perf-v1",
+    "input_manifest": "source_inputs.json",
+    "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "script": "scripts/build_figures.py",
+    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+  },
+  {
+    "id": "01_method",
+    "outputs": [
+      "01_method.svg",
+      "01_method.png"
+    ],
+    "fields": [
+      "encoder_topk.py",
+      "ffn_skip.py",
+      "Text5 input shapes"
+    ],
+    "n": 1,
+    "statistics": "code schematic and observed shapes; no causal attribution",
+    "units": "shape / tokens",
+    "scientific_version": "context-v2",
+    "input_manifest": "source_inputs.json",
+    "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "script": "scripts/build_figures.py",
+    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+  },
+  {
+    "id": "07_case_text5",
+    "outputs": [
+      "text5.png"
+    ],
+    "fields": [
+      "image_file",
+      "image_sha256",
+      "raw_generated_text"
+    ],
+    "n": 1,
+    "scientific_version": "context-v2",
+    "statistics": "qualitative raw image, no attribution",
+    "units": "pixels",
+    "inputs": {
+      "results/context_v2_baseline_20261030/textvqa/samples/row_00005.json": "f729aa88e29d9b9de259d8334c6ec7d148d4377b290c85c9f9bc7f1e4b020162",
+      "data/baseline_inputs/textvqa/row_00005.png": "e8d2b96d8403223d4ac1971afd349ec1f71584ae380654355c2cdf510d9772c7"
+    }
+  }
+]

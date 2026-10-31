@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "started_at": "2026-10-31T08:33:27.417654+00:00",
+  "finished_at": "2026-10-31T08:33:27.695213+00:00",
+  "argv": [
+    "publishing/20261031/autonomous/repo/scripts/validate_delivery.py",
+    "--artifact-root",
+    "delivery/postday3_v3/unpacked_final/Shen-Wu-Challenge"
+  ],
+  "cwd": "/home/zx/Documents/Shen-Wu-Challenge",
+  "checks": {
+    "frozen_19_scientific_bindings_equal": true,
+    "original_scientific_copies_equal": 50,
+    "selected_evidence_exact_or_labeled_excerpt": true,
+    "new24_same_final_entry_sha": "71dfee6869402d789b742cad6e59bb551c2d40d4be2a49905ee2f342e81f309e",
+    "new24_complete_partial_groups": 12,
+    "old_quality_and_performance_scopes_separate": true,
+    "requirements_67_actual_source_lines": true,
+    "current_navigation_local_links": 148,
+    "history_documents_scope": "v3 history retained separately; old package-relative evidence references require full artifact root",
+    "report_17_pages_text_and_render_binding": true,
+    "talk_12_slides_30_target_minutes_notes_complete": true,
+    "code_map_pdf_one_page": true,
+    "exercise_cpu_only_no_new_quality": true,
+    "publication_claim_honest": true,
+    "git_candidate_no_large_asset_or_credential_signature": true
+  },
+  "not_verified": [
+    "public repository/Release/downloads (authentication/capability block)",
+    "cold installation/cross-machine",
+    "new entry full256",
+    "v3 first/stages",
+    "Flash/SDPA",
+    "user review/independent practice/technical exchange"
+  ]
+}

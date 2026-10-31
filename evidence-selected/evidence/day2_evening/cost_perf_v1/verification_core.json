@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "at": "2026-10-30T18:25:59.613871+08:00",
+  "formal_measurements": {
+    "natural": 240,
+    "first": 240,
+    "fixed16": 60,
+    "stages": 240
+  },
+  "formal_measurements_total": 780,
+  "warmups_total": 312,
+  "anchors_formal": 20,
+  "anchors_warmup": 8,
+  "prototype_excluded": true,
+  "input_output_alignment_combinations": 48,
+  "old_quality_frozen_files_unchanged": true,
+  "old_final_audit_references_unchanged": true,
+  "quality_raw_records_unchanged": 3072,
+  "cost_actual_rows": 3072,
+  "cost_G16_rows": 3072,
+  "encoder_crosschecks": 24576,
+  "scoring_outputs_checked": 1536,
+  "scoring_differences": 0,
+  "delivery_smoke_passed": true,
+  "decode_q1_sTplus1": true,
+  "head_input_one_position": true,
+  "external_hooks_restored": true,
+  "major_cost_scope_complete": true,
+  "precise_instruction_flops_claim": false,
+  "cross_machine_cold_cache_verified": false
+}

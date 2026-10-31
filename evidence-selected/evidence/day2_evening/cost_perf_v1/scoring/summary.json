@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "at": "2026-10-30T10:07:08.362658+00:00",
+  "records": 1536,
+  "differences": 0,
+  "group_percent": {
+    "baseline": 54.492187500000014,
+    "skip": 32.96875,
+    "early": 43.55468750000001,
+    "middle": 42.1484375,
+    "late": 47.96875,
+    "multi": 13.6328125
+  },
+  "boundaries": [
+    {
+      "raw": "YES.",
+      "matches": 0,
+      "score": 0.0,
+      "expected": 0
+    },
+    {
+      "raw": "YES.",
+      "matches": 1,
+      "score": 0.3,
+      "expected": 0.3
+    },
+    {
+      "raw": "YES.",
+      "matches": 2,
+      "score": 0.6,
+      "expected": 0.6
+    },
+    {
+      "raw": "YES.",
+      "matches": 3,
+      "score": 0.9,
+      "expected": 0.9
+    },
+    {
+      "raw": "YES.",
+      "matches": 4,
+      "score": 1.0,
+      "expected": 1
+    },
+    {
+      "raw": "YES.",
+      "matches": 10,
+      "score": 1.0,
+      "expected": 1
+    },
+    {
+      "raw": "The TWO!",
+      "answer": "2",
+      "normalized": "2",
+      "score": 1.0
+    },
+    {
+      "raw": "1,000",
+      "answer": "1000",
+      "normalized": "1000",
+      "score": 1.0
+    },
+    {
+      "raw": "dont",
+      "answer": "don't",
+      "normalized": "don't",
+      "score": 1.0
+    },
+    {
+      "raw": "3.14",
+      "answer": "3.14",
+      "normalized": "3.14",
+      "score": 1.0
+    },
+    {
+      "raw": "",
+      "answer": "yes",
+      "normalized": "",
+      "score": 0.0
+    }
+  ],
+  "normalizer_ast_equal": true,
+  "upstream_mmf_bytes_equal_vendor": true,
+  "independence": "Independent closed-form leave-one aggregation; normalization separately loaded from lmms-eval but same MMF/Pythia lineage and identical AST, therefore not independent complete normalization implementation",
+  "official_context": "TextVQA official challenge points to VQA-v2 metric and Pythia/MMF; official MMF reference equals vendored bytes. Generic VQA reference inspected only, its conditional uniform-answer normalization is not substituted as TextVQA scoring recipe.",
+  "script_sha256": "bfc0ac9a38773d748ae8fd9cb71225b1cc07add7109b4112c04f2306d737a6ae"
+}

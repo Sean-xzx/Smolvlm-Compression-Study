@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "finished_at": "2026-10-30T21:31:46.562921+08:00",
+  "archive": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/Shen-Wu-Challenge-postday3-v3.tar.gz",
+  "archive_bytes": 455733348,
+  "archive_sha256": "d95a7774653f0b35f5e7cb37619807c27b0d295e0494d29b90b4be22bcec0d4d",
+  "checksum_file": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/Shen-Wu-Challenge-postday3-v3.tar.gz.sha256",
+  "candidate_root": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/candidate/Shen-Wu-Challenge",
+  "final_unpacked_root": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/unpacked_final/Shen-Wu-Challenge",
+  "manifest": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/unpacked_final/Shen-Wu-Challenge/artifact_manifest.json",
+  "manifest_sha256": "dbc0e0db91f3a1b24f6176a4b2ea2b125ea4ddbb83e199db8592533217066c58",
+  "manifest_file_count": 8815,
+  "all_files_size_sha_verified": true,
+  "archive_safe_members": true,
+  "duplicate_members": false,
+  "excluded_self_manifest_only": true,
+  "RC_acceptance": {
+    "passed": true,
+    "at": "2026-10-30T21:27:41.924425+08:00",
+    "root": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/unpacked_rc1/Shen-Wu-Challenge",
+    "shared": {
+      "interpreter": "/home/zx/Documents/Shen-Wu-Challenge/.venv/bin/python",
+      "HF_HOME": "/home/zx/Documents/Shen-Wu-Challenge/data/hf_cache",
+      "GPU": "same RTX5090 Laptop"
+    },
+    "commands": 27,
+    "all_command_exit_zero": true,
+    "data_png_sha_count": 512,
+    "encoder_100_paths": 8,
+    "encoder_tensor_comparisons": 32,
+    "max_abs_error": 0.0,
+    "atol": 0.0,
+    "rtol": 0.0,
+    "empty_skip_samples": 2,
+    "empty_skip_prefill_decode_comparisons": 4,
+    "independent_cache": true,
+    "full_generated_ids_equal": true,
+    "full_named_module_hook_cleanup": true,
+    "controlled_exception_cleanup": true,
+    "performance": {
+      "warmup": 48,
+      "formal": 120
+    },
+    "anchors": [
+      {
+        "dataset": "textvqa",
+        "start_median_ms": 240.40416000934783,
+        "end_median_ms": 236.67760999524035,
+        "change_percent": -1.5501187724715648,
+        "threshold_percent": 10,
+        "triggered": false
+      },
+      {
+        "dataset": "scienceqa",
+        "start_median_ms": 258.22437700117007,
+        "end_median_ms": 255.22870899294503,
+        "change_percent": -1.1601027149390597,
+        "threshold_percent": 10,
+        "triggered": false
+      }
+    ],
+    "profiler": {
+      "sample": "Text5",
+      "multi_K": [
+        512,
+        256,
+        128
+      ],
+      "mlp_matrices": {
+        "baseline": 180,
+        "skip": 162
+      },
+      "baseline_skip_prefill_decode": true
+    },
+    "replay_records": 12,
+    "cost_csv_byte_equal": true,
+    "protected_original_files": 8163,
+    "old_package_scientific_files_unchanged": true,
+    "report_table_lines_unchanged": 146,
+    "tested_execution_files": 7981,
+    "scope": "same-machine independent unpack; no new 3072 quality, full 780 benchmark, full old proofs, cold installation, O1, or personal training",
+    "unrun_cli": [
+      "performance first",
+      "performance stages",
+      "replay limit256"
+    ],
+    "failure_records": "no new failure; preserved v2 legacy failure logs remain in historical validation"
+  },
+  "tested_execution_files_matched": 7981,
+  "final_execution": "Final unpack verified byte-identical execution/inputs to tested RC; no duplicate GPU run after document-only changes",
+  "protected_original_files_matched": 8163,
+  "old_v2_archive_SHA_unchanged": "0853dc715513eb165bdc76273414f9d3be441b5fd5d76696ba82e4d4bf12b90c",
+  "final_commands": [
+    {
+      "label": "final_pack",
+      "command": [
+        "tar",
+        "-I",
+        "gzip -1",
+        "-cf",
+        "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/Shen-Wu-Challenge-postday3-v3.tar.gz",
+        "Shen-Wu-Challenge"
+      ],
+      "cwd": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/candidate",
+      "started_at": "2026-10-30T21:31:27.379789+08:00",
+      "log": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/logs/final_pack.log",
+      "finished_at": "2026-10-30T21:31:36.816429+08:00",
+      "exit_code": 0
+    },
+    {
+      "label": "final_checksum",
+      "command": [
+        "sha256sum",
+        "-c",
+        "Shen-Wu-Challenge-postday3-v3.tar.gz.sha256"
+      ],
+      "cwd": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3",
+      "started_at": "2026-10-30T21:31:37.055298+08:00",
+      "log": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/logs/final_checksum.log",
+      "finished_at": "2026-10-30T21:31:37.945095+08:00",
+      "exit_code": 0
+    },
+    {
+      "label": "final_unpack",
+      "command": [
+        "tar",
+        "-xf",
+        "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/Shen-Wu-Challenge-postday3-v3.tar.gz",
+        "-C",
+        "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/unpacked_final"
+      ],
+      "cwd": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3",
+      "started_at": "2026-10-30T21:31:41.254840+08:00",
+      "log": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/logs/final_unpack.log",
+      "finished_at": "2026-10-30T21:31:44.916500+08:00",
+      "exit_code": 0
+    }
+  ],
+  "active_experiment_processes": [],
+  "gpu_snapshot": "name, driver_version, memory.used [MiB], utilization.gpu [%], temperature.gpu\nNVIDIA GeForce RTX 5090 Laptop GPU, 580.178.04, 453 MiB, 35 %, 41\n",
+  "compute_processes_snapshot": "pid, process_name, used_gpu_memory [MiB]\n",
+  "remaining": "first/stages and limit256 unrun; same-machine shared interpreter/HF cache only; no cold install, O1 or personal training",
+  "packaging_preparation_attempts": [
+    {
+      "recorded_at": "2026-10-30T21:31:26.441745+08:00",
+      "command": [
+        "python3",
+        "-B",
+        "delivery/postday3_v3/finalize_delivery.py"
+      ],
+      "cwd": "/home/zx/Documents/Shen-Wu-Challenge",
+      "exit_code": 1,
+      "started_at": null,
+      "finished_at": null,
+      "timing_note": "Initial pre-archive validation was invoked directly through exec_command; exact process timestamps not captured; do not fabricate them.",
+      "log": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/logs/final_prepare_attempt1.log",
+      "affected": "packaging exclusion guard only; no execution/input bytes changed",
+      "resolution": "preserve four historical .venv-path native source snapshots; apply runtime/cache exclusion only at package root"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/finalize_delivery.py"
+      ],
+      "cwd": "/home/zx/Documents/Shen-Wu-Challenge",
+      "started_at": "2026-10-30T21:31:26.455648+08:00",
+      "finished_at": "2026-10-30T21:31:46.801771+08:00",
+      "exit_code": 0,
+      "log": "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/logs/final_prepare_attempt2.log"
+    }
+  ],
+  "outer_completion_index": {
+    "/home/zx/Documents/Shen-Wu-Challenge/README.md": "08147b3424cc2beb0307a476b4785fdaeb10912ce4b54316b82d88334b966e47",
+    "/home/zx/Documents/Shen-Wu-Challenge/notes/POST_DAY3_V3_HANDOFF.zh.md": "d9e57ffd3d4096cb05cfd393bbfc0d2fbf203042c9f0ac37cfe872f58be97bcf",
+    "/home/zx/Documents/Shen-Wu-Challenge/delivery/postday3_v3/HANDOFF.zh.md": "d9e57ffd3d4096cb05cfd393bbfc0d2fbf203042c9f0ac37cfe872f58be97bcf"
+  },
+  "outer_completion_at": "2026-10-30T21:32:53.280290+08:00"
+}

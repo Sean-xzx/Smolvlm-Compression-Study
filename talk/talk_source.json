@@ -1,0 +1,150 @@
+[
+  {
+    "title": "SmolVLM无需训练压缩",
+    "minutes": 2,
+    "body": [
+      "视觉Token剪枝与FFN Skip的实验比较",
+      "Sean-xzx（GitHub账号）",
+      "六配置  两集各256题  3072正式预测",
+      "Encoder减少计算，质量全部下降"
+    ],
+    "notes": "本次任务比较指定SmolVLM模型上的两种无需训练压缩。第一种在视觉Encoder内部选择Token，第二种跳过LLM三个FFN。两类方法独立运行，没有叠加，也没有为了找最好分数扫描层或保留率。正式质量范围是每个数据集固定256题，共六配置、十二组3072条预测。\n\n开场先把四个问题分开：质量是否保持，计算量是否真实下降，速度是否改善，以及权重或显存是否减少。它们需要不同证据。这里的主要发现是Encoder确实少算，部分小基准也更快，但质量都下降。Multi质量损失很大。Skip在自然生成中可能更快，统一长度16时旧主基准几乎没有收益。所有权重仍保存，不能宣称模型文件变小。\n\n今天的讲述先解释实现和评分，再看正式结果、执行证据和复现。报告与材料由AI依据保存记录完成，贡献已披露；这些材料不代表Sean-xzx已经独立完成现场交流。此处留约20秒确认四个指标各由哪种记录支持，然后进入统一协议。",
+    "figure": null,
+    "source": "报告§1/6/7/9/10/17；E1/E6"
+  },
+  {
+    "title": "固定协议与两个评分对象",
+    "minutes": 3,
+    "body": [
+      "同题同输入  BF16  eager  batch 1",
+      "TextVQA：十参考留一软分",
+      "ScienceQA：选项索引准确率 + 本地标签盲解析",
+      "Science合法hint进入输入，答案与解析字段不进入",
+      "解析失败记0并保留分母"
+    ],
+    "notes": "六配置的公平比较首先依赖输入固定。两份清单各256题，从指定validation按种子20261029无放回抽取并升序。模型和两个数据集都固定revision，清单包含ID、原索引、图片SHA。图像以RGB无损PNG保存，模型端复用原Idefics3Processor的预处理和切块。硬件是RTX5090 Laptop，BF16、eager、batch1，greedy、max_new_tokens64，cache保持。显式取Attention权重需要eager，baseline也用同后端，所以不能外推到Flash或SDPA。\n\nTextVQA不是普通整数正确率。它标准化预测和十条参考，依次留出一条，再对另外九条的匹配数用min(m/3,1)，最后平均。匹配1、2、3、4次时分别得到0.3、0.6、0.9、1。历史1536条Text输出与独立闭式聚合相同，但normalizer同源，所以独立性仅在聚合层。\n\nScience的指标定义是预测选项索引与标签相等；从自由文本提取选项是本地保守解析，不是完整官方管线的原样复用。hint是合法背景，输入只用hint、问题和原顺序选项，answer仅在生成后判分，lecture和solution不参与。解析失败保留原文、记0、分母不变；推理异常则标未完成。旧无hint基线58.98%不与本次64.06%混算分差。官方73.6%历史recipe没有完整复现。此处可用约30秒打开协议和一条原子记录，核对prompt与label分离。",
+    "figure": null,
+    "source": "报告§2；E1/E5；configs/eval_protocol_context_v2.json"
+  },
+  {
+    "title": "Encoder Top K计算位置",
+    "minutes": 3,
+    "body": [
+      "Attention残差后选择",
+      "当前FFN先变短，下一层Attention再变短"
+    ],
+    "notes": "沿图的第一行讲一层的实际计算。先得到a等于x加Attention(norm1(x))。选择位置必须在这次残差之后、当前FFN之前。Attention权重形状为图块、head、query、key；FP32先平均head，再平均有效query，为每个key得到incoming attention分数，无效key不能参加选择。\n\n每块K是当前有效数乘保留率后向上取整，至少1。先稳定排序取最高K，平分按原位置，再把所选集合恢复原始相对顺序。真正gather的是a，当前FFN处理gather(a)，第二残差也以这个短a为底。只改mask但仍喂完整矩阵不能称这里的真实压缩。\n\nEarly、Middle、Late在视觉12层的3、6、9层分别独立保留50%。Multi在同一次前向走3、6、9，每次根据当层当前短序列重新计算Attention和评分，K依次512、256、128，最终保留12.5%。不是最早一次排序后固定重复使用，也不是每次对原1024取一半。\n\n图的下方先预告接口问题：后续Connector需要规则二维网格，所以Encoder输出并没有直接缩短LLM序列。这里不要把算法位置与最终外部token比例混为一谈。花约45秒定位attention_scores、select_tokens、prune_layer三个函数，指出求均值的维度、ceil和两个残差；代码定位表已有准确行号。",
+    "figure": "01_method.png",
+    "source": "报告§3/5；E2/E3；encoder_topk.py"
+  },
+  {
+    "title": "Attention与FFN的逐层长度",
+    "minutes": 2,
+    "body": [
+      "Na为Attention输入，Nf为当前FFN输入",
+      "Multi最终每块128，原始每块1024"
+    ],
+    "notes": "这张阶梯图将Na和Nf分开。Early在第3层做选择，但第3层Attention已经用1024算过，所以该点Na仍为1024，Nf为512。第4层Attention才接收512。Middle和Late同理。Multi在第6层是512/256，第9层是256/128，不能用最终128倒推所有前层成本。\n\n这些数取自真实Text5的hook与逐层记录，不是按保留率手绘预测。该题有13个独立图块，每块初始1024。Attention在块内独立执行，不能把13乘1024当作一条长度13312的Attention序列；只有Linear展平BN行时可以出现13312这个二维矩阵行数。\n\n正式24576层记录padding都是0，人工[16,5]的有效数测试只检验不等长边界。ceil会得到[8,3]，物理按Kmax占位，但padding不参与评分或回填。图用不同符号和颜色标配置，baseline与Skip视觉长度相同。此处用约20秒对照第3、6、9行表，确认当前FFN先短的事实。",
+    "figure": "02_tokens.png",
+    "source": "报告§4；E3；figures/layer_tokens.csv"
+  },
+  {
+    "title": "Connector适配与三层FFN Skip",
+    "minutes": 3,
+    "body": [
+      "postnorm后零回填原网格",
+      "pixel shuffle 4×4，单Linear 12288到576",
+      "Text5仍有832个LLM视觉位置",
+      "Skip L8/L16/L24：保留Attention与cache，省norm2 + MLP",
+      "7962624个MLP参数停用，权重仍保留"
+    ],
+    "notes": "Encoder输出变短后，还需要与原模型Connector的空间结构兼容。保留特征先过原post_layernorm，再按原位置scatter回每块1024的零网格，随后用原pixel shuffle和Linear。零填必须放在postnorm后，否则LayerNorm的bias可能把占位零变成非零。回填发生在Encoder之后，没有把丢弃token送回后层Encoder。\n\nText5中13块各自从1024位置空间合并为64，通道由768变为12288，单Linear映射到576。最后LLM仍收到13乘64等于832个视觉位置，总输入T889。因此Encoder内部少算没有继续成为Connector或LLM视觉序列缩短。类名SimpleMLP不能证明它是多层MLP，本模型实际只有一个无bias Linear。\n\n教授要求的四类Projector可这样区分：普通逐token Linear和MLP主要改特征宽度，通常保持N；Q-Former用学习query汇聚视觉信息；视觉Perceiver Resampler用固定学习latent从可变长度特征中重采样，输出latent数固定。Flamingo常用64个，本文只解释不实现它。\n\n另一方法在LLM8、16、24层同时跳过norm2加MLP。保留a=x+Attention(inputnorm(x))、Attention和cache。不是把MLP设Identity再叠加norm2(a)。三层MLP共7962624参数，另norm2为1728，都仍注册；总参数和513028808 bytes权重不变。选层是预先分散覆盖，未验证最优。此处可用30秒对照skip_forward的返回位置。",
+    "figure": null,
+    "source": "报告§5；E3/E4；Flamingo §3.1.1 https://arxiv.org/abs/2204.14198"
+  },
+  {
+    "title": "正式质量结果与负结果",
+    "minutes": 2,
+    "body": [
+      "每组n=256，Text软分与Science准确率分别报告",
+      "Late损失相对较小，Multi与Skip损失很大"
+    ],
+    "notes": "质量图每个柱来自256条原子分数均值，共3072条正式预测。Text基线54.4922%，Science基线64.0625%。四种Encoder都下降，Late相对损失最小，分别是6.5234和3.5156个百分点；Multi分别损失40.8594和31.25个百分点。Skip分别损失21.5234和31.6406个百分点。\n\n这里的结论应保留负结果，不能为了美化把Multi或Skip移到附录，也不能改解析器或删题后覆盖原正式表。十二组都完整，没有执行异常。Science Skip有41条解析失败，Multi有28条，均记0保留分母。即使把Skip的41条全救回，上界48.4375%仍低于基线，说明格式失败不能解释所有损失；它也不能排除其他未标记的解析问题。\n\nText是软分，54.49%不是把256题乘百分比得到整数正确题数。Late在本数据的质量较好也不意味着它在效率、其他输入或其他后端最优。这一页用约15秒核对pp符号与baseline版本，避免将旧无hint结果拼入差值。",
+    "figure": "03_quality.png",
+    "source": "报告§6；E1/E5；figures/quality.csv"
+  },
+  {
+    "title": "Encoder成本与全模型成本",
+    "minutes": 3,
+    "body": [
+      "主要矩阵与卷积，乘加计2",
+      "G*=16是离线统一工作量估算",
+      "最终保留率不能直接乘全模型"
+    ],
+    "notes": "每对柱分别是Encoder本体成本与全模型主要矩阵/卷积成本，相对同版baseline。每集256题取均值，G星号16是离线统一生成工作量，不是又对512题跑了一轮固定16模型评估。\n\n视觉一层是8BNa dv平方，加4BNa平方dv，再加4BNf dv mv。前两项是投影和Attention，最后是当前FFN。由于当前层Na和Nf不同，多阶段必须逐层累加。Early、Middle、Late的Encoder本体减少43.18%、29.55%、15.91%，Multi减少59.59%。最终剩12.5%不意味着整个Encoder只花12.5%，前层完整计算已发生。\n\n全模型还包括patch卷积、原Connector、LLM prefill、G减1步decode及每步最后位置输出头。LLM投影按GQA的K/V宽192计算，Attention按query总宽576，首输出token属于prefill。Skip仅省三层gated FFN，减少15925248乘T加G减1，而视觉不变，因此统一长度全模型只省约0.47%和0.49%，不能称全模型省10%。\n\n主要FLOPs不含全部辅助开销。FP32评分、cast字节、稳定排序、gather/scatter、同步和其他非矩阵操作单列；没有说它们免费。此处花约40秒打开一行成本CSV，找B、T、实际G、统一G、encoder_matrices与total_major_flops，说明同一组指标的不同范围。",
+    "figure": "04_cost.png",
+    "source": "报告§7/8；E6；analyze_costs.py:components"
+  },
+  {
+    "title": "自然生成速度与输出长度",
+    "minutes": 3,
+    "body": [
+      "旧主基准 每集4题，每题2预热5正式",
+      "wall为逐题median的均值，图内显示实际G",
+      "自然少输出会改变工作量"
+    ],
+    "notes": "这页使用旧cost-perf-v1主基准，不能与下一部分的v3迁移毫秒混算。自然生成每数据集按输入长度选4题，每题2预热5正式。先对每题5次取median，再对4题取算术均值，柱旁G为这些题的平均生成长度。这里的五次重复不是五个独立任务，也没有总体置信区间。\n\n计时从输入已在GPU开始，到原生generate返回并同步。不包含加载、图片解码、Processor、H2D、评分和I/O，生产score、排序、gather、scatter和同步保留。主机perf_counter wall为主，CUDA Event只是辅助stream elapsed，不是纯kernel时间加总。\n\n自然Text基线297.235ms，Skip257.427ms，但平均G从6.5变为3.5，所以不能把1.155倍都归于三个FFN少算。Science的G也会变化。四Encoder在本小基准更快，并不代表质量保持，也不证明其他输入分布有同样速度比。\n\nallocated峰值大致2902MiB，各配置近似相同，剪枝略增；reserved属于分配器保留历史。早层密集Attention可能决定峰值，但没有独立内存时间线证实因果。旧首尾锚点Text负2.46%、Science正3.83%，没有触发10%线，仍没有锁频或消除全部温度/调度波动。此处用约30秒指向原始measurement记录的warmup、wall、G和peak字段。",
+    "figure": "06_natural.png",
+    "source": "报告§9/10；E6；旧780正式/312预热，锚点另计"
+  },
+  {
+    "title": "固定G为16的速度比较",
+    "minutes": 3,
+    "body": [
+      "每集1诊断题，2预热5正式，误差线为IQR",
+      "Skip旧主基准 0.993× / 1.002×",
+      "Early 1.223× / 1.147×，伴随质量下降"
+    ],
+    "notes": "为控制生成工作量，固定16用min_new_tokens与max_new_tokens都设16。这改变停止行为，所以文本不进入正式质量表。每数据集只有一个诊断题，2次预热5次正式；柱为median，误差线为25到75分位IQR，不能当总体置信区间。\n\nText基线414.220ms，Skip417.234ms，对应0.993倍；Science基线417.665ms，Skip416.892ms，对应1.002倍。旧主基准没有显示明确同长度Skip收益。Early仍有1.223和1.147倍，Multi有1.282和1.285倍，但上一页质量结果必须同时看。不能用自然生成的更大速度比替换这个同工作量控制。\n\n为什么FLOPs少了但wall没有同比减少？主要矩阵不包括所有选择、排序、零回填、同步和框架开销。旧Connector独立回放在剪枝下约4到5ms，baseline约0.3到0.5ms，说明适配开销确实有去处。然而模块独立median不能相加为整请求，也不能相减来伪造LLM耗时。\n\n另外，fresh-cache单步decode wrapper还含mask和position/cache张量构造，不是纯LLM kernel。v3迁移验证也是各集一题，fixed16有不同小速度比，必须与它自己的baseline比较，不能拼接旧数据。这页留约30秒复述计时排除项和“n=1题、5重复”的区别，随后进入实现证明。",
+    "figure": "05_fixed16.png",
+    "source": "报告§10/15；E6/E7，主图只用cost-perf-v1"
+  },
+  {
+    "title": "一致性与真实少算证据",
+    "minutes": 2,
+    "body": [
+      "100%与空Skip：比较对象明确，最大误差0",
+      "50%与Multi：pre-hook + 矩阵shape/time",
+      "Multi FFN输入K为512、256、128",
+      "Skip目标norm2/MLP零调用，投影marker缺席"
+    ],
+    "notes": "首先看一致性证明的对象：两个输入乘四种100%路径，对Encoder、postnorm、Connector和prefill logits共32次比较，最大绝对误差0，atol和rtol都为0，完整生成IDs相同。空Skip还有独立cache的一步decode比较。Encoder100%没有单独比较decode logits，不能扩大措辞。\n\n100%明确走原生旁路，score和scatter调用0，所以它证明关闭压缩时一致，却不检验真实选择。50%和Multi另有受控mask/残差、选集重建与真实hook。Text5的Multi在L3、6、9当前fc1输入分别[13,512,768]、[13,256,768]、[13,128,768]，下一层保持短，矩阵行数对应6656、3328、1664；CPU/CUDA时间原表可查。\n\nSkip同时有模块零调用和gate/up/down marker缺席。v3的prefill加一步decode投影矩阵180变162，与三层三投影两阶段一致。profiler诊断的耗时不是规范性能，嵌套时间不能重复加。此处用约25秒打开E3一行hook和一行矩阵，作为从结论到代码和证据的演示。",
+    "figure": null,
+    "source": "报告§11/12；E2/E3/E4/E7；figures/matrix_evidence.csv"
+  },
+  {
+    "title": "真实失败案例与因果边界",
+    "minutes": 2,
+    "body": [
+      "Text5  baseline “22.”，Multi “2.”",
+      "得分1到0，输入和LLM视觉位置相同",
+      "尚无Attention归因实验"
+    ],
+    "notes": "这是真实TextVQA row5原图，按照预定类别的最小索引选取。基线输出22，Multi输出2，软分从1到0。两者图片、问题、prompt完全相同，最终LLM视觉位置都是832，所以不能把质量损失解释成LLM视觉token数量变化。\n\n这组记录支持的是计算路径改变伴随答错，尚未进行Attention归因或被删patch可视化。不能在原图上画一个推测热图然后称已经测到关键数字被删除。保留特征本身也混合过其他位置的信息，删除空间位置不等于完全删除对应语义。\n\nScience还存在基线正确、变体选择错误的实例，以及Skip输出互相矛盾而解析拒绝的实例。对解析失败应保留原文和分母，必要时先保存可复现反例、另版分析，不能看到分低就改规则覆盖正式结果。此处花约20秒展示failure_cases的选择规则和raw字段，说明案例与全量统计承担不同作用。",
+    "figure": "text5.png",
+    "source": "报告§13；E1/E5；固定TextVQA row5 PNG"
+  },
+  {
+    "title": "复现入口与现场操作准备",
+    "minutes": 2,
+    "body": [
+      "新入口真实24条通过，partial单独登记",
+      "代码、协议、原子记录与证据可离线定位",
+      "三项练习：改保留率、改Skip、查成本",
+      "AI完成准备；个人独立操作与交流尚未进行"
+    ],
+    "notes": "复现从完整科学包加轻量代码开始，先核包SHA，准备固定模型和Processor缓存，再做随包数据就绪检查。数据检查不是下载器；新预测评估与严格历史重放是两个入口。新增evaluate_release显式绑定artifact-root，使用冻结helper真实generate，不要求新输出逐字等于旧输出。\n\n本轮实跑六配置各两集前两题，共24条，ID和partial摘要正确，六进程exit0。这个结果不等于完整256新评估，也不进入旧3072表。旧780性能、v3 120迁移性能与本轮24条分别记录。冷安装、跨机、Flash/SDPA仍未验证。\n\n现场可从代码定位表找到评分、选择、残差、Connector与Skip，也可用离线速查找到公式和一条真实证据。三项练习都有参考解法，其中75%选择的CPU helper演示由AI实际运行，只证明配置与helper行为，没有新模型质量或速度。用户独立练习尚未发生。教授指定现场环节需要独立完成，不调用AI或Agent；这些准备文件可以离线查阅。到这里讲述目标30分钟，另留10到15分钟讨论或修改。",
+    "figure": null,
+    "source": "报告§14/17；E8；talk/EXERCISES_AND_SOLUTIONS.zh.md"
+  }
+]

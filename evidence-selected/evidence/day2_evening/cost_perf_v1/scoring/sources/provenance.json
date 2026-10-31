@@ -1,0 +1,50 @@
+[
+  {
+    "repo": "facebookresearch/mmf",
+    "revision": "72f898ec35af86567423c7a019dd1dc5175d1a5a",
+    "file": "mmf/utils/m4c_evaluators.py",
+    "url": "https://raw.githubusercontent.com/facebookresearch/mmf/72f898ec35af86567423c7a019dd1dc5175d1a5a/mmf/utils/m4c_evaluators.py",
+    "local": "evidence/day2_evening/cost_perf_v1/scoring/sources/facebookresearch_mmf_m4c_evaluators.py",
+    "sha256": "e10a99e15c4658f8d0d83a05cc536c835922e701171fce0016718bec021b8c0a"
+  },
+  {
+    "repo": "facebookresearch/mmf",
+    "revision": "72f898ec35af86567423c7a019dd1dc5175d1a5a",
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/facebookresearch/mmf/72f898ec35af86567423c7a019dd1dc5175d1a5a/LICENSE",
+    "local": "evidence/day2_evening/cost_perf_v1/scoring/sources/facebookresearch_mmf_LICENSE",
+    "sha256": "dbb40c7bb9a3de99f13fe5643fbdaa0ae90a1591c232f1b316e0528a835776c9"
+  },
+  {
+    "repo": "EvolvingLMMs-Lab/lmms-eval",
+    "revision": "3d12c1760482c9753b1c6416348228fef83bd0dd",
+    "file": "lmms_eval/tasks/_task_utils/vqa_eval_metric.py",
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/3d12c1760482c9753b1c6416348228fef83bd0dd/lmms_eval/tasks/_task_utils/vqa_eval_metric.py",
+    "local": "evidence/day2_evening/cost_perf_v1/scoring/sources/EvolvingLMMs-Lab_lmms-eval_vqa_eval_metric.py",
+    "sha256": "4e4154c6c7e4657e6c44aa08e184ce5ae0e872665744c6cb684cf645e4647ce0"
+  },
+  {
+    "repo": "EvolvingLMMs-Lab/lmms-eval",
+    "revision": "3d12c1760482c9753b1c6416348228fef83bd0dd",
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/3d12c1760482c9753b1c6416348228fef83bd0dd/LICENSE",
+    "local": "evidence/day2_evening/cost_perf_v1/scoring/sources/EvolvingLMMs-Lab_lmms-eval_LICENSE",
+    "sha256": "17358b5caadacb8108f14a6a319779cc8a20feed699f79c59e396e7e9dd5c33b"
+  },
+  {
+    "repo": "GT-Vision-Lab/VQA",
+    "revision": "a013f0043c1e2cdc995922dfe257f7149aa9af06",
+    "file": "PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+    "url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/a013f0043c1e2cdc995922dfe257f7149aa9af06/PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+    "local": "evidence/day2_evening/cost_perf_v1/scoring/sources/GT-Vision-Lab_VQA_vqaEval.py",
+    "sha256": "f08edfcad5be0112500993e245c706b6cb928eadebe203f89f838e5e0d04bec8"
+  },
+  {
+    "repo": "GT-Vision-Lab/VQA",
+    "revision": "a013f0043c1e2cdc995922dfe257f7149aa9af06",
+    "file": "license.txt",
+    "url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/a013f0043c1e2cdc995922dfe257f7149aa9af06/license.txt",
+    "local": "evidence/day2_evening/cost_perf_v1/scoring/sources/GT-Vision-Lab_VQA_license.txt",
+    "sha256": "4bf86fe8b104b69fc72caaa095b2fff4bade0d3d9a7970c6a5fd01fb736cad04"
+  }
+]

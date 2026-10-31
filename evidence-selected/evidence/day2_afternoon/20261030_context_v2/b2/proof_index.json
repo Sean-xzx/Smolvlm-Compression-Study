@@ -1,0 +1,24 @@
+{
+  "kind": "navigation_excerpt_not_full_proof",
+  "full_artifact_relative_path": "evidence/day2_afternoon/20261030_context_v2/b2/proof.json",
+  "full_sha256": "ac13bae794fbd3fb314f801818e52a51c71655271f6bb3b3b6ae2f5029b23d67",
+  "full_bytes": 49972185,
+  "passed": true,
+  "top_level_keys": [
+    "passed",
+    "binding",
+    "recorded_at",
+    "command",
+    "results"
+  ],
+  "result_keys": [
+    "toys",
+    "native",
+    "equivalence",
+    "pruned",
+    "controlled",
+    "skip",
+    "restoration"
+  ],
+  "scope": "Original full proof remains byte-identical in scientific tar. This index deliberately omits large tensor/ID arrays; use full proof for per-value verification."
+}

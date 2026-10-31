@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "slide_count": 12,
+  "target_minutes": 30,
+  "pptx_sha256": "1d365702c0ceded1b9530d20100387ba67ceb2947f05ad931294485ce1fb115a",
+  "pdf_sha256": "af7c2bff470f3595bac55c507ea93d196e342858b44cd71a0524a16dd0c597ad",
+  "renderers": [
+    "Artifact Tool PNG scale1.5",
+    "Bundled LibreOfficeDev 26.8 via isolated glibc compatibility wrapper, exported PDF and system Poppler PNG"
+  ],
+  "visual_reviewed_artifact_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "visual_reviewed_exported_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "layout": "No clipping/overlap/missing Chinese glyphs in reviewed pages; 12 speaker-notes parts present. Chart images reused from report, text/layout editable, SVG/data/scripts supplied separately.",
+  "code_map_one_page_pdf": "Mixed CJK/Latin font fallback repaired; final page inspected",
+  "limits": "No inspection in Microsoft PowerPoint; no user rehearsal/independent competence claim",
+  "at": "2026-10-31T08:33:27.285020+00:00"
+}

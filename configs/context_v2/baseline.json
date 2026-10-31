@@ -1,0 +1,8 @@
+{
+  "configuration": "baseline",
+  "version": "context-v2",
+  "status": "frozen",
+  "base_protocol_sha256": "7c7f4a6f9b8fa4f164d196da1a3306c35691decbb9bcf857645d41416c1bdb48",
+  "environment_id": "98f15960cb99ee3d7bae5d7713b1bc7c44471dde0831dab1aa2d7a1729b91531",
+  "patch": "none"
+}

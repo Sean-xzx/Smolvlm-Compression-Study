@@ -1,0 +1,122 @@
+{
+  "protocol_version": "context-v2",
+  "status": "draft",
+  "configuration": "shared_six_configuration_quality_protocol",
+  "model": {
+    "key": "model",
+    "kind": "model",
+    "repo_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "revision": "7e3e67edbbed1bf9888184d9df282b700a323964"
+  },
+  "datasets": {
+    "textvqa": {
+      "repo_id": "lmms-lab-encoder/textvqa",
+      "revision": "9c0699cd19768ac5ab97568f6b3cbac4c0062884",
+      "config": "default",
+      "split": "validation",
+      "population_size": 5000
+    },
+    "scienceqa": {
+      "repo_id": "lmms-lab/ScienceQA-IMG",
+      "revision": "b9984af01798586705cee1fbdfa80a6dcbef04f1",
+      "config": "default",
+      "split": "validation",
+      "population_size": 2097
+    }
+  },
+  "preprocessing": {
+    "do_convert_rgb": true,
+    "do_image_splitting": true,
+    "do_normalize": true,
+    "do_pad": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "image_processor_type": "Idefics3ImageProcessor",
+    "image_std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "max_image_size": {
+      "longest_edge": 512
+    },
+    "processor_class": "Idefics3Processor",
+    "resample": 1,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "longest_edge": 2048
+    }
+  },
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "attention_backend": "eager",
+  "batch_size": 1,
+  "eval": true,
+  "inference_mode": true,
+  "generation": {
+    "max_new_tokens": 64,
+    "do_sample": false,
+    "num_beams": 1,
+    "use_cache": true
+  },
+  "generation_seed": 0,
+  "deterministic_algorithms": true,
+  "allow_tf32": false,
+  "prompts": {
+    "textvqa": {
+      "instruction": "Answer with a short word or phrase.",
+      "use_ocr": false
+    },
+    "scienceqa": {
+      "instruction": "Answer with only the option letter.",
+      "use_hint": true,
+      "choices_order": "original"
+    }
+  },
+  "sampling": {
+    "algorithm": "python.random.Random(seed).sample(range(N), count), sorted for replay",
+    "seed": 20261029,
+    "count": 256,
+    "independent_rng_per_dataset": true
+  },
+  "scoring": {
+    "textvqa": "unchanged MMF EvalAIAnswerProcessor/TextVQAAccuracyEvaluator",
+    "scienceqa": "extract_choice v2 then index equality, mean over all inferred samples",
+    "code_sha256": "db19c320c3254fc1335759b30ad584e26adbdc95726464009f5cc5e5de637619",
+    "mmf_sha256": "e10a99e15c4658f8d0d83a05cc536c835922e701171fce0016718bec021b8c0a"
+  },
+  "failure_policy": {
+    "empty_output": "retain raw output, score 0, remains in denominator",
+    "parse_failure": "retain raw output, score 0, remains in denominator",
+    "read_or_inference_exception": "persist exception and traceback; run incomplete until fixed; never replace input or silently exclude"
+  },
+  "timing": "sample/whole-run wall clocks for scheduling only; no formal GPU latency claim",
+  "context_rule": {
+    "field": "hint",
+    "nonempty_test": "bool(hint.strip())",
+    "prefix": "Hint: ",
+    "separator": "\n",
+    "preserve_raw_hint": true,
+    "empty_hint": "byte-identical to v1",
+    "allowed_text_fields": [
+      "hint",
+      "question",
+      "choices"
+    ],
+    "excluded_fields": [
+      "answer",
+      "lecture",
+      "solution"
+    ]
+  },
+  "context_decision": {
+    "path": "evidence/day2_afternoon/20261030_context_v2/b1/semantic_decision.json",
+    "sha256": "92b92f81845a0ecf82f8b0870bdd98e93f219fc182555aa8da90b3a1de15e52f",
+    "decision_before_generation": true
+  }
+}
