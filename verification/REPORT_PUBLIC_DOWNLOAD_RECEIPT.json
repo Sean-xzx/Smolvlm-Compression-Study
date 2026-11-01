@@ -1,0 +1,368 @@
+{
+  "passed": true,
+  "at": "2026-11-01T02:42:52.768243+00:00",
+  "repository": "https://github.com/Sean-xzx/Smolvlm-Compression-Study",
+  "report_commit": "e04f4f52224b6feb76c0fc85a483ee38d839dabf",
+  "remote_main_at_check": "e04f4f52224b6feb76c0fc85a483ee38d839dabf",
+  "authentication": "Anonymous urllib GET; no token/cookie/Authorization",
+  "downloads": [
+    {
+      "kind": "report",
+      "path": "report/REPORT.zh.md",
+      "ref": "e04f4f52224b6feb76c0fc85a483ee38d839dabf",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.md",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.md",
+      "http": 200,
+      "bytes": 36998,
+      "sha256": "86417817e3b8907663022549e95971c6849305f470eeaedab37649588c712496",
+      "matches_local": true
+    },
+    {
+      "kind": "report",
+      "path": "report/REPORT.zh.md",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.md",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.md",
+      "http": 200,
+      "bytes": 36998,
+      "sha256": "86417817e3b8907663022549e95971c6849305f470eeaedab37649588c712496",
+      "matches_local": true
+    },
+    {
+      "kind": "report",
+      "path": "report/REPORT.zh.docx",
+      "ref": "e04f4f52224b6feb76c0fc85a483ee38d839dabf",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.docx",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.docx",
+      "http": 200,
+      "bytes": 816419,
+      "sha256": "c67b905d76aba4331757079fffc10edc01168542996f789257f8741e5ed97673",
+      "matches_local": true
+    },
+    {
+      "kind": "report",
+      "path": "report/REPORT.zh.docx",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.docx",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.docx",
+      "http": 200,
+      "bytes": 816419,
+      "sha256": "c67b905d76aba4331757079fffc10edc01168542996f789257f8741e5ed97673",
+      "matches_local": true
+    },
+    {
+      "kind": "report",
+      "path": "report/REPORT.zh.pdf",
+      "ref": "e04f4f52224b6feb76c0fc85a483ee38d839dabf",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.pdf",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.pdf",
+      "http": 200,
+      "bytes": 1863382,
+      "sha256": "e778c99cefe1d518a3ef316c15a9dfd446a99492d39f55122683d202a7e45a33",
+      "matches_local": true
+    },
+    {
+      "kind": "report",
+      "path": "report/REPORT.zh.pdf",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.pdf",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.pdf",
+      "http": 200,
+      "bytes": 1863382,
+      "sha256": "e778c99cefe1d518a3ef316c15a9dfd446a99492d39f55122683d202a7e45a33",
+      "matches_local": true
+    },
+    {
+      "kind": "image",
+      "path": "figures/01_method.png",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/01_method.png",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/01_method.png",
+      "http": 200,
+      "bytes": 212551,
+      "sha256": "cb5abdf32af2cc65f4504c5394128543041d4a1ceddf00346160f9fa89562fd0",
+      "matches_local": true
+    },
+    {
+      "kind": "image",
+      "path": "figures/02_tokens.png",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/02_tokens.png",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/02_tokens.png",
+      "http": 200,
+      "bytes": 99011,
+      "sha256": "a4495c395e563163c61531419a611d6a3c39d22df5f6061a048bbe1ac5efccdc",
+      "matches_local": true
+    },
+    {
+      "kind": "image",
+      "path": "figures/03_quality.png",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/03_quality.png",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/03_quality.png",
+      "http": 200,
+      "bytes": 111132,
+      "sha256": "ec14f3b86aff798a0f80b6b86cbea01743aabe1966be1b25b48879b506ec8d95",
+      "matches_local": true
+    },
+    {
+      "kind": "image",
+      "path": "figures/04_cost.png",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/04_cost.png",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/04_cost.png",
+      "http": 200,
+      "bytes": 143330,
+      "sha256": "efad96e9c3c9fade31fbe02ceb264913b0ac6fc52086fabf20258ea473afbc45",
+      "matches_local": true
+    },
+    {
+      "kind": "image",
+      "path": "figures/05_fixed16.png",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/05_fixed16.png",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/05_fixed16.png",
+      "http": 200,
+      "bytes": 108317,
+      "sha256": "726f8ae8234d5bf2acbf6f5bfd4529d5ae0fea24ec13cd2bb893a43311806ff7",
+      "matches_local": true
+    },
+    {
+      "kind": "image",
+      "path": "figures/06_natural.png",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/06_natural.png",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/figures/06_natural.png",
+      "http": 200,
+      "bytes": 170587,
+      "sha256": "c5c961dc08aa689d3d3fadabbd7f5c1f6dcc0510611b4afd40d313a6526f2a74",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "README.md",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/README.md",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/README.md",
+      "http": 200,
+      "bytes": 8863,
+      "sha256": "26e4ab80862a82e635ce6bb4859881cde2e9e0afd60869b34b3ed949e3fe8236",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "docs/REQUIREMENTS_MAPPING.zh.md",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/docs/REQUIREMENTS_MAPPING.zh.md",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/docs/REQUIREMENTS_MAPPING.zh.md",
+      "http": 200,
+      "bytes": 13656,
+      "sha256": "85363671ba6279d571f203ba2f5861052057e439757243ca32b749823d4ef25e",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "docs/EVIDENCE_INDEX.zh.md",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/docs/EVIDENCE_INDEX.zh.md",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/docs/EVIDENCE_INDEX.zh.md",
+      "http": 200,
+      "bytes": 10476,
+      "sha256": "f2f5353f08cb3e7a44e596caeeab2da043bc5a92e6d72882a7899ea1aa987cbc",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "docs/PUBLICATION.zh.md",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/docs/PUBLICATION.zh.md",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/docs/PUBLICATION.zh.md",
+      "http": 200,
+      "bytes": 6270,
+      "sha256": "b13a89e25326e296c56d23eddb2c2b221520bb6f4ce0a31e6281f105fd68957b",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "scripts/build_report.py",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/scripts/build_report.py",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/scripts/build_report.py",
+      "http": 200,
+      "bytes": 8667,
+      "sha256": "a2c95b70387935ed6ba73b31ea5b1bdfa3f5774f3fb370236f7b110f17725983",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "scripts/build_figures.py",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/scripts/build_figures.py",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/scripts/build_figures.py",
+      "http": 200,
+      "bytes": 16443,
+      "sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8",
+      "matches_local": true
+    },
+    {
+      "kind": "source",
+      "path": "verification/REPORT_REFACTOR_QA.json",
+      "ref": "main",
+      "url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/verification/REPORT_REFACTOR_QA.json",
+      "final_url": "https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/verification/REPORT_REFACTOR_QA.json",
+      "http": 200,
+      "bytes": 5795,
+      "sha256": "0891c02877ad862c7a7dd6807c4c015b24ab88abdebdf4ccfccc7be353e4a169",
+      "matches_local": true
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/",
+      "http": 200,
+      "bytes": 271843
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/report/REPORT.zh.md",
+      "http": 200,
+      "bytes": 480446
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/docs/REQUIREMENTS_MAPPING.zh.md",
+      "http": 200,
+      "bytes": 265271
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/docs/EVIDENCE_INDEX.zh.md",
+      "http": 200,
+      "bytes": 254968
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/docs/REPRODUCTION.zh.md",
+      "http": 200,
+      "bytes": 273143
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/docs/PUBLICATION.zh.md",
+      "http": 200,
+      "bytes": 222085
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/scripts/encoder_topk.py#L153",
+      "http": 200,
+      "bytes": 347595
+    },
+    {
+      "url": "https://github.com/Sean-xzx/Smolvlm-Compression-Study/blob/main/scripts/ffn_skip.py#L16",
+      "http": 200,
+      "bytes": 225079
+    }
+  ],
+  "old_release_assets_unchanged": [
+    {
+      "id": 695354652,
+      "name": "REPORT.zh.pdf",
+      "size": 2126744,
+      "digest": "sha256:cebe7cc68085c24c2f0937da29301b13e7681f886411efc590a0a9a1228188bb",
+      "updated_at": "2026-10-31T12:39:05Z"
+    },
+    {
+      "id": 695354653,
+      "name": "new24-verification-20261031.tar.gz",
+      "size": 8484215,
+      "digest": "sha256:112ad84cf71c9866befbf9260ef31c7ae5e8f8562ccb5f0f7e215a23edfaa7ff",
+      "updated_at": "2026-10-31T12:39:05Z"
+    },
+    {
+      "id": 695354654,
+      "name": "Shen-Wu-Challenge-postday3-v3.tar.gz",
+      "size": 455733348,
+      "digest": "sha256:d95a7774653f0b35f5e7cb37619807c27b0d295e0494d29b90b4be22bcec0d4d",
+      "updated_at": "2026-10-31T12:39:16Z"
+    },
+    {
+      "id": 695354655,
+      "name": "Smolvlm-Compression-Study-Autonomous-20261031.zip",
+      "size": 10172906,
+      "digest": "sha256:e72d8f2763867186fb7902c06afd6162049520a9d99ba387320d974d1cce6c5e",
+      "updated_at": "2026-10-31T12:39:05Z"
+    },
+    {
+      "id": 695354656,
+      "name": "Smolvlm-Compression-Study-Autonomous-20261031.bundle",
+      "size": 10120877,
+      "digest": "sha256:cd2153acea8cd70e8150cea218f8581ea9ebea4700b26d91f28cb9b3e4d7309b",
+      "updated_at": "2026-10-31T12:39:05Z"
+    },
+    {
+      "id": 695354682,
+      "name": "REPORT.zh.docx",
+      "size": 2255342,
+      "digest": "sha256:d2ededbdb1fc41d5c7e9201627393a447c2d7bc79c8f0d17bb175ea220797f0b",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354686,
+      "name": "DEFENSE.zh.pptx",
+      "size": 2291265,
+      "digest": "sha256:1d365702c0ceded1b9530d20100387ba67ceb2947f05ad931294485ce1fb115a",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354689,
+      "name": "REPORT.zh.md",
+      "size": 32859,
+      "digest": "sha256:4a04edec5be5b87790f4fb96b4ee3e900a19bd855f9dc556ce9d14e2bf1a09a1",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354691,
+      "name": "DEFENSE.zh.pdf",
+      "size": 1477684,
+      "digest": "sha256:af7c2bff470f3595bac55c507ea93d196e342858b44cd71a0524a16dd0c597ad",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354706,
+      "name": "CODE_MAP.zh.pdf",
+      "size": 40821,
+      "digest": "sha256:3c5c45e12599e3e32187190ae8425316a17e6e1c70912b49243b394108b087c9",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354711,
+      "name": "TASK_STATUS.json",
+      "size": 3556,
+      "digest": "sha256:eadc7b7acdc8c98308efbbf0871c666398997983443e1ee8747d8bae3295ceb5",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354716,
+      "name": "AUTONOMOUS_HANDOFF.zh.md",
+      "size": 2437,
+      "digest": "sha256:85b8c47114c9deeb88442b09ea9bab1ac2b98e1e8eae050525fd4354078ec972",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354719,
+      "name": "ASSETS.json",
+      "size": 3883,
+      "digest": "sha256:7c4761f3bbebf1b27b52242759cbda191f6653feeeaff6a1a4b414bb46bc1fc1",
+      "updated_at": "2026-10-31T12:39:06Z"
+    },
+    {
+      "id": 695354723,
+      "name": "SHA256SUMS.txt",
+      "size": 1098,
+      "digest": "sha256:6c92402b2861db45edf393360efcf1adf1de64d5809d8565f6684655755da089",
+      "updated_at": "2026-10-31T12:39:07Z"
+    }
+  ],
+  "old_tag_unchanged": "c8c31283aa066f5a0dc9036e7b9d56e93bde1386",
+  "scope": "Actual full-byte GET of new MD/DOCX/PDF at immutable commit AND current main, six Markdown PNGs, seven navigation/generator/QA files, eight GitHub pages. Historical large release attachments not redownloaded; metadata compared.",
+  "not_verified": [
+    "Microsoft Word app rendering",
+    "Every upstream external link or every browser interaction",
+    "Cold installation or any new scientific inference"
+  ]
+}

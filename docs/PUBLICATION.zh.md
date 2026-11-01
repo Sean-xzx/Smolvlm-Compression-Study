@@ -22,7 +22,7 @@ Release 中的 `Smolvlm-Compression-Study-Autonomous-20261031.zip` / `.bundle` �
 
 ## 新版报告与旧快照
 
-新版报告 professor-report-v2 重组旧17节，新增同报告附录并改进六张图；3072质量、780主性能及v3迁移范围不变。当前下载应使用上表 main 的直接链接。旧Release中同名REPORT附件、旧代码ZIP/bundle和talk均保留原字节，不能用旧附件SHA验证新报告。`verification/REPORT_RENDER_QA.json`、`FINAL_ACCEPTANCE.json`与`REPOSITORY_NAVIGATION_QA.json`均为之前版本的历史回执；新版使用独立[报告核版记录](../verification/REPORT_REFACTOR_QA.json)，实际发布后下载记录另见交接。
+新版报告 professor-report-v2 重组旧17节，新增同报告附录并改进六张图；3072质量、780主性能及v3迁移范围不变。当前下载应使用上表 main 的直接链接。旧Release中同名REPORT附件、旧代码ZIP/bundle和talk均保留原字节，不能用旧附件SHA验证新报告。`verification/REPORT_RENDER_QA.json`、`FINAL_ACCEPTANCE.json`与`REPOSITORY_NAVIGATION_QA.json`均为之前版本的历史回执；新版使用独立[报告核版记录](../verification/REPORT_REFACTOR_QA.json)，实际匿名下载记录见[新版报告下载回执](../verification/REPORT_PUBLIC_DOWNLOAD_RECEIPT.json)。
 
 报告生成：编辑 `report/REPORT.zh.md` 母稿后运行 `scripts/build_report.py` 导出Word，再用documents的 `render_docx.py` 同源渲染PDF；生成器不会恢复旧17节。图表用独立文档依赖运行 `build_figures.py --artifact-root U`，只读原科学记录；不能改实验环境。
 
@@ -39,7 +39,7 @@ Release 中的 `Smolvlm-Compression-Study-Autonomous-20261031.zip` / `.bundle` �
 
 ## 已有发布验证与范围
 
-已有[源码回执](../verification/PUBLIC_REPOSITORY_RECEIPT.json)记录：本机匿名下载 `c8c3128` 源码ZIP，148文件匹配，报告PDF直接下载字节一致。[附件回执](../verification/PUBLIC_DOWNLOAD_RECEIPT.json)记录：GitHub托管Ubuntu无token/cookie/Authorization的完整下载，14项大小/SHA均通过。它们验证的是指定版本，**不是后来每次main改动的科学验收**。本轮[仓库导航检查](../verification/REPOSITORY_NAVIGATION_QA.json)只覆盖定向链接/结构、CLI/help与工装防误用，不重下载大附件、不追加GPU实验。
+已有[源码回执](../verification/PUBLIC_REPOSITORY_RECEIPT.json)记录：本机匿名下载 `c8c3128` 源码ZIP，148文件匹配，报告PDF直接下载字节一致。[附件回执](../verification/PUBLIC_DOWNLOAD_RECEIPT.json)记录：GitHub托管Ubuntu无token/cookie/Authorization的完整下载，14项大小/SHA均通过。它们验证的是指定版本，**不是后来每次main改动的科学验收**。此前[仓库导航检查](../verification/REPOSITORY_NAVIGATION_QA.json)只覆盖定向链接/结构、CLI/help与工装防误用，不重下载大附件、不追加GPU实验。
 
 发布经Edge正常账号建库、已认证连接器推送、[Actions上传](https://github.com/Sean-xzx/Smolvlm-Compression-Study/actions/runs/41201440762)和[匿名下载核验](https://github.com/Sean-xzx/Smolvlm-Compression-Study/actions/runs/41202446542)完成。此前CLI/浏览器上传限制已不阻塞现有公开成果，未索取聊天密码或改变账号权限。[临时传输关闭记录](../verification/TRANSFER_SHUTDOWN.json)保留。
 
@@ -48,3 +48,15 @@ Release 中的 `Smolvlm-Compression-Study-Autonomous-20261031.zip` / `.bundle` �
 ## 本地工装与接收者检查
 
 `scripts/validate_delivery.py` 是历史本机工装，依赖仓库外new24目录及旧ACCESS_BLOCKER；默认拒绝执行。需要研究历史逻辑时先看其 `--help`，显式历史模式也要求全新的仓库外输出文件，不会覆盖历史验收。一般读者使用 `python3 -B scripts/check_repository.py`，仅检查阅读材料/本地链接/配置；按需附 `--artifact-root` 或 `--archive`，缺少外部输入会明确显示未检查。它不证明科学正确性、GPU就绪、冷安装或推理成功。
+
+## professor report v2实际下载核对
+
+报告内容提交为 `e04f4f52224b6feb76c0fc85a483ee38d839dabf`。本机匿名完整GET该固定commit及main的三种报告，大小/SHA均与本地相同；六张PNG及当前导航/生成器/核版文件也已取回核对。此表只绑定新版报告，不替代旧Release下载回执。
+
+|当前文件|bytes|SHA256|
+|---|---:|---|
+|[REPORT.zh.md](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.md)|36998|`86417817e3b8907663022549e95971c6849305f470eeaedab37649588c712496`|
+|[REPORT.zh.docx](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.docx)|816419|`c67b905d76aba4331757079fffc10edc01168542996f789257f8741e5ed97673`|
+|[REPORT.zh.pdf](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.pdf)|1863382|`e778c99cefe1d518a3ef316c15a9dfd446a99492d39f55122683d202a7e45a33`|
+
+实际8个GitHub页面返回200且首页/报告含新版内容；PDF有内部跳转与HTTPS证据/源码链接。未在Microsoft Word应用中单独审阅，未重新下载旧大科学附件，未逐一检查所有上游外链。
