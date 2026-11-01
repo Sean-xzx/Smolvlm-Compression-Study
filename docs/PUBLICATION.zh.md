@@ -10,7 +10,7 @@
 |[正式 Release / tag](https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/tag/autonomous-20261031-release)|`autonomous-20261031-release` 固定指向 `c8c31283aa066f5a0dc9036e7b9d56e93bde1386`；14项上传附件，另有GitHub自动源码包|
 |[完整科学包](https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/Shen-Wu-Challenge-postday3-v3.tar.gz)|postday3-v3原包；455733348 bytes；运行与全部原始证据的必要父依赖|
 |[新增24验证包](https://github.com/Sean-xzx/Smolvlm-Compression-Study/releases/download/autonomous-20261031-release/new24-verification-20261031.tar.gz)|薄入口的小样本新预测，与原包/旧主实验分开保存|
-|[报告PDF](../report/REPORT.zh.pdf)、[Word](../report/REPORT.zh.docx)、[Markdown](../report/REPORT.zh.md)|报告和slides本次未重制；当前main的导航改进不意味着这些材料已经同步改写|
+|[新版PDF直接下载](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.pdf)、[Word直接下载](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.docx)、[Markdown](../report/REPORT.zh.md)|当前main为professor-report-v2：任务A/B/C正文与同报告附录，MD母稿→Word→PDF；旧Release报告不替换。slides仍为旧版|
 
 科学原包 SHA256：
 
@@ -19,6 +19,12 @@ d95a7774653f0b35f5e7cb37619807c27b0d295e0494d29b90b4be22bcec0d4d
 ```
 
 Release 中的 `Smolvlm-Compression-Study-Autonomous-20261031.zip` / `.bundle` 是发布时的代码快照，**不包含此后 main 的所有说明更新**。当前 main 与固定tag不能称为字节一致；此轮不移动tag、不替换或删除任何旧附件。按当前命令复现时，使用当前main薄入口配合原科学包，而不是把GitHub自动源码包当作完整实验包。
+
+## 新版报告与旧快照
+
+新版报告 professor-report-v2 重组旧17节，新增同报告附录并改进六张图；3072质量、780主性能及v3迁移范围不变。当前下载应使用上表 main 的直接链接。旧Release中同名REPORT附件、旧代码ZIP/bundle和talk均保留原字节，不能用旧附件SHA验证新报告。`verification/REPORT_RENDER_QA.json`、`FINAL_ACCEPTANCE.json`与`REPOSITORY_NAVIGATION_QA.json`均为之前版本的历史回执；新版使用独立[报告核版记录](../verification/REPORT_REFACTOR_QA.json)，实际发布后下载记录另见交接。
+
+报告生成：编辑 `report/REPORT.zh.md` 母稿后运行 `scripts/build_report.py` 导出Word，再用documents的 `render_docx.py` 同源渲染PDF；生成器不会恢复旧17节。图表用独立文档依赖运行 `build_figures.py --artifact-root U`，只读原科学记录；不能改实验环境。
 
 ## 历史快照如何读
 

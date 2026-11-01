@@ -1,6 +1,6 @@
 # 按正式题目检查证据
 
-从[首页检查表](../README.md)进入；E1–E8 编号与原报告/67项映射保持一致。这里只整理已保存的证据，不新增实验，也不把历史 `passed` 当作此次重跑。
+从[首页检查表](../README.md)进入；E1–E8 编号与新版报告/67项映射保持一致。这里只整理已保存的证据，不新增实验，也不把历史 `passed` 当作此次重跑。
 
 ## 材料在哪里
 
@@ -17,7 +17,7 @@
 |---|---|---|---|
 |六配置×两集各256，原3072正式质量|[quality.csv](../figures/quality.csv)、[协议](../configs/eval_protocol_context_v2.json)、[清单/meta](../data/manifests)|`results/context_v2_{配置}_20261030/{数据集}/samples/row_*.json` 及各 `run.json`；配置名为 baseline/early/middle/late/multi/skip|保存 prompt/IDs/raw/score/parse/T/G；CSV为旧记录只读汇总，不是新推理|
 |逐层 Na/Nf 与图块→Connector→LLM|[layer_tokens.csv](../figures/layer_tokens.csv)、[report_data.json](../figures/report_data.json)|`evidence/day2_afternoon/20261030_context_v2/b6/encoder_layer_lengths.csv`、上述逐题记录|Text5 的832视觉位置是代表案例；零回填保持原Connector/LLM位置，不代表所有图像相同|
-|参数与权重存储|[报告 §5](../report/REPORT.zh.md#5-projector与ffn-skip)、[原包回执](../evidence-selected/FINAL_RECEIPT.json)|模型配置/源绑定及各原始 run/runtime 记录，实际模型权重按固定HF revision取得|参数/权重文件不变；停用参数不等于删除；Git不分发模型权重|
+|参数与权重存储|[报告 §2.2/4.2](../report/REPORT.zh.md#3-任务b-projector)、[原包回执](../evidence-selected/FINAL_RECEIPT.json)|模型配置/源绑定及各原始 run/runtime 记录，实际模型权重按固定HF revision取得|参数/权重文件不变；停用参数不等于删除；Git不分发模型权重|
 
 ## E2
 
@@ -38,7 +38,7 @@
 - 配置：baseline、early、middle、late、multi；代表样本 TextVQA row5，13图块，输入 T=889。Multi 三次在当前序列重新打分并剪到512/256/128。
 - 直接查：[B4总报告](../evidence-selected/evidence/day2_afternoon/20261030_context_v2/b4/report.json)、[Multi明细](../evidence-selected/evidence/day2_afternoon/20261030_context_v2/b4/multi.json)、[矩阵表](../figures/matrix_evidence.csv)。各配置明细均在[同一精选目录](../evidence-selected/evidence/day2_afternoon/20261030_context_v2/b4)。检查当前FFN及下一层Attention的pre-hook输入、矩阵shape与CPU/CUDA时间；不是只看最终输出形状。
 - 完整原件：U的 `evidence/day2_afternoon/20261030_context_v2/b4/{baseline,early,middle,late,multi}.json` 和对应 `*_trace.json`；v3再次诊断见 `validation/postday3_v3/checks/profiler/multi/` 及[profiler摘要](../evidence-selected/validation/postday3_v3/checks/profiler/profiler.json)。
-- postnorm后回填保留原网格，Connector输入/输出和最终LLM视觉位置见[报告 §4–5](../report/REPORT.zh.md#4-逐层token与真实少算边界)与上述JSON。Projector四类是文字说明，未增加四种连接器实验。
+- postnorm后回填保留原网格，Connector输入/输出和最终LLM视觉位置见[报告 §2.5/3](../report/REPORT.zh.md#25-必答a4-从视觉输入到llm的传递)与上述JSON。Projector四类是文字说明，未增加四种连接器实验。
 - 边界：这些是固定诊断样本；嵌套CPU/device事件有重叠，不能当稳定延迟基准或相加计算加速比。
 
 ## E4
@@ -50,7 +50,7 @@
 |baseline/skip，TextVQA row1848，13图块，T=888；Skip8/16/24|[基线调用](../evidence-selected/evidence/day2_evening/cost_perf_v1/skip_trace/baseline/skip_trace_proof.json)、[Skip零调用/marker](../evidence-selected/evidence/day2_evening/cost_perf_v1/skip_trace/skip/skip_trace_proof.json)|`evidence/day2_evening/cost_perf_v1/skip_trace/{baseline,skip}/` 的proof与trace|prefill及decode目标norm2/MLP为0、gate/up/down marker缺席；Attention/inputnorm与cache保留；不是每个生成步均录trace|
 |v3迁移诊断，TextVQA row5|[profiler摘要](../evidence-selected/validation/postday3_v3/checks/profiler/profiler.json)|`validation/postday3_v3/checks/profiler/{baseline,skip}/`|独立诊断，不能混入旧性能毫秒表|
 
-停用参数统计和理论节省公式见[报告 §5/8](../report/REPORT.zh.md#8-计算公式与实际生成长度)、[components](../scripts/analyze_costs.py#L24)；参数仍存储，norm2与MLP参数分列。
+停用参数统计和理论节省公式见[报告 §4.2–4.3](../report/REPORT.zh.md#43-必答c2-prefill与decode成本)、[components](../scripts/analyze_costs.py#L24)；参数仍存储，norm2与MLP参数分列。
 
 ## E5
 
@@ -64,10 +64,10 @@
 
 |量与样本范围|Git 结果入口|完整 U 相对位置|统计边界|
 |---|---|---|---|
-|实际G/统一G=16，两数据集全部固定256题|[costs.csv](../figures/costs.csv)、[原摘要](../evidence-selected/evidence/day2_evening/cost_perf_v1/costs/summary.json)、[逐层Token](../figures/layer_tokens.csv)|`evidence/day2_evening/cost_perf_v1/costs/{costs_actual_G,costs_G16}.csv` 各3072行，`evidence/day2_afternoon/20261030_context_v2/b6/encoder_layer_lengths.csv`|主要矩阵/Conv、乘加2；Encoder/prefill/decode分项；打分/排序/回填等额外范围见报告§8，不称硬件FLOPs实测|
+|实际G/统一G=16，两数据集全部固定256题|[costs.csv](../figures/costs.csv)、[原摘要](../evidence-selected/evidence/day2_evening/cost_perf_v1/costs/summary.json)、[逐层Token](../figures/layer_tokens.csv)|`evidence/day2_evening/cost_perf_v1/costs/{costs_actual_G,costs_G16}.csv` 各3072行，`evidence/day2_afternoon/20261030_context_v2/b6/encoder_layer_lengths.csv`|主要矩阵/Conv、乘加2；Encoder/prefill/decode分项；打分/排序/回填等额外范围见报告附录B3，不称硬件FLOPs实测|
 |旧cost-perf-v1，六配置：natural/first每集4题，fixed16/stages每集1题，各2预热5正式|[performance.csv](../figures/performance.csv)、[每题median/IQR](../figures/performance_samples.csv)、[原摘要](../evidence-selected/evidence/day2_evening/cost_perf_v1/performance_summary.json)|`evidence/day2_evening/cost_perf_v1/{natural,first,fixed16,stages}/{配置}/measurements.jsonl`|780正式/312预热，锚点另计；同硬件BF16/batch1/eager，同步包围native generate；不含加载/Processor/H2D/评分/I/O，生产选择/回填保留|
 
-公式在[报告 §7–8](../report/REPORT.zh.md#7-encoder与全模型计算量)，计时边界在[报告 §9–10](../report/REPORT.zh.md#9-自然生成性能主基准)和[benchmark_efficiency.py](../scripts/benchmark_efficiency.py#L65)。自然生成G变化不能替代fixed16比较；独立模块median不可相加减推因果，少FLOPs不保证同比wall/存储/峰值收益。
+公式在[报告附录B](../report/REPORT.zh.md#附录b-flops推导与分项)，计时边界在[报告 §5.3](../report/REPORT.zh.md#53-固定长度与自然生成延迟)和[benchmark_efficiency.py](../scripts/benchmark_efficiency.py#L65)。自然生成G变化不能替代fixed16比较；独立模块median不可相加减推因果，少FLOPs不保证同比wall/存储/峰值收益。
 
 ## E7
 

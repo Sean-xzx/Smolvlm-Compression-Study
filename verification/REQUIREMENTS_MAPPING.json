@@ -2,7 +2,7 @@
   {
     "id": "D1",
     "requirement": "指定SmolVLM-256M-Instruct",
-    "report_section": "2",
+    "report_section": "1.1",
     "code_file": "scripts/run_original.py",
     "code_function": "load_original_model",
     "line": 166,
@@ -13,7 +13,7 @@
   {
     "id": "D2",
     "requirement": "指定TextVQA与ScienceQA-IMG",
-    "report_section": "2",
+    "report_section": "1.1",
     "code_file": "scripts/evaluate_context.py",
     "code_function": "manifests_for",
     "line": 24,
@@ -24,7 +24,7 @@
   {
     "id": "D3",
     "requirement": "每集固定256，所有配置同题",
-    "report_section": "2/6",
+    "report_section": "1.1/5.1",
     "code_file": "scripts/evaluate_context.py",
     "code_function": "manifests_for",
     "line": 24,
@@ -35,7 +35,7 @@
   {
     "id": "D4",
     "requirement": "保存数据版本、划分、种子与样本ID",
-    "report_section": "2",
+    "report_section": "1.1",
     "code_file": "scripts/inspect_data.py",
     "code_function": "prepare_manifests",
     "line": 71,
@@ -46,7 +46,7 @@
   {
     "id": "D5",
     "requirement": "固定图像预处理",
-    "report_section": "2",
+    "report_section": "1.1",
     "code_file": "scripts/context_runtime.py",
     "code_function": "load_context_model",
     "line": 63,
@@ -57,7 +57,7 @@
   {
     "id": "D6",
     "requirement": "固定提示词与生成参数",
-    "report_section": "2",
+    "report_section": "1.1",
     "code_file": "scripts/context_runtime.py",
     "code_function": "build_question",
     "line": 47,
@@ -68,7 +68,7 @@
   {
     "id": "D7",
     "requirement": "Text官方评分口径及所用实现",
-    "report_section": "2/6",
+    "report_section": "1.2/5.1",
     "code_file": "scripts/check_scores.py",
     "code_function": "textvqa_score",
     "line": 12,
@@ -79,7 +79,7 @@
   {
     "id": "D8",
     "requirement": "Science官方评分口径及所用实现",
-    "report_section": "2/6",
+    "report_section": "1.2/5.1",
     "code_file": "scripts/check_scores.py",
     "code_function": "extract_choice",
     "line": 18,
@@ -90,7 +90,7 @@
   {
     "id": "A1",
     "requirement": "无需训练",
-    "report_section": "1/3",
+    "report_section": "2.1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "EncoderTopKPatch",
     "line": 75,
@@ -101,7 +101,7 @@
   {
     "id": "A2",
     "requirement": "支持剪枝层列表和各阶段比例",
-    "report_section": "3",
+    "report_section": "2.1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "__init__",
     "line": 76,
@@ -112,7 +112,7 @@
   {
     "id": "A3",
     "requirement": "Attention残差后、当前FFN前插入",
-    "report_section": "3 图1",
+    "report_section": "2.1 图1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "prune_layer",
     "line": 153,
@@ -123,7 +123,7 @@
   {
     "id": "A4",
     "requirement": "按head/query平均给key打分",
-    "report_section": "3",
+    "report_section": "2.1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "attention_scores",
     "line": 19,
@@ -134,7 +134,7 @@
   {
     "id": "A5",
     "requirement": "选最高K并恢复原序",
-    "report_section": "3",
+    "report_section": "2.1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "select_tokens",
     "line": 34,
@@ -145,7 +145,7 @@
   {
     "id": "A6",
     "requirement": "当前FFN及后层真正变短",
-    "report_section": "4/12 图2",
+    "report_section": "2.2/2.4 附录A/C",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "prune_layer",
     "line": 153,
@@ -156,7 +156,7 @@
   {
     "id": "A7",
     "requirement": "Early/Middle/Late分别独立50%",
-    "report_section": "3 配置表",
+    "report_section": "2.1 配置表",
     "code_file": "scripts/experiment_runtime.py",
     "code_function": "patch_for",
     "line": 63,
@@ -167,7 +167,7 @@
   {
     "id": "A8",
     "requirement": "Multi同一前向依次每阶段保留当前50%",
-    "report_section": "3/4/12",
+    "report_section": "2.1/2.4 附录C",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "prune_layer",
     "line": 153,
@@ -178,7 +178,7 @@
   {
     "id": "A9",
     "requirement": "说明层号和K取整",
-    "report_section": "3",
+    "report_section": "2.1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "select_tokens",
     "line": 34,
@@ -189,7 +189,7 @@
   {
     "id": "A10",
     "requirement": "特殊token/图块/后续适配",
-    "report_section": "3/5",
+    "report_section": "2.1/2.5",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "restore_grid",
     "line": 62,
@@ -200,7 +200,7 @@
   {
     "id": "A11",
     "requirement": "参数量、权重文件大小、逐层token及指标区别",
-    "report_section": "4/5",
+    "report_section": "2.2 附录A",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -211,7 +211,7 @@
   {
     "id": "A12",
     "requirement": "Encoder和全模型FLOPs公式与实际长度",
-    "report_section": "7/8 图4",
+    "report_section": "2.3/5.2 附录B",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -222,7 +222,7 @@
   {
     "id": "A13",
     "requirement": "打分、选择等额外开销",
-    "report_section": "8/16",
+    "report_section": "2.3 附录B3",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "select_tokens",
     "line": 34,
@@ -233,7 +233,7 @@
   {
     "id": "A14",
     "requirement": "pre-hook证明被丢弃token未进入当前FFN和后层",
-    "report_section": "12",
+    "report_section": "2.4 附录C",
     "code_file": "scripts/profile_context.py",
     "code_function": "main",
     "line": 21,
@@ -244,7 +244,7 @@
   {
     "id": "A15",
     "requirement": "profiler矩阵shape与耗时；Multi每阶段覆盖",
-    "report_section": "12",
+    "report_section": "2.4 附录C1/C2",
     "code_file": "scripts/release_profile.py",
     "code_function": "encoder_trace",
     "line": 24,
@@ -255,7 +255,7 @@
   {
     "id": "A16",
     "requirement": "从视觉到Projector到LLM的实际传递",
-    "report_section": "5 图1",
+    "report_section": "2.5 图1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -266,7 +266,7 @@
   {
     "id": "B1",
     "requirement": "Linear特征映射与token数量",
-    "report_section": "5",
+    "report_section": "3",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -277,7 +277,7 @@
   {
     "id": "B2",
     "requirement": "MLP映射与token数量",
-    "report_section": "5",
+    "report_section": "3",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -288,7 +288,7 @@
   {
     "id": "B3",
     "requirement": "Q-Former映射与token数量",
-    "report_section": "5",
+    "report_section": "3",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -299,7 +299,7 @@
   {
     "id": "B4",
     "requirement": "Perceiver Resampler映射与token数量",
-    "report_section": "5",
+    "report_section": "3",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -310,7 +310,7 @@
   {
     "id": "B5",
     "requirement": "结合代码解释指定模型真实模块",
-    "report_section": "5",
+    "report_section": "3",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -321,7 +321,7 @@
   {
     "id": "B6",
     "requirement": "如何处理剪枝后视觉特征",
-    "report_section": "5",
+    "report_section": "3/2.5",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "restore_grid",
     "line": 62,
@@ -332,7 +332,7 @@
   {
     "id": "C1",
     "requirement": "自选三层同时跳FFN、无需训练",
-    "report_section": "5",
+    "report_section": "4.1",
     "code_file": "scripts/ffn_skip.py",
     "code_function": "skip_forward",
     "line": 16,
@@ -343,7 +343,7 @@
   {
     "id": "C2",
     "requirement": "支持Skip列表配置",
-    "report_section": "5",
+    "report_section": "4.1",
     "code_file": "scripts/ffn_skip.py",
     "code_function": "__init__",
     "line": 33,
@@ -354,7 +354,7 @@
   {
     "id": "C3",
     "requirement": "残差、归一化处理正确",
-    "report_section": "5",
+    "report_section": "4.1",
     "code_file": "scripts/ffn_skip.py",
     "code_function": "skip_forward",
     "line": 16,
@@ -365,7 +365,7 @@
   {
     "id": "C4",
     "requirement": "解释选层理由",
-    "report_section": "5",
+    "report_section": "4.1",
     "code_file": "scripts/ffn_skip.py",
     "code_function": "skip_forward",
     "line": 16,
@@ -376,7 +376,7 @@
   {
     "id": "C5",
     "requirement": "实际存储参数与被跳FFN参数、统计方法",
-    "report_section": "5",
+    "report_section": "4.2",
     "code_file": "scripts/run_original.py",
     "code_function": "load_original_model",
     "line": 166,
@@ -387,7 +387,7 @@
   {
     "id": "C6",
     "requirement": "FLOPs公式与prefill/decode/T/G范围",
-    "report_section": "8",
+    "report_section": "4.3 附录B",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -398,7 +398,7 @@
   {
     "id": "C7",
     "requirement": "调用记录与profiler证明真正未执行",
-    "report_section": "11",
+    "report_section": "4.4",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "skip_trace",
     "line": 163,
@@ -409,7 +409,7 @@
   {
     "id": "V1",
     "requirement": "基线+四Encoder+Skip，12组",
-    "report_section": "6",
+    "report_section": "5.1",
     "code_file": "scripts/experiment_runtime.py",
     "code_function": "patch_for",
     "line": 63,
@@ -420,7 +420,7 @@
   {
     "id": "V2",
     "requirement": "单点100%、Multi全100%，关闭额外打分",
-    "report_section": "11",
+    "report_section": "6",
     "code_file": "scripts/release_checks.py",
     "code_function": "correctness",
     "line": 50,
@@ -431,7 +431,7 @@
   {
     "id": "V3",
     "requirement": "空Skip与原模型输出一致",
-    "report_section": "11",
+    "report_section": "6",
     "code_file": "scripts/verify_skip.py",
     "code_function": "empty_stage",
     "line": 94,
@@ -442,7 +442,7 @@
   {
     "id": "V4",
     "requirement": "说明比较对象、浮点误差",
-    "report_section": "11",
+    "report_section": "6",
     "code_file": "scripts/verify_encoder_topk.py",
     "code_function": "equal",
     "line": 23,
@@ -453,7 +453,7 @@
   {
     "id": "V5",
     "requirement": "小样本hook/profiler标配置/样本/模块",
-    "report_section": "12",
+    "report_section": "2.4/4.4 附录C",
     "code_file": "scripts/profile_context.py",
     "code_function": "main",
     "line": 21,
@@ -464,7 +464,7 @@
   {
     "id": "V6",
     "requirement": "效率同硬件/精度/batch/生成设置",
-    "report_section": "2/9/10",
+    "report_section": "1.1/5.3",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "generation_block",
     "line": 80,
@@ -475,7 +475,7 @@
   {
     "id": "V7",
     "requirement": "计时范围/预热/同步/n/重复/G",
-    "report_section": "9/10",
+    "report_section": "5.3 附录D2/D3",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "timed",
     "line": 65,
@@ -486,7 +486,7 @@
   {
     "id": "V8",
     "requirement": "说明Attention获取及后端影响",
-    "report_section": "3/16",
+    "report_section": "1.1/2.1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "prune_layer",
     "line": 153,
@@ -497,7 +497,7 @@
   {
     "id": "V9",
     "requirement": "FLOPs约定与范围、Encoder/prefill/decode分开",
-    "report_section": "7/8",
+    "report_section": "2.3/4.3 附录B",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -508,7 +508,7 @@
   {
     "id": "V10",
     "requirement": "理论量与实测不一致的证据分析",
-    "report_section": "10/16",
+    "report_section": "5.3/7.1",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "stage_block",
     "line": 137,
@@ -519,7 +519,7 @@
   {
     "id": "V11",
     "requirement": "结果如实，不强求精度/速度提升",
-    "report_section": "6/16",
+    "report_section": "5.1/7.1",
     "code_file": "scripts/check_scores.py",
     "code_function": "score_response",
     "line": 59,
@@ -530,7 +530,7 @@
   {
     "id": "S1",
     "requirement": "代码仓库或压缩包",
-    "report_section": "14/15",
+    "report_section": "7.3/7.4",
     "code_file": "scripts/evaluate_release.py",
     "code_function": "main",
     "line": 18,
@@ -541,7 +541,7 @@
   {
     "id": "S2",
     "requirement": "完整PyTorch实现、六配置、依赖、模型版本",
-    "report_section": "2/3/5",
+    "report_section": "1/2.1/4.1",
     "code_file": "scripts/experiment_runtime.py",
     "code_function": "patch_for",
     "line": 63,
@@ -552,7 +552,7 @@
   {
     "id": "S3",
     "requirement": "数据准备命令与固定样本清单",
-    "report_section": "14",
+    "report_section": "7.3",
     "code_file": "scripts/inspect_data.py",
     "code_function": "prepare_manifests",
     "line": 71,
@@ -563,7 +563,7 @@
   {
     "id": "S4",
     "requirement": "评估运行命令",
-    "report_section": "14",
+    "report_section": "7.3",
     "code_file": "scripts/evaluate_release.py",
     "code_function": "main",
     "line": 18,
@@ -574,7 +574,7 @@
   {
     "id": "S5",
     "requirement": "正确性和性能分析运行命令",
-    "report_section": "14/15",
+    "report_section": "7.3 附录D3",
     "code_file": "scripts/release_checks.py",
     "code_function": "main",
     "line": 143,
@@ -585,18 +585,18 @@
   {
     "id": "S6",
     "requirement": "报告结果表、必答、实现、限制",
-    "report_section": "1至17",
+    "report_section": "0至7 附录A至E",
     "code_file": "scripts/build_report.py",
-    "code_function": "page",
-    "line": 22,
+    "code_function": "render_document",
+    "line": 23,
     "evidence": "E1至E8",
-    "verified_scope": "完整Markdown/PDF/Word同源；渲染见验收记录",
+    "verified_scope": "Markdown为母稿、Word/PDF同源；新渲染见REPORT_REFACTOR_QA，旧回执保持历史",
     "status": "covered_with_scope"
   },
   {
     "id": "S7",
     "requirement": "hook/调用/profiler执行证据",
-    "report_section": "11/12",
+    "report_section": "2.4/4.4/6 附录C",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "skip_trace",
     "line": 163,
@@ -607,7 +607,7 @@
   {
     "id": "S8",
     "requirement": "表中配置/层号/比例/K/最终比例/Skip层",
-    "report_section": "3 配置表",
+    "report_section": "2.1 配置表",
     "code_file": "scripts/experiment_runtime.py",
     "code_function": "config_path",
     "line": 20,
@@ -618,7 +618,7 @@
   {
     "id": "S9",
     "requirement": "两数据集分数及相对基线分差",
-    "report_section": "6 图3",
+    "report_section": "5.1 图3",
     "code_file": "scripts/build_figures.py",
     "code_function": "read",
     "line": 21,
@@ -629,7 +629,7 @@
   {
     "id": "S10",
     "requirement": "总参数/跳过FFN参数/权重大小",
-    "report_section": "5",
+    "report_section": "2.2/4.2",
     "code_file": "scripts/run_original.py",
     "code_function": "load_original_model",
     "line": 166,
@@ -640,7 +640,7 @@
   {
     "id": "S11",
     "requirement": "逐层Encoder/Projector入出/LLM视觉token",
-    "report_section": "4/5 图1/2",
+    "report_section": "2.2/2.5 附录A",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "connect",
     "line": 180,
@@ -651,7 +651,7 @@
   {
     "id": "S12",
     "requirement": "Encoder/全模型FLOPs、延迟、相对变化与实际G",
-    "report_section": "7至10",
+    "report_section": "5.2/5.3 附录B/D",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -662,18 +662,18 @@
   {
     "id": "S13",
     "requirement": "随样本变化时给代表明细和子集汇总、说明统计",
-    "report_section": "13",
+    "report_section": "5.1 附录D",
     "code_file": "scripts/build_figures.py",
     "code_function": "csvread",
     "line": 24,
     "evidence": "E1/E6",
-    "verified_scope": "Text5案例、全256成本范围、小n性能统计",
+    "verified_scope": "Text5案例、全256实际G/成本范围、小n性能统计",
     "status": "covered_with_scope"
   },
   {
     "id": "T1",
     "requirement": "说明外部代码来源",
-    "report_section": "17",
+    "report_section": "7.2/7.4",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "EncoderTopKPatch",
     "line": 75,
@@ -684,7 +684,7 @@
   {
     "id": "T2",
     "requirement": "说明AI用途与自行核验关键内容",
-    "report_section": "17",
+    "report_section": "7.2",
     "code_file": "scripts/evaluate_release.py",
     "code_function": "main",
     "line": 18,
@@ -695,7 +695,7 @@
   {
     "id": "T3",
     "requirement": "可说明错误修正，无需全聊天",
-    "report_section": "17",
+    "report_section": "7.2",
     "code_file": "scripts/context_runtime.py",
     "code_function": "validate_protocol",
     "line": 25,
@@ -706,7 +706,7 @@
   {
     "id": "T4",
     "requirement": "理解并对实现/数据/结论负责",
-    "report_section": "17",
+    "report_section": "7.2",
     "code_file": "scripts/evaluate_release.py",
     "code_function": "main",
     "line": 18,
@@ -717,7 +717,7 @@
   {
     "id": "T5",
     "requirement": "30—45分钟技术交流：代码、结果、小范围现场修改",
-    "report_section": "17",
+    "report_section": "7.2",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "select_tokens",
     "line": 34,
@@ -728,7 +728,7 @@
   {
     "id": "T6",
     "requirement": "指定现场环节不用AI，可查代码文档",
-    "report_section": "17",
+    "report_section": "7.2",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "select_tokens",
     "line": 34,

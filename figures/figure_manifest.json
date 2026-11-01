@@ -16,8 +16,12 @@
     "scientific_version": "context-v2 3072",
     "input_manifest": "source_inputs.json",
     "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "output_sha256": {
+      "03_quality.svg": "5b8a3ac5712a4c26a034a102c80963739988f1b61b3c83b8e0cb3f68fb2f47e0",
+      "03_quality.png": "ec14f3b86aff798a0f80b6b86cbea01743aabe1966be1b25b48879b506ec8d95"
+    },
     "script": "scripts/build_figures.py",
-    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+    "script_sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8"
   },
   {
     "id": "02_tokens",
@@ -36,8 +40,12 @@
     "scientific_version": "context-v2 b4/b6",
     "input_manifest": "source_inputs.json",
     "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "output_sha256": {
+      "02_tokens.svg": "d18d407fabefc4f1ea10821b13e4c241e9eeea8dc5ca8875af0b31ae415ffe7c",
+      "02_tokens.png": "a4495c395e563163c61531419a611d6a3c39d22df5f6061a048bbe1ac5efccdc"
+    },
     "script": "scripts/build_figures.py",
-    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+    "script_sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8"
   },
   {
     "id": "04_cost",
@@ -56,8 +64,12 @@
     "scientific_version": "cost-perf-v1",
     "input_manifest": "source_inputs.json",
     "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "output_sha256": {
+      "04_cost.svg": "9405935320a3c8cc29854c67102d9374e7f2c76501ddd87bea1665eb07129508",
+      "04_cost.png": "efad96e9c3c9fade31fbe02ceb264913b0ac6fc52086fabf20258ea473afbc45"
+    },
     "script": "scripts/build_figures.py",
-    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+    "script_sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8"
   },
   {
     "id": "05_fixed16",
@@ -77,8 +89,12 @@
     "scientific_version": "cost-perf-v1",
     "input_manifest": "source_inputs.json",
     "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "output_sha256": {
+      "05_fixed16.svg": "7091d4f42a64740f874150821f44bb1f342674b4db5f7203ca0a2becea148734",
+      "05_fixed16.png": "726f8ae8234d5bf2acbf6f5bfd4529d5ae0fea24ec13cd2bb893a43311806ff7"
+    },
     "script": "scripts/build_figures.py",
-    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+    "script_sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8"
   },
   {
     "id": "06_natural",
@@ -93,13 +109,17 @@
       "sample"
     ],
     "n": 4,
-    "statistics": "arithmetic mean of 4 per-sample five-repeat medians; 2 warmups",
+    "statistics": "four separate sample medians with asymmetric Q1/Q3 of 5 repeats; black diamond = arithmetic mean of medians; no confidence interval",
     "units": "milliseconds",
     "scientific_version": "cost-perf-v1",
     "input_manifest": "source_inputs.json",
     "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "output_sha256": {
+      "06_natural.svg": "95c8ea93dee90c44505d8bb2358a4c76baf1141d352ffe5167879d4171ba2114",
+      "06_natural.png": "c5c961dc08aa689d3d3fadabbd7f5c1f6dcc0510611b4afd40d313a6526f2a74"
+    },
     "script": "scripts/build_figures.py",
-    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+    "script_sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8"
   },
   {
     "id": "01_method",
@@ -113,13 +133,17 @@
       "Text5 input shapes"
     ],
     "n": 1,
-    "statistics": "code schematic and observed shapes; no causal attribution",
+    "statistics": "code schematic and observed shapes; zero-grid adapter only on pruned path; no causal attribution",
     "units": "shape / tokens",
     "scientific_version": "context-v2",
     "input_manifest": "source_inputs.json",
     "input_manifest_sha256": "fad5f46eee6a4e1bfd01df11facc9ad57d3e932c166f6731a44be942b3b40c27",
+    "output_sha256": {
+      "01_method.svg": "ab92215aec39abd98efc1a224a5e131d45a241eb838646daf5c78fd4a9430a20",
+      "01_method.png": "cb5abdf32af2cc65f4504c5394128543041d4a1ceddf00346160f9fa89562fd0"
+    },
     "script": "scripts/build_figures.py",
-    "script_sha256": "4d047f0fd528edd2667fd71430b6e8415a146027dd678af71d87a27aa4fb35a2"
+    "script_sha256": "3f3ebb366f8699a6fc34b9a0fd47fdd452d0594ee07056f3507c58e6cf70aca8"
   },
   {
     "id": "07_case_text5",

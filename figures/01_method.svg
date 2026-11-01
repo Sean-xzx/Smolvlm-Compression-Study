@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="711.9pt" height="347.04pt" viewBox="0 0 711.9 347.04" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="388.26pt" height="313.776pt" viewBox="0 0 388.26 313.776" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-31T16:16:13.682432</dc:date>
+    <dc:date>2026-10-31T22:02:52.360253</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,246 +21,193 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 347.04 
-L 711.9 347.04 
-L 711.9 -0 
-L 0 -0 
+   <path d="M 0 313.776 
+L 388.26 313.776 
+L 388.26 0 
+L 0 0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 12.78 116.9712 
-L 146.7 116.9712 
-Q 151.164 116.9712 151.164 112.536 
-L 151.164 57.096 
-Q 151.164 52.6608 146.7 52.6608 
-L 12.78 52.6608 
-Q 8.316 52.6608 8.316 57.096 
-L 8.316 112.536 
-Q 8.316 116.9712 12.78 116.9712 
+    <path d="M 12.78 90.141875 
+L 177.39 90.141875 
+Q 179.622 90.141875 179.622 88.178754 
+L 179.622 48.916328 
+Q 179.622 46.953207 177.39 46.953207 
+L 12.78 46.953207 
+Q 10.548 46.953207 10.548 48.916328 
+L 10.548 88.178754 
+Q 10.548 90.141875 12.78 90.141875 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #eaf0f6; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #edf0f3; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 174.6 116.9712 
-L 305.73 116.9712 
-Q 310.194 116.9712 310.194 112.536 
-L 310.194 57.096 
-Q 310.194 52.6608 305.73 52.6608 
-L 174.6 52.6608 
-Q 170.136 52.6608 170.136 57.096 
-L 170.136 112.536 
-Q 170.136 116.9712 174.6 116.9712 
+    <path d="M 210.87 90.141875 
+L 375.48 90.141875 
+Q 377.712 90.141875 377.712 88.178754 
+L 377.712 48.916328 
+Q 377.712 46.953207 375.48 46.953207 
+L 210.87 46.953207 
+Q 208.638 46.953207 208.638 48.916328 
+L 208.638 88.178754 
+Q 208.638 90.141875 210.87 90.141875 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #e5edf7; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #e5edf7; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 333.63 116.9712 
-L 470.34 116.9712 
-Q 474.804 116.9712 474.804 112.536 
-L 474.804 57.096 
-Q 474.804 52.6608 470.34 52.6608 
-L 333.63 52.6608 
-Q 329.166 52.6608 329.166 57.096 
-L 329.166 112.536 
-Q 329.166 116.9712 333.63 116.9712 
+    <path d="M 210.87 149.035515 
+L 375.48 149.035515 
+Q 377.712 149.035515 377.712 147.072393 
+L 377.712 110.263869 
+Q 377.712 108.300748 375.48 108.300748 
+L 210.87 108.300748 
+Q 208.638 108.300748 208.638 110.263869 
+L 208.638 147.072393 
+Q 208.638 149.035515 210.87 149.035515 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #e5edf7; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #e5edf7; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 498.24 116.9712 
-L 687.96 116.9712 
-Q 692.424 116.9712 692.424 112.536 
-L 692.424 57.096 
-Q 692.424 52.6608 687.96 52.6608 
-L 498.24 52.6608 
-Q 493.776 52.6608 493.776 57.096 
-L 493.776 112.536 
-Q 493.776 116.9712 498.24 116.9712 
+    <path d="M 12.78 149.035515 
+L 177.39 149.035515 
+Q 179.622 149.035515 179.622 147.072393 
+L 179.622 110.263869 
+Q 179.622 108.300748 177.39 108.300748 
+L 12.78 108.300748 
+Q 10.548 108.300748 10.548 110.263869 
+L 10.548 147.072393 
+Q 10.548 149.035515 12.78 149.035515 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #eaf0f6; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #fae9e9; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 12.78 222.3072 
-L 146.7 222.3072 
-Q 151.164 222.3072 151.164 217.872 
-L 151.164 162.432 
-Q 151.164 157.9968 146.7 157.9968 
-L 12.78 157.9968 
-Q 8.316 157.9968 8.316 162.432 
-L 8.316 217.872 
-Q 8.316 222.3072 12.78 222.3072 
+    <path d="M 12.78 212.836957 
+L 177.39 212.836957 
+Q 179.622 212.836957 179.622 210.873836 
+L 179.622 169.157508 
+Q 179.622 167.194387 177.39 167.194387 
+L 12.78 167.194387 
+Q 10.548 167.194387 10.548 169.157508 
+L 10.548 210.873836 
+Q 10.548 212.836957 12.78 212.836957 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #eaf0f6; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #edf0f3; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
-    <path d="M 174.6 222.3072 
-L 305.73 222.3072 
-Q 310.194 222.3072 310.194 217.872 
-L 310.194 162.432 
-Q 310.194 157.9968 305.73 157.9968 
-L 174.6 157.9968 
-Q 170.136 157.9968 170.136 162.432 
-L 170.136 217.872 
-Q 170.136 222.3072 174.6 222.3072 
+    <path d="M 210.87 212.836957 
+L 375.48 212.836957 
+Q 377.712 212.836957 377.712 210.873836 
+L 377.712 169.157508 
+Q 377.712 167.194387 375.48 167.194387 
+L 210.87 167.194387 
+Q 208.638 167.194387 208.638 169.157508 
+L 208.638 210.873836 
+Q 208.638 212.836957 210.87 212.836957 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #fae9e9; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #edf0f3; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 333.63 222.3072 
-L 470.34 222.3072 
-Q 474.804 222.3072 474.804 217.872 
-L 474.804 162.432 
-Q 474.804 157.9968 470.34 157.9968 
-L 333.63 157.9968 
-Q 329.166 157.9968 329.166 162.432 
-L 329.166 217.872 
-Q 329.166 222.3072 333.63 222.3072 
+    <path d="M 12.78 301.177416 
+L 375.48 301.177416 
+Q 377.712 301.177416 377.712 299.214295 
+L 377.712 250.136262 
+Q 377.712 248.173141 375.48 248.173141 
+L 12.78 248.173141 
+Q 10.548 248.173141 10.548 250.136262 
+L 10.548 299.214295 
+Q 10.548 301.177416 12.78 301.177416 
 z
-" clip-path="url(#p03721d8fdc)" style="fill: #eaf0f6; stroke: #8b99a6; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_9">
-    <path d="M 498.24 222.3072 
-L 687.96 222.3072 
-Q 692.424 222.3072 692.424 217.872 
-L 692.424 162.432 
-Q 692.424 157.9968 687.96 157.9968 
-L 498.24 157.9968 
-Q 493.776 157.9968 493.776 162.432 
-L 493.776 217.872 
-Q 493.776 222.3072 498.24 222.3072 
-z
-" clip-path="url(#p03721d8fdc)" style="fill: #eaf0f6; stroke: #8b99a6; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_10">
-    <path d="M 12.78 327.6432 
-L 305.73 327.6432 
-Q 310.194 327.6432 310.194 323.208 
-L 310.194 267.768 
-Q 310.194 263.3328 305.73 263.3328 
-L 12.78 263.3328 
-Q 8.316 263.3328 8.316 267.768 
-L 8.316 323.208 
-Q 8.316 327.6432 12.78 327.6432 
-z
-" clip-path="url(#p03721d8fdc)" style="fill: #eaf0f6; stroke: #8b99a6; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_11">
-    <path d="M 333.63 327.6432 
-L 687.96 327.6432 
-Q 692.424 327.6432 692.424 323.208 
-L 692.424 267.768 
-Q 692.424 263.3328 687.96 263.3328 
-L 333.63 263.3328 
-Q 329.166 263.3328 329.166 267.768 
-L 329.166 323.208 
-Q 329.166 327.6432 333.63 327.6432 
-z
-" clip-path="url(#p03721d8fdc)" style="fill: #e4f3ef; stroke: #8b99a6; stroke-linejoin: miter"/>
+" clip-path="url(#pc470b06248)" style="fill: #e4f3ef; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 18px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="9.99" y="23.832" transform="rotate(-0 9.99 23.832)">Encoder Top-K 与原 Connector 的真实传播</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="9.99" y="17.997167" transform="rotate(-0 9.99 17.997167)">Top-K 缩短当前 FFN 与后层 Encoder</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(15.073125 82.920375)">x + Attention(norm1(x))</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(17.939063 95.831625)">当前层 Attention 用 Na</text>
+    <text style="font-size: 9px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="12.78" y="36.64682" transform="rotate(-0 12.78 36.64682)">baseline：每块1024格 → 原postnorm → 原Connector → LLM</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(191.496563 82.03725)">head / query 均值</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(192.315 95.406)">Top-K 并恢复原序</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(33.365469 66.967853)">a = x + Attention(norm1(x))</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(43.584219 77.727228)">当前 Attention 使用 Na</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(376.430625 82.596)">gather(a)</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(362.701875 96.156)">当前 FFN 用 Nf</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(214.277344 66.127228)">head 与有效 query 平均给 key 打分</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(220.884375 77.267853)">Top-K 选集恢复原序并 gather(a)</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 182.179182 68.547541 
+Q 194.128906 68.547541 204.73699 68.547541 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 200.73699 66.547541 
+L 204.73699 68.547541 
+L 200.73699 70.547541 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
    </g>
    <g id="text_5">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(517.975313 82.596)">gather(a) + MLP(norm2(...))</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(528.359063 96.156)">后层 Attention 用短序列</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(213.445312 126.818131)">gather(a) + MLP(norm2(gather(a)))</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(225.439062 138.118131)">当前 FFN 使用 Nf，后层也变短</text>
    </g>
-   <g id="patch_12">
-    <path d="M 148.699182 84.816 
-Q 160.648906 84.816 170.92158 84.816 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-    <path d="M 166.12158 82.416 
-L 170.92158 84.816 
-L 166.12158 87.216 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-   </g>
-   <g id="patch_13">
-    <path d="M 307.729182 84.816 
-Q 319.678906 84.816 329.95158 84.816 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-    <path d="M 325.15158 82.416 
-L 329.95158 84.816 
-L 325.15158 87.216 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-   </g>
-   <g id="patch_14">
-    <path d="M 472.339182 84.816 
-Q 484.288906 84.816 494.56158 84.816 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-    <path d="M 489.76158 82.416 
-L 494.56158 84.816 
-L 489.76158 87.216 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
+   <g id="patch_10">
+    <path d="M 291.78 92.633041 
+Q 291.78 99.222925 291.78 104.471167 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 293.78 100.471167 
+L 291.78 104.471167 
+L 289.78 100.471167 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
    </g>
    <g id="text_6">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(32.89125 188.712)">Text5 独立13图块</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(34.396875 200.712)">每块 1024 × 768</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(51.238125 127.468131)">Multi L3 → L6 → L9</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(26.167813 137.468131)">每块 1024 → 512 → 256 → 128</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 206.080818 129.895082 
+Q 194.131094 129.895082 183.52301 129.895082 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 187.52301 131.895082 
+L 183.52301 129.895082 
+L 187.52301 127.895082 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
    </g>
    <g id="text_7">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(194.844375 188.00325)">Multi L3 / L6 / L9</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(200.113125 200.712)">512 / 256 / 128</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(29.950625 188.27036)">剪枝路径 postnorm 后零回填</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(31.17875 199.360985)">恢复每块 1024 × 768 原网格</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 96.48 151.52668 
+Q 96.48 158.116564 96.48 163.364807 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 98.48 159.364807 
+L 96.48 163.364807 
+L 94.48 159.364807 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
    </g>
    <g id="text_8">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(349.168125 188.057625)">postnorm 后零回填</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(358.665 201.366375)">每块恢复1024格</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(236.263281 188.27036)">原 pixel shuffle 4×4 合并</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(210.207031 199.360985)">64 × 12288 → 单 Linear → 64 × 576</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 182.179182 188.788721 
+Q 194.128906 188.788721 204.73699 188.788721 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 200.73699 186.788721 
+L 204.73699 188.788721 
+L 200.73699 190.788721 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
    </g>
    <g id="text_9">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(538.150313 188.057625)">原 pixel shuffle 4×4</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(512.920313 201.366375)">64 × 12288，再 Linear 到576</text>
-   </g>
-   <g id="patch_15">
-    <path d="M 148.699182 190.152 
-Q 160.648906 190.152 170.92158 190.152 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-    <path d="M 166.12158 187.752 
-L 170.92158 190.152 
-L 166.12158 192.552 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-   </g>
-   <g id="patch_16">
-    <path d="M 307.729182 190.152 
-Q 319.678906 190.152 329.95158 190.152 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-    <path d="M 325.15158 187.752 
-L 329.95158 190.152 
-L 325.15158 192.552 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-   </g>
-   <g id="patch_17">
-    <path d="M 472.339182 190.152 
-Q 484.288906 190.152 494.56158 190.152 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
-    <path d="M 489.76158 187.752 
-L 494.56158 190.152 
-L 489.76158 192.552 
-" style="fill: none; stroke: #526376; stroke-width: 1.5; stroke-linecap: round"/>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="13.896" y="232.958951" transform="rotate(-0 13.896 232.958951)">Text5：13 块各自处理 → LLM 仍有 832 视觉位置，T=889</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(63.816563 294.048)">LLM 仍接收 13 × 64 = 832 视觉位置</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(22.490625 306.048)">本样本总输入 T=889，Encoder少算未缩短LLM序列</text>
-   </g>
-   <g id="text_11">
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(448.380937 292.938)">FFN Skip L8 / L16 / L24</text>
-    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'" transform="translate(373.587187 306.24675)">保留 a = x + Attention(norm1(x))，省 norm2 + MLP</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(96.408125 267.384654)">Skip L8 / L16 / L24 仅省 norm2 与 MLP 分支</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(45.4925 278.475279)">输入 → inputnorm → Attention → 与输入相加得到 a → 直接输出 a</text>
+    <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'" transform="translate(89.358906 289.565904)">保留 Attention、残差与 KV cache；参数仍注册</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p03721d8fdc">
-   <rect x="7.2" y="7.2" width="697.5" height="332.64"/>
+  <clipPath id="pc470b06248">
+   <rect x="7.2" y="7.2" width="373.86" height="299.376"/>
   </clipPath>
  </defs>
 </svg>

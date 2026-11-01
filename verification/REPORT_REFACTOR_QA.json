@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "scope": "Read-only extraction/fact/document/link/protection checks; NO model/GPU experiment",
+  "quality_atomic_rows": 3072,
+  "cost_rows": 6144,
+  "layer_rows": 24576,
+  "main_performance": {
+    "formal": 780,
+    "warmup": 312
+  },
+  "input_sha_checked": 3116,
+  "parameter_metadata": {
+    "path": "evidence/day1_morning/model_runtime.json",
+    "sha256": "94cee5591152e544d48df3770f0a01c4d9a7f9d84a0e4fbc0c3c6cb7bd130617"
+  },
+  "correctness_tensor_comparisons": 32,
+  "empty_skip_logit_comparisons": 4,
+  "ffn_matrix_rows": 30,
+  "multi_next_attention_rows": 9,
+  "skip_call_scope": "three layers x prefill/decode; projection markers aggregate across two stages",
+  "md_docx_all_text_equal": true,
+  "docx_external_links": 24,
+  "pdf_external_links": 28,
+  "pdf_internal_destinations": 6,
+  "pdf_pages": 21,
+  "protected_existing_git_files": 133,
+  "scientific_products_unchanged": true,
+  "scientific_reexecution": false,
+  "report_version": "professor-report-v2",
+  "at": "2026-11-01T02:33:41.663068+00:00",
+  "baseline_commit": "010526f516d55ec9041b5a753c16b51e95c48484",
+  "outputs": {
+    "report/REPORT.zh.docx": {
+      "bytes": 816419,
+      "sha256": "c67b905d76aba4331757079fffc10edc01168542996f789257f8741e5ed97673"
+    },
+    "report/REPORT.zh.md": {
+      "bytes": 36998,
+      "sha256": "86417817e3b8907663022549e95971c6849305f470eeaedab37649588c712496"
+    },
+    "report/REPORT.zh.pdf": {
+      "bytes": 1863382,
+      "sha256": "e778c99cefe1d518a3ef316c15a9dfd446a99492d39f55122683d202a7e45a33"
+    }
+  },
+  "render": {
+    "renderer": "canonical documents render_docx.py through existing task-local compatibility launcher; bundled LibreOfficeDev 26.8 and system Poppler; experiment venv unchanged",
+    "pages": 21,
+    "checked_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "page_image_sha256": {
+      "page-1.png": "393ad912f08369f18b5eada35ddcebcf47850dbf2fe6a12565b409ec25bbeddb",
+      "page-10.png": "de64cc373676e3bbf0684873590dd89c0905c152a4155bdb19297bc787e4e8c9",
+      "page-11.png": "33c17027bf30d6af0bfee378dc2d7206aa5c8a8a0e9abb857d976b6fb02f4312",
+      "page-12.png": "47fe92aaf71d4145441aebc12da0861e1bdd65a192e8e79b9b24ee42a104d539",
+      "page-13.png": "432c03cb5f5e97b25c1f0334e54a5634d2b76f25ae2a526e66396fdd628fa8ac",
+      "page-14.png": "b6eb5903a1ae91715c1d81a38ab0f69202676f73482406d66ecdbf6d6ba594d7",
+      "page-15.png": "785697fbf1e659fc110e62e563039ec96b865b835f6bb80ac1acb4b6ccc4baa7",
+      "page-16.png": "4437e1b43b61498a576141ee999be5adfe2ca693928b87e8869361a594295cb0",
+      "page-17.png": "a568512338b0483054ff1c6ff59831690a682cafaa5b9f9542efcfaeb363f35a",
+      "page-18.png": "424c3f1b3fd685fb38050aadcf7072e06f86820f0bdd0e01cb4c3b4a6c888307",
+      "page-19.png": "e3524e379def7163e7f188d91791704a24138b47589ac42e3ec8c8ce12a5a97f",
+      "page-2.png": "ad30a960cb3d1f197336401a8a5a590cd010521dfd4005fe245c8e030c0d0f2d",
+      "page-20.png": "49dafb66cbc1b2e4d8448beb5cf35d428d8e38c3d5d05bc9efcf47dd3044b28d",
+      "page-21.png": "8e024e0265c0f557f1ac83636baaa42798b185bdcd3d2f3397b14cfca3aeb5d3",
+      "page-3.png": "1780e77b27a7e230a8a7069af3c6d0ce577a697580a8d6d0496ee86484451594",
+      "page-4.png": "7887d63a325683ce92295b67fdedbbecbfd73e5b4cd9af52d6029aac74e05942",
+      "page-5.png": "87b2657cd206fe26067e51dacb370f67a197a7fc3086a2b6e889e18b4fc24dcb",
+      "page-6.png": "3c7a540fbaead30b350fc8d59f9959fa54742cbcae43fcdc6125ae43d7922f73",
+      "page-7.png": "d5d7a5c751cbc21fbc60689f8715a4f6a54828ef32b2d91bde805c29410be12c",
+      "page-8.png": "95ef1093a7dd2de829dc020591cc7543f3ec92eec2ac136bc73f1c9dd29b86f4",
+      "page-9.png": "03931d752f4bf1340ccb6f4a7fe4dae98185b4977893192fc29faa391ef9fc6e"
+    },
+    "review": "All pages visually opened; final2 changes on pages 8/9/15/16/17 re-opened; remaining pages byte-identical to inspected final. Page4 explicitly re-opened. Chinese, editable text equations, axes, captions, tables with repeated headers, page numbers and navigation checked. No Microsoft Word application review claimed."
+  },
+  "mandatory_locations": {
+    "A1": "2.2 / appendix A",
+    "A2": "2.3 / 5.2 / appendix B",
+    "A3": "2.4 / appendix C1/C2",
+    "A4": "2.5",
+    "B": "3",
+    "C1": "4.2",
+    "C2": "4.3 / appendix B",
+    "C3": "4.4",
+    "validation": "6 / appendix D",
+    "coverage": "appendix E + 67-row repository mapping"
+  },
+  "scientific_protection": "133 pre-existing Git files unchanged, including core scientific code/config/manifests, selected proof, CSV/JSON science data, talk, licenses and historical receipts. Original tar/U/environment not written; old large archive not rehashed.",
+  "limitations": [
+    "No new GPU experiment",
+    "No Microsoft Word application-specific rendering verification",
+    "No new cold installation/cross-machine/complete256 thin entry/Flash-SDPA/v3 first-stages validation",
+    "Remote publication/download checked separately after actual push"
+  ],
+  "navigation_check": {
+    "scope": "reading structure and requested file integrity only",
+    "scientific_correctness": "NOT TESTED",
+    "inference_readiness": "NOT TESTED",
+    "artifact_root": "19 saved file bindings match; images/model/GPU/scientific behavior NOT CHECKED",
+    "archive": "not supplied; attachment bytes NOT CHECKED",
+    "local_links_checked": 235,
+    "requested_checks_passed": true,
+    "errors": []
+  },
+  "syntax_checks": {
+    "python_ast": [
+      "build_report.py",
+      "build_figures.py",
+      "build_mapping.py"
+    ],
+    "report_bash_blocks": "bash -n passed",
+    "diff_check": "passed; Matplotlib-generated SVG EOL whitespace excluded"
+  }
+}
