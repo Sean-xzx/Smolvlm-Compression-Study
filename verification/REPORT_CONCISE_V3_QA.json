@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "report_version": "professor-report-v3",
+  "at": "2026-11-01T03:20:42.530095+00:00",
+  "baseline_commit": "e4e96a7ef57be211b35a3be2535c2fe0e6de6a98",
+  "editing_metrics": {
+    "old_total_chars": 23749,
+    "new_total_chars": 16664,
+    "old_body_chars": 14402,
+    "new_body_chars": 7662,
+    "old_bytes": 36998,
+    "new_bytes": 24250,
+    "body_reduction": 0.4679905568671018
+  },
+  "facts": {
+    "passed": true,
+    "scope": "Read-only extraction/fact/document/link/protection checks; NO model/GPU experiment",
+    "quality_atomic_rows": 3072,
+    "cost_rows": 6144,
+    "layer_rows": 24576,
+    "main_performance": {
+      "formal": 780,
+      "warmup": 312
+    },
+    "input_sha_checked": 3116,
+    "parameter_metadata": {
+      "path": "evidence/day1_morning/model_runtime.json",
+      "sha256": "94cee5591152e544d48df3770f0a01c4d9a7f9d84a0e4fbc0c3c6cb7bd130617"
+    },
+    "correctness_tensor_comparisons": 32,
+    "empty_skip_logit_comparisons": 4,
+    "ffn_matrix_rows": 30,
+    "multi_next_attention_rows": 9,
+    "skip_call_scope": "three layers x prefill/decode; projection markers aggregate across two stages",
+    "md_docx_all_text_equal": true,
+    "docx_external_links": 25,
+    "pdf_external_links": 28,
+    "pdf_internal_destinations": 5,
+    "pdf_pages": 13,
+    "protected_existing_git_files": 148,
+    "scientific_products_unchanged": true,
+    "scientific_reexecution": false
+  },
+  "render": {
+    "pages": 13,
+    "main_text_pages": "1–7; appendix starts on page7",
+    "checked_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "review": "All render2 pages visually opened; only final page3 differs and was re-opened after label-overflow fix. No clipped text or axes, table A kept complete, repeated matrix headers legible. Body10.5pt/table9.2pt unchanged; no font shrinking to reduce pages.",
+    "renderer": "canonical render_docx.py via existing compatibility launcher; bundled LibreOfficeDev26.8 and Poppler; no experiment venv changes",
+    "page_sha256": {
+      "page-3.png": "b602e42db892872b0e59e777bf36ebbadf3bd5243eb7dd123754872c9a94c490",
+      "page-1.png": "9beb89f3dab87a2b9d9fb8224844eeb1c91cb7cd44060dcaaf1a7032eda0489d",
+      "page-11.png": "e9ab3ce54a3ff6e53d5d7a4a0aab9ac9b3077ae344c42e214c830f1e0ade5d9a",
+      "page-13.png": "c10b54ea391a13bb9f7725313ba0348d97e3450a7a0ca6b817e28fd80d0655f6",
+      "page-12.png": "4a5ca593fa522b092ff25e2ca40fd45fb4e96a0ac473cb5ce1f6a613852442d3",
+      "page-9.png": "5168b629374949ac873a228e71ab4dca9705f998bf671bfa4b2fdee7b97571f3",
+      "page-7.png": "31d4e87d92faf7f1c347c40ecb249f184515e55f8a9a0b388a504d3e244f632f",
+      "page-5.png": "fa0b8c43a8b532da6b8f3f0283d941b1971a9d7c21e9218e1cbaee2fd06fdb8b",
+      "page-6.png": "8a0d6b73e9673cd51e83b1eceba8a5273747dba0f885b1df1bc87e5384eb139d",
+      "page-8.png": "9db2079b3b2e23b7a0316baaa737b826fd582ed9e5753cbbc9d5815894d1c7d5",
+      "page-2.png": "013fa1ecf474f9d0770c4bb25efae5f67537e3ca0b7ad29815e67b01ac55f164",
+      "page-4.png": "a85c779f86d59905ca486eea53b2c8c114fa9a1c575e082dc55b9b57643190ab",
+      "page-10.png": "a9355bb7ddf62fc1646f2e093c94183ce45dda8f4c6c4da3459238f8e5ab51d2"
+    }
+  },
+  "outputs": {
+    "report/REPORT.zh.md": {
+      "bytes": 24250,
+      "sha256": "5b4d1f4571b21b85bb8a23332bb28ca7d3b57dbed708dfd1b21be7d348a5fb5c"
+    },
+    "report/REPORT.zh.pdf": {
+      "bytes": 965639,
+      "sha256": "30174af0fab9eed0f2461dc574b0bced351fa5f37d5d83f6179719ba3dc48663"
+    },
+    "report/REPORT.zh.docx": {
+      "bytes": 201094,
+      "sha256": "09fba3b70292255c732984868953744f7bcbf26d9e40666183fd88a7a8c0072f"
+    }
+  },
+  "mandatory_locations": {
+    "A1": "2.2 / A",
+    "A2": "2.3 / B1/B2",
+    "A3": "2.4 / C1/C2",
+    "A4": "2.5",
+    "B": "3",
+    "C1": "4.2",
+    "C2": "4.3 / B1",
+    "C3": "4.4",
+    "validation": "6",
+    "coverage": "E + external 67-row map"
+  },
+  "protected_scope": "148 existing Git files including scientific code/config/results/proof, nine numeric/source products, existing six chart SVG/PNG, talk, licenses and old receipts; original science tar/U/environment not written.",
+  "initial_local_change": "One pasted nontechnical fragment in appendix E C2 label was backed up then removed while rewriting that table.",
+  "not_verified": [
+    "Microsoft Word application-specific rendering",
+    "Cold installation/cross-machine/new full256/Flash-SDPA/v3 first-stages; no new inference",
+    "Remote files verified only after push in separate download receipt"
+  ],
+  "navigation": {
+    "scope": "reading structure and requested file integrity only",
+    "scientific_correctness": "NOT TESTED",
+    "inference_readiness": "NOT TESTED",
+    "artifact_root": "19 saved file bindings match; images/model/GPU/scientific behavior NOT CHECKED",
+    "archive": "not supplied; attachment bytes NOT CHECKED",
+    "local_links_checked": 237,
+    "requested_checks_passed": true,
+    "errors": []
+  },
+  "syntax": "three changed generators AST and git diff --check passed; generated SVG EOL whitespace allowed"
+}

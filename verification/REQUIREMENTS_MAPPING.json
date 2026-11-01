@@ -2,7 +2,7 @@
   {
     "id": "D1",
     "requirement": "指定SmolVLM-256M-Instruct",
-    "report_section": "1.1",
+    "report_section": "1.1 / D1",
     "code_file": "scripts/run_original.py",
     "code_function": "load_original_model",
     "line": 166,
@@ -13,7 +13,7 @@
   {
     "id": "D2",
     "requirement": "指定TextVQA与ScienceQA-IMG",
-    "report_section": "1.1",
+    "report_section": "1.1 / D1",
     "code_file": "scripts/evaluate_context.py",
     "code_function": "manifests_for",
     "line": 24,
@@ -24,7 +24,7 @@
   {
     "id": "D3",
     "requirement": "每集固定256，所有配置同题",
-    "report_section": "1.1/5.1",
+    "report_section": "0 / 1.1",
     "code_file": "scripts/evaluate_context.py",
     "code_function": "manifests_for",
     "line": 24,
@@ -35,7 +35,7 @@
   {
     "id": "D4",
     "requirement": "保存数据版本、划分、种子与样本ID",
-    "report_section": "1.1",
+    "report_section": "1.1 / D1",
     "code_file": "scripts/inspect_data.py",
     "code_function": "prepare_manifests",
     "line": 71,
@@ -46,7 +46,7 @@
   {
     "id": "D5",
     "requirement": "固定图像预处理",
-    "report_section": "1.1",
+    "report_section": "1.1 / D1",
     "code_file": "scripts/context_runtime.py",
     "code_function": "load_context_model",
     "line": 63,
@@ -68,7 +68,7 @@
   {
     "id": "D7",
     "requirement": "Text官方评分口径及所用实现",
-    "report_section": "1.2/5.1",
+    "report_section": "1.2 / D1",
     "code_file": "scripts/check_scores.py",
     "code_function": "textvqa_score",
     "line": 12,
@@ -79,7 +79,7 @@
   {
     "id": "D8",
     "requirement": "Science官方评分口径及所用实现",
-    "report_section": "1.2/5.1",
+    "report_section": "1.2 / 7.1 / D2",
     "code_file": "scripts/check_scores.py",
     "code_function": "extract_choice",
     "line": 18,
@@ -211,7 +211,7 @@
   {
     "id": "A12",
     "requirement": "Encoder和全模型FLOPs公式与实际长度",
-    "report_section": "2.3/5.2 附录B",
+    "report_section": "2.3 / B1/B2",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -222,7 +222,7 @@
   {
     "id": "A13",
     "requirement": "打分、选择等额外开销",
-    "report_section": "2.3 附录B3",
+    "report_section": "B1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "select_tokens",
     "line": 34,
@@ -409,7 +409,7 @@
   {
     "id": "V1",
     "requirement": "基线+四Encoder+Skip，12组",
-    "report_section": "5.1",
+    "report_section": "0 / 2.1",
     "code_file": "scripts/experiment_runtime.py",
     "code_function": "patch_for",
     "line": 63,
@@ -464,7 +464,7 @@
   {
     "id": "V6",
     "requirement": "效率同硬件/精度/batch/生成设置",
-    "report_section": "1.1/5.3",
+    "report_section": "1.1 / 5 / D1",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "generation_block",
     "line": 80,
@@ -475,7 +475,7 @@
   {
     "id": "V7",
     "requirement": "计时范围/预热/同步/n/重复/G",
-    "report_section": "5.3 附录D2/D3",
+    "report_section": "5 / D2/D3",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "timed",
     "line": 65,
@@ -497,7 +497,7 @@
   {
     "id": "V9",
     "requirement": "FLOPs约定与范围、Encoder/prefill/decode分开",
-    "report_section": "2.3/4.3 附录B",
+    "report_section": "2.3 / 4.3 / B1",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -508,7 +508,7 @@
   {
     "id": "V10",
     "requirement": "理论量与实测不一致的证据分析",
-    "report_section": "5.3/7.1",
+    "report_section": "5 / 7.1",
     "code_file": "scripts/benchmark_efficiency.py",
     "code_function": "stage_block",
     "line": 137,
@@ -519,7 +519,7 @@
   {
     "id": "V11",
     "requirement": "结果如实，不强求精度/速度提升",
-    "report_section": "5.1/7.1",
+    "report_section": "0 / 7.1",
     "code_file": "scripts/check_scores.py",
     "code_function": "score_response",
     "line": 59,
@@ -530,7 +530,7 @@
   {
     "id": "S1",
     "requirement": "代码仓库或压缩包",
-    "report_section": "7.3/7.4",
+    "report_section": "7.3 / D3",
     "code_file": "scripts/evaluate_release.py",
     "code_function": "main",
     "line": 18,
@@ -574,7 +574,7 @@
   {
     "id": "S5",
     "requirement": "正确性和性能分析运行命令",
-    "report_section": "7.3 附录D3",
+    "report_section": "7.3 / D3",
     "code_file": "scripts/release_checks.py",
     "code_function": "main",
     "line": 143,
@@ -590,7 +590,7 @@
     "code_function": "render_document",
     "line": 23,
     "evidence": "E1至E8",
-    "verified_scope": "Markdown为母稿、Word/PDF同源；新渲染见REPORT_REFACTOR_QA，旧回执保持历史",
+    "verified_scope": "Markdown为母稿、Word/PDF同源；新渲染见REPORT_CONCISE_V3_QA，旧回执保持历史",
     "status": "covered_with_scope"
   },
   {
@@ -618,7 +618,7 @@
   {
     "id": "S9",
     "requirement": "两数据集分数及相对基线分差",
-    "report_section": "5.1 图3",
+    "report_section": "0 结果表",
     "code_file": "scripts/build_figures.py",
     "code_function": "read",
     "line": 21,
@@ -651,7 +651,7 @@
   {
     "id": "S12",
     "requirement": "Encoder/全模型FLOPs、延迟、相对变化与实际G",
-    "report_section": "5.2/5.3 附录B/D",
+    "report_section": "2.3 / 5 / B2 / D2",
     "code_file": "scripts/analyze_costs.py",
     "code_function": "components",
     "line": 24,
@@ -662,18 +662,18 @@
   {
     "id": "S13",
     "requirement": "随样本变化时给代表明细和子集汇总、说明统计",
-    "report_section": "5.1 附录D",
+    "report_section": "2.4 / 2.5 / D2",
     "code_file": "scripts/build_figures.py",
     "code_function": "csvread",
     "line": 24,
     "evidence": "E1/E6",
-    "verified_scope": "Text5案例、全256实际G/成本范围、小n性能统计",
+    "verified_scope": "Text5形状/矩阵代表题、全256长度/成本范围、小n性能统计",
     "status": "covered_with_scope"
   },
   {
     "id": "T1",
     "requirement": "说明外部代码来源",
-    "report_section": "7.2/7.4",
+    "report_section": "7.2 / D1",
     "code_file": "scripts/encoder_topk.py",
     "code_function": "EncoderTopKPatch",
     "line": 75,

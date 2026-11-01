@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="388.26pt" height="153.3696pt" viewBox="0 0 388.26 153.3696" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T11:18:01.797903</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 153.3696 
+L 388.26 153.3696 
+L 388.26 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 9.99 64.6728 
+L 116.01 64.6728 
+Q 117.684 64.6728 117.684 63.0096 
+L 117.684 26.9736 
+Q 117.684 25.3104 116.01 25.3104 
+L 9.99 25.3104 
+Q 8.316 25.3104 8.316 26.9736 
+L 8.316 63.0096 
+Q 8.316 64.6728 9.99 64.6728 
+z
+" clip-path="url(#pf6946f699b)" style="fill: #edf0f3; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 141.12 64.6728 
+L 241.56 64.6728 
+Q 243.234 64.6728 243.234 63.0096 
+L 243.234 26.9736 
+Q 243.234 25.3104 241.56 25.3104 
+L 141.12 25.3104 
+Q 139.446 25.3104 139.446 26.9736 
+L 139.446 63.0096 
+Q 139.446 64.6728 141.12 64.6728 
+z
+" clip-path="url(#pf6946f699b)" style="fill: #e5edf7; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 266.67 64.6728 
+L 378.27 64.6728 
+Q 379.944 64.6728 379.944 63.0096 
+L 379.944 26.9736 
+Q 379.944 25.3104 378.27 25.3104 
+L 266.67 25.3104 
+Q 264.996 25.3104 264.996 26.9736 
+L 264.996 63.0096 
+Q 264.996 64.6728 266.67 64.6728 
+z
+" clip-path="url(#pf6946f699b)" style="fill: #e5edf7; stroke: #8b99a6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 9.99 114.5688 
+L 378.27 114.5688 
+" clip-path="url(#pf6946f699b)" style="fill: none; stroke: #d9d9d9; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(19.5125 38.9156)">norm1 → Attention</text>
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(25.941453 48.7156)">与输入相加得到a</text>
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(25.622953 58.5156)">Attention长度Na</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(144.161422 37.185287)">head/query 均值打分</text>
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(148.460406 48.1031)">Top-K选集恢复原序</text>
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(160.670594 58.971912)">真实gather(a)</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(269.922859 37.6416)">gather(a)进norm2/MLP</text>
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(277.100594 48.7156)">与gather(a)残差相加</text>
+    <text style="font-size: 9.8px; font-family: 'Noto Sans CJK JP'" transform="translate(283.034953 59.7896)">当前Nf，后层变短</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 120.79782 44.9916 
+Q 128.564456 44.9916 134.989451 44.9916 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 130.989451 42.9916 
+L 134.989451 44.9916 
+L 130.989451 46.9916 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 246.34782 44.9916 
+Q 254.114456 44.9916 260.539451 44.9916 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 256.539451 42.9916 
+L 260.539451 44.9916 
+L 256.539451 46.9916 
+" style="fill: none; stroke: #526376; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="9.99" y="16.44" transform="rotate(-0 9.99 16.44)">Top-K：Multi在L3 / L6 / L9依次1024 → 512 → 256 → 128</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.5px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="9.99" y="82.968" transform="rotate(-0 9.99 82.968)">剪枝出口 → 原postnorm → 零回填1024格 → 原pixel shuffle + Linear → LLM</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.5px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="9.99" y="102.372" transform="rotate(-0 9.99 102.372)">Text5：13块 → Connector [13,64,576] → 832视觉位置（与基线相同）</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.5px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #17685d" x="9.99" y="130.6464" transform="rotate(-0 9.99 130.6464)">Skip：L8 / L16 / L24直接返回Attention残差a；省norm2 + MLP，保留cache</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf6946f699b">
+   <rect x="7.2" y="7.5696" width="373.86" height="138.6"/>
+  </clipPath>
+ </defs>
+</svg>

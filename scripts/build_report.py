@@ -34,7 +34,7 @@ def render_document():
         st.paragraph_format.space_before=Pt(10);st.paragraph_format.space_after=Pt(6)
     for el in list(doc.styles.element.iter(qn('w:pBdr'))):el.getparent().remove(el)
     doc.core_properties.author='Sean-xzx';doc.core_properties.title='SmolVLM无需训练压缩实验报告'
-    doc.core_properties.comments='professor-report-v2; AI-authored revision. Human authorship, review and mastery not asserted.'
+    doc.core_properties.comments='professor-report-v3; AI-authored revision. Human authorship, review and mastery not asserted.'
     headings=[re.sub(r'^#{1,3} ','',x) for x in manuscript.splitlines() if re.match(r'^#{1,3} ',x)]
     bookmarks={slug(h):f'section_{i}' for i,h in enumerate(headings)}
     def words(text):
@@ -79,7 +79,7 @@ def render_document():
             for j,(cell,text,width) in enumerate(zip(cells,row,widths)):
                 cell.width=Cm(width);cell.vertical_alignment=WD_CELL_VERTICAL_ALIGNMENT.CENTER
                 tc=cell._tc.get_or_add_tcPr();mar=OxmlElement('w:tcMar')
-                for side,value in [('top',60),('bottom',60),('left',70),('right',70)]:
+                for side,value in [('top',40 if h[0]=='层' else 60),('bottom',40 if h[0]=='层' else 60),('left',70),('right',70)]:
                     e=OxmlElement('w:'+side);e.set(qn('w:w'),str(value));e.set(qn('w:type'),'dxa');mar.append(e)
                 tc.append(mar);pp=cell.paragraphs[0];pp.paragraph_format.space_after=Pt(1);pp.paragraph_format.space_before=Pt(1);pp.paragraph_format.line_spacing=1.08
                 if re.match(r'^[+−\-\d\[]',text) and len(text)<40:pp.alignment=WD_ALIGN_PARAGRAPH.CENTER

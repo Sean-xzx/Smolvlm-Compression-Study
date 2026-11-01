@@ -1,17 +1,17 @@
 # 教授原文67项最终映射
 
-报告professor-report-v2以节号及附录定位，七个必答见§2.2–2.5与§4.2–4.4，完整原文索引在报告附录E；代码行号从本轮实际文件读取。E编号见[证据索引](EVIDENCE_INDEX.zh.md)。原文[原字节副本](ASSIGNMENT.zh.md)。covered_with_scope表示有实现/已保存实验及本轮只读核对，不表示本轮重跑全部历史实验。个人独立能力、未来交流与公开发布分别标记，不以自动检查替代。S1按[当前发布状态](PUBLICATION.zh.md)更新；历史验收原结论保留。
+报告professor-report-v3以节号及附录定位，七个必答见§2.2–2.5与§4.2–4.4，完整原文索引在报告附录E；代码行号从本轮实际文件读取。E编号见[证据索引](EVIDENCE_INDEX.zh.md)。原文[原字节副本](ASSIGNMENT.zh.md)。covered_with_scope表示有实现/已保存实验及本轮只读核对，不表示本轮重跑全部历史实验。个人独立能力、未来交流与公开发布分别标记，不以自动检查替代。S1按[当前发布状态](PUBLICATION.zh.md)更新；历史验收原结论保留。
 
 |编号|原文要求|报告节/图表|实际代码及行|证据/命令|范围与未验证边界|状态|
 |---|---|---|---|---|---|---|
-|D1|指定SmolVLM-256M-Instruct|§1.1|[load_original_model](../scripts/run_original.py#L166)|E1；见REPRODUCTION命令|固定模型revision；新24实测|covered_with_scope|
-|D2|指定TextVQA与ScienceQA-IMG|§1.1|[manifests_for](../scripts/evaluate_context.py#L24)|E1；见REPRODUCTION命令|固定两数据集revision|covered_with_scope|
-|D3|每集固定256，所有配置同题|§1.1/5.1|[manifests_for](../scripts/evaluate_context.py#L24)|E1；见REPRODUCTION命令|旧12×256，只读汇总；不重复推理|covered_with_scope|
-|D4|保存数据版本、划分、种子与样本ID|§1.1|[prepare_manifests](../scripts/inspect_data.py#L71)|E1；见REPRODUCTION命令|seed/split/ID/meta已保存；HF重建本轮未跑|covered_with_scope|
-|D5|固定图像预处理|§1.1|[load_context_model](../scripts/context_runtime.py#L63)|E1/E8；见REPRODUCTION命令|原Processor与输入shape；新24输入对齐|covered_with_scope|
+|D1|指定SmolVLM-256M-Instruct|§1.1 / D1|[load_original_model](../scripts/run_original.py#L166)|E1；见REPRODUCTION命令|固定模型revision；新24实测|covered_with_scope|
+|D2|指定TextVQA与ScienceQA-IMG|§1.1 / D1|[manifests_for](../scripts/evaluate_context.py#L24)|E1；见REPRODUCTION命令|固定两数据集revision|covered_with_scope|
+|D3|每集固定256，所有配置同题|§0 / 1.1|[manifests_for](../scripts/evaluate_context.py#L24)|E1；见REPRODUCTION命令|旧12×256，只读汇总；不重复推理|covered_with_scope|
+|D4|保存数据版本、划分、种子与样本ID|§1.1 / D1|[prepare_manifests](../scripts/inspect_data.py#L71)|E1；见REPRODUCTION命令|seed/split/ID/meta已保存；HF重建本轮未跑|covered_with_scope|
+|D5|固定图像预处理|§1.1 / D1|[load_context_model](../scripts/context_runtime.py#L63)|E1/E8；见REPRODUCTION命令|原Processor与输入shape；新24输入对齐|covered_with_scope|
 |D6|固定提示词与生成参数|§1.1|[build_question](../scripts/context_runtime.py#L47)|E1/E8；见REPRODUCTION命令|hint合法，answer/lecture/solution不输入|covered_with_scope|
-|D7|Text官方评分口径及所用实现|§1.2/5.1|[textvqa_score](../scripts/check_scores.py#L12)|E5；见REPRODUCTION命令|Text留一软分；同源normalizer|covered_with_scope|
-|D8|Science官方评分口径及所用实现|§1.2/5.1|[extract_choice](../scripts/check_scores.py#L18)|E5；见REPRODUCTION命令|官方索引准确率定义，本地标签盲解析|covered_with_scope|
+|D7|Text官方评分口径及所用实现|§1.2 / D1|[textvqa_score](../scripts/check_scores.py#L12)|E5；见REPRODUCTION命令|Text留一软分；同源normalizer|covered_with_scope|
+|D8|Science官方评分口径及所用实现|§1.2 / 7.1 / D2|[extract_choice](../scripts/check_scores.py#L18)|E5；见REPRODUCTION命令|官方索引准确率定义，本地标签盲解析|covered_with_scope|
 |A1|无需训练|§2.1|[EncoderTopKPatch](../scripts/encoder_topk.py#L75)|E2；见REPRODUCTION命令|原权重无需训练|covered_with_scope|
 |A2|支持剪枝层列表和各阶段比例|§2.1|[__init__](../scripts/encoder_topk.py#L76)|E2；见REPRODUCTION命令|层列表/阶段率检查；演练另版配置|covered_with_scope|
 |A3|Attention残差后、当前FFN前插入|§2.1 图1|[prune_layer](../scripts/encoder_topk.py#L153)|E2/E3；见REPRODUCTION命令|Attention残差后、当前FFN前|covered_with_scope|
@@ -23,8 +23,8 @@
 |A9|说明层号和K取整|§2.1|[select_tokens](../scripts/encoder_topk.py#L34)|E2；见REPRODUCTION命令|1起层号、ceilK；有效[16,5]受控例|covered_with_scope|
 |A10|特殊token/图块/后续适配|§2.1/2.5|[restore_grid](../scripts/encoder_topk.py#L62)|E2/E3；见REPRODUCTION命令|无额外CLS；块独立、postnorm后回填|covered_with_scope|
 |A11|参数量、权重文件大小、逐层token及指标区别|§2.2 附录A|[connect](../scripts/encoder_topk.py#L180)|E1/E3；见REPRODUCTION命令|参数/文件不变；完整12层Na/Nf|covered_with_scope|
-|A12|Encoder和全模型FLOPs公式与实际长度|§2.3/5.2 附录B|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|Encoder及全模型，实际G/G16分开|covered_with_scope|
-|A13|打分、选择等额外开销|§2.3 附录B3|[select_tokens](../scripts/encoder_topk.py#L34)|E6；见REPRODUCTION命令|score/cast/排序/移动/同步单列范围|covered_with_scope|
+|A12|Encoder和全模型FLOPs公式与实际长度|§2.3 / B1/B2|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|Encoder及全模型，实际G/G16分开|covered_with_scope|
+|A13|打分、选择等额外开销|§B1|[select_tokens](../scripts/encoder_topk.py#L34)|E6；见REPRODUCTION命令|score/cast/排序/移动/同步单列范围|covered_with_scope|
 |A14|pre-hook证明被丢弃token未进入当前FFN和后层|§2.4 附录C|[main](../scripts/profile_context.py#L21)|E3；见REPRODUCTION命令|Text5 prehook当前/下一层|covered_with_scope|
 |A15|profiler矩阵shape与耗时；Multi每阶段覆盖|§2.4 附录C1/C2|[encoder_trace](../scripts/release_profile.py#L24)|E3/E7；见REPRODUCTION命令|Multi三阶段shape与CPU/CUDA时间|covered_with_scope|
 |A16|从视觉到Projector到LLM的实际传递|§2.5 图1|[connect](../scripts/encoder_topk.py#L180)|E3；见REPRODUCTION命令|Text5 13块→832视觉位置保持|covered_with_scope|
@@ -41,31 +41,31 @@
 |C5|实际存储参数与被跳FFN参数、统计方法|§4.2|[load_original_model](../scripts/run_original.py#L166)|E4；见REPRODUCTION命令|MLP7962624、norm2另1728；权重未删|covered_with_scope|
 |C6|FLOPs公式与prefill/decode/T/G范围|§4.3 附录B|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|15925248(T+G−1)，prefill+G−1decode|covered_with_scope|
 |C7|调用记录与profiler证明真正未执行|§4.4|[skip_trace](../scripts/benchmark_efficiency.py#L163)|E4/E7；见REPRODUCTION命令|零调用+投影marker缺席；v3 180→162|covered_with_scope|
-|V1|基线+四Encoder+Skip，12组|§5.1|[patch_for](../scripts/experiment_runtime.py#L63)|E1；见REPRODUCTION命令|六配置两集3072；不叠加方法|covered_with_scope|
+|V1|基线+四Encoder+Skip，12组|§0 / 2.1|[patch_for](../scripts/experiment_runtime.py#L63)|E1；见REPRODUCTION命令|六配置两集3072；不叠加方法|covered_with_scope|
 |V2|单点100%、Multi全100%，关闭额外打分|§6|[correctness](../scripts/release_checks.py#L50)|E2/E7；见REPRODUCTION命令|8路径32张量，score/scatter0；不代替50%|covered_with_scope|
 |V3|空Skip与原模型输出一致|§6|[empty_stage](../scripts/verify_skip.py#L94)|E2/E7；见REPRODUCTION命令|空Skip独立cache prefill/decode与IDs|covered_with_scope|
 |V4|说明比较对象、浮点误差|§6|[equal](../scripts/verify_encoder_topk.py#L23)|E2/E7；见REPRODUCTION命令|maxerr0，atol/rtol0；Encoder未独立decode logits|covered_with_scope|
 |V5|小样本hook/profiler标配置/样本/模块|§2.4/4.4 附录C|[main](../scripts/profile_context.py#L21)|E3/E4；见REPRODUCTION命令|配置/ID/模块明确；诊断不代替稳定延迟|covered_with_scope|
-|V6|效率同硬件/精度/batch/生成设置|§1.1/5.3|[generation_block](../scripts/benchmark_efficiency.py#L80)|E6；见REPRODUCTION命令|同硬件BF16/batch1/eager；不混版本|covered_with_scope|
-|V7|计时范围/预热/同步/n/重复/G|§5.3 附录D2/D3|[timed](../scripts/benchmark_efficiency.py#L65)|E6；见REPRODUCTION命令|旧780/312；n/G/边界/同步/重复明确|covered_with_scope|
+|V6|效率同硬件/精度/batch/生成设置|§1.1 / 5 / D1|[generation_block](../scripts/benchmark_efficiency.py#L80)|E6；见REPRODUCTION命令|同硬件BF16/batch1/eager；不混版本|covered_with_scope|
+|V7|计时范围/预热/同步/n/重复/G|§5 / D2/D3|[timed](../scripts/benchmark_efficiency.py#L65)|E6；见REPRODUCTION命令|旧780/312；n/G/边界/同步/重复明确|covered_with_scope|
 |V8|说明Attention获取及后端影响|§1.1/2.1|[prune_layer](../scripts/encoder_topk.py#L153)|E2；见REPRODUCTION命令|显式eager权重；Flash/SDPA未测|covered_with_scope|
-|V9|FLOPs约定与范围、Encoder/prefill/decode分开|§2.3/4.3 附录B|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|主要矩阵Conv乘加2，辅助范围明示|covered_with_scope|
-|V10|理论量与实测不一致的证据分析|§5.3/7.1|[stage_block](../scripts/benchmark_efficiency.py#L137)|E6；见REPRODUCTION命令|自然G/选择回填开销；独立median不相加减|covered_with_scope|
-|V11|结果如实，不强求精度/速度提升|§5.1/7.1|[score_response](../scripts/check_scores.py#L59)|E1/E6；见REPRODUCTION命令|保留Multi/Skip负结果与无存储收益|covered_with_scope|
-|S1|代码仓库或压缩包|§7.3/7.4|[main](../scripts/evaluate_release.py#L18)|E7/E8；见REPRODUCTION命令|公开main与固定Release已发布；当前状态见PUBLICATION；两者版本不同|published_with_scope|
+|V9|FLOPs约定与范围、Encoder/prefill/decode分开|§2.3 / 4.3 / B1|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|主要矩阵Conv乘加2，辅助范围明示|covered_with_scope|
+|V10|理论量与实测不一致的证据分析|§5 / 7.1|[stage_block](../scripts/benchmark_efficiency.py#L137)|E6；见REPRODUCTION命令|自然G/选择回填开销；独立median不相加减|covered_with_scope|
+|V11|结果如实，不强求精度/速度提升|§0 / 7.1|[score_response](../scripts/check_scores.py#L59)|E1/E6；见REPRODUCTION命令|保留Multi/Skip负结果与无存储收益|covered_with_scope|
+|S1|代码仓库或压缩包|§7.3 / D3|[main](../scripts/evaluate_release.py#L18)|E7/E8；见REPRODUCTION命令|公开main与固定Release已发布；当前状态见PUBLICATION；两者版本不同|published_with_scope|
 |S2|完整PyTorch实现、六配置、依赖、模型版本|§1/2.1/4.1|[patch_for](../scripts/experiment_runtime.py#L63)|E1/E8；见REPRODUCTION命令|源码六配置/依赖锁/版本齐全|covered_with_scope|
 |S3|数据准备命令与固定样本清单|§7.3|[prepare_manifests](../scripts/inspect_data.py#L71)|E1/E7；见REPRODUCTION命令|两数据路径职责明确；冷HF重建未测|covered_with_scope|
 |S4|评估运行命令|§7.3|[main](../scripts/evaluate_release.py#L18)|E8；见REPRODUCTION命令|新24预测与聚合已测；limit256未跑|covered_with_scope|
-|S5|正确性和性能分析运行命令|§7.3 附录D3|[main](../scripts/release_checks.py#L143)|E7；见REPRODUCTION命令|正确性/性能/profiler/CPU命令；v3 first/stages未跑|covered_with_scope|
-|S6|报告结果表、必答、实现、限制|§0至7 附录A至E|[render_document](../scripts/build_report.py#L23)|E1至E8；见REPRODUCTION命令|Markdown为母稿、Word/PDF同源；新渲染见REPORT_REFACTOR_QA，旧回执保持历史|covered_with_scope|
+|S5|正确性和性能分析运行命令|§7.3 / D3|[main](../scripts/release_checks.py#L143)|E7；见REPRODUCTION命令|正确性/性能/profiler/CPU命令；v3 first/stages未跑|covered_with_scope|
+|S6|报告结果表、必答、实现、限制|§0至7 附录A至E|[render_document](../scripts/build_report.py#L23)|E1至E8；见REPRODUCTION命令|Markdown为母稿、Word/PDF同源；新渲染见REPORT_CONCISE_V3_QA，旧回执保持历史|covered_with_scope|
 |S7|hook/调用/profiler执行证据|§2.4/4.4/6 附录C|[skip_trace](../scripts/benchmark_efficiency.py#L163)|E2/E3/E4/E7；见REPRODUCTION命令|精选proof可点；完整trace在科学包|covered_with_scope|
 |S8|表中配置/层号/比例/K/最终比例/Skip层|§2.1 配置表|[config_path](../scripts/experiment_runtime.py#L20)|E1；见REPRODUCTION命令|层/阶段率/K/最终率/Skip表|covered_with_scope|
-|S9|两数据集分数及相对基线分差|§5.1 图3|[read](../scripts/build_figures.py#L21)|E1；见REPRODUCTION命令|两指标与同版pp；解析失败保留分母|covered_with_scope|
+|S9|两数据集分数及相对基线分差|§0 结果表|[read](../scripts/build_figures.py#L21)|E1；见REPRODUCTION命令|两指标与同版pp；解析失败保留分母|covered_with_scope|
 |S10|总参数/跳过FFN参数/权重大小|§2.2/4.2|[load_original_model](../scripts/run_original.py#L166)|E4；见REPRODUCTION命令|总参数/停用参数/文件大小|covered_with_scope|
 |S11|逐层Encoder/Projector入出/LLM视觉token|§2.2/2.5 附录A|[connect](../scripts/encoder_topk.py#L180)|E3；见REPRODUCTION命令|逐层Na/Nf与Projector/LLM形状|covered_with_scope|
-|S12|Encoder/全模型FLOPs、延迟、相对变化与实际G|§5.2/5.3 附录B/D|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|Encoder/全模型FLOPs、延迟/G/同版比|covered_with_scope|
-|S13|随样本变化时给代表明细和子集汇总、说明统计|§5.1 附录D|[csvread](../scripts/build_figures.py#L24)|E1/E6；见REPRODUCTION命令|Text5案例、全256实际G/成本范围、小n性能统计|covered_with_scope|
-|T1|说明外部代码来源|§7.2/7.4|[EncoderTopKPatch](../scripts/encoder_topk.py#L75)|E5；见REPRODUCTION命令|来源/license/固定commit与必要适配|covered_with_scope|
+|S12|Encoder/全模型FLOPs、延迟、相对变化与实际G|§2.3 / 5 / B2 / D2|[components](../scripts/analyze_costs.py#L24)|E6；见REPRODUCTION命令|Encoder/全模型FLOPs、延迟/G/同版比|covered_with_scope|
+|S13|随样本变化时给代表明细和子集汇总、说明统计|§2.4 / 2.5 / D2|[csvread](../scripts/build_figures.py#L24)|E1/E6；见REPRODUCTION命令|Text5形状/矩阵代表题、全256长度/成本范围、小n性能统计|covered_with_scope|
+|T1|说明外部代码来源|§7.2 / D1|[EncoderTopKPatch](../scripts/encoder_topk.py#L75)|E5；见REPRODUCTION命令|来源/license/固定commit与必要适配|covered_with_scope|
 |T2|说明AI用途与自行核验关键内容|§7.2|[main](../scripts/evaluate_release.py#L18)|E8；见REPRODUCTION命令|AI实际用途与自动检查明确；不冒称人工|covered_with_scope|
 |T3|可说明错误修正，无需全聊天|§7.2|[validate_protocol](../scripts/context_runtime.py#L25)|E5/E7；见REPRODUCTION命令|历史勘误/失败保留；不发布完整聊天|covered_with_scope|
 |T4|理解并对实现/数据/结论负责|§7.2|[main](../scripts/evaluate_release.py#L18)|E8；见REPRODUCTION命令|个人理解/责任不能由AI文件证明；尚未验收|not_assessed|

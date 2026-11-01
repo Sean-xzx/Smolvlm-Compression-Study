@@ -163,5 +163,27 @@
       "results/context_v2_baseline_20261030/textvqa/samples/row_00005.json": "f729aa88e29d9b9de259d8334c6ec7d148d4377b290c85c9f9bc7f1e4b020162",
       "data/baseline_inputs/textvqa/row_00005.png": "e8d2b96d8403223d4ac1971afd349ec1f71584ae380654355c2cdf510d9772c7"
     }
+  },
+  {
+    "id": "08_compact_method",
+    "outputs": [
+      "08_compact_method.svg",
+      "08_compact_method.png"
+    ],
+    "scientific_version": "context-v2",
+    "n": 1,
+    "statistics": "code schematic plus TextVQA row5 observed shapes; no attribution or latency estimate",
+    "units": "tensor shapes / tokens",
+    "inputs": {
+      "scripts/encoder_topk.py": "3f01f9153b81f3c80e2a6c32f1b926d7a698fed70a34f36f0acfc74b805baf2d",
+      "scripts/ffn_skip.py": "fb080d41ed77cac538665c7726e237b8b701a036968b087d7266eabb14a957cc",
+      "evidence-selected/evidence/day2_afternoon/20261030_context_v2/b4/multi.json": "09072f6e495dc911d3c9b3c3543358321b2504f880fbfea590ab1afead628b91"
+    },
+    "script": "scripts/build_compact_method_figure.py",
+    "script_sha256": "6df8c8cbf9b300f932c2ce8d1b54dafb11889b2afc479ec1c14987e6b04f6beb",
+    "output_sha256": {
+      "08_compact_method.svg": "5ca4a2c043d0b86989843e00a50a0fb4916e5d45995e26ff8e78915ee28daf52",
+      "08_compact_method.png": "9386a0e2ec7f830cb0c5b0f5dde87ccecad255bebfa1b49a4c9f3c8cfae7cfe3"
+    }
   }
 ]
