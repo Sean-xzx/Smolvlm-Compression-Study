@@ -24,7 +24,7 @@ Release 中的 `Smolvlm-Compression-Study-Autonomous-20261031.zip` / `.bundle` �
 
 当前报告 professor-report-v3 按教授快速检查需求精简：主文删除重复图表解释、交付流水账与冗长免责声明；完整逐层/矩阵/统计仍在同报告附录。3072质量、780主性能及其他验证版本的科学口径不变。当前报告使用main下载，旧Release同名报告仍是固定历史快照。
 
-v3核版见[REPORT_CONCISE_V3_QA](../verification/REPORT_CONCISE_V3_QA.json)。v2的[核版](../verification/REPORT_REFACTOR_QA.json)与[下载回执](../verification/REPORT_PUBLIC_DOWNLOAD_RECEIPT.json)，以及更早的REPORT_RENDER_QA/FINAL_ACCEPTANCE/REPOSITORY_NAVIGATION_QA均保留原结论，不绑定新版报告字节。
+v3核版见[REPORT_CONCISE_V3_QA](../verification/REPORT_CONCISE_V3_QA.json)，实际匿名下载见[REPORT_CONCISE_V3_DOWNLOAD](../verification/REPORT_CONCISE_V3_DOWNLOAD.json)。v2的[核版](../verification/REPORT_REFACTOR_QA.json)与[下载回执](../verification/REPORT_PUBLIC_DOWNLOAD_RECEIPT.json)，以及更早的REPORT_RENDER_QA/FINAL_ACCEPTANCE/REPOSITORY_NAVIGATION_QA均保留原结论，不绑定新版报告字节。
 
 报告生成：编辑 `report/REPORT.zh.md` 母稿后运行 `scripts/build_report.py` 导出Word，再用documents的 `render_docx.py` 同源渲染PDF；生成器不会恢复旧17节。图表用独立文档依赖运行 `build_figures.py --artifact-root U`，只读原科学记录；不能改实验环境。
 
@@ -53,7 +53,7 @@ v3核版见[REPORT_CONCISE_V3_QA](../verification/REPORT_CONCISE_V3_QA.json)。v
 
 ## professor report v2历史下载核对
 
-报告内容提交为 `e04f4f52224b6feb76c0fc85a483ee38d839dabf`。当时匿名完整GET该固定commit及当时main的三种报告，大小/SHA均与本地相同；六张PNG及当前导航/生成器/核版文件也已取回核对。此表只绑定新版报告，不替代旧Release下载回执。
+报告内容提交为 `e04f4f52224b6feb76c0fc85a483ee38d839dabf`。当时匿名完整GET该固定commit及当时main的三种报告，大小/SHA均与本地相同；六张PNG及当前导航/生成器/核版文件也已取回核对。此表只绑定v2报告，不绑定当前v3，也不替代旧Release下载回执。
 
 |v2历史文件|bytes|SHA256|
 |---|---:|---|
@@ -62,3 +62,13 @@ v3核版见[REPORT_CONCISE_V3_QA](../verification/REPORT_CONCISE_V3_QA.json)。v
 |[REPORT.zh.pdf](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/e04f4f52224b6feb76c0fc85a483ee38d839dabf/report/REPORT.zh.pdf)|1863382|`e778c99cefe1d518a3ef316c15a9dfd446a99492d39f55122683d202a7e45a33`|
 
 实际8个GitHub页面返回200且首页/报告含新版内容；PDF有内部跳转与HTTPS证据/源码链接。未在Microsoft Word应用中单独审阅，未重新下载旧大科学附件，未逐一检查所有上游外链。
+
+## professor report v3当前下载核对
+
+内容提交 `86ed5289b8815c9d2f44d4827abe0ecee23e195a`；13页，主文文字比v2减少46.8%，七个必答、完整逐层/矩阵/统计明细保留。三格式在内容commit及当时main均匿名完整下载核SHA通过，图与导航入口已检查。
+
+|当前文件|bytes|SHA256|
+|---|---:|---|
+|[REPORT.zh.md](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.md)|24250|`5b4d1f4571b21b85bb8a23332bb28ca7d3b57dbed708dfd1b21be7d348a5fb5c`|
+|[REPORT.zh.docx](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.docx)|201094|`09fba3b70292255c732984868953744f7bcbf26d9e40666183fd88a7a8c0072f`|
+|[REPORT.zh.pdf](https://raw.githubusercontent.com/Sean-xzx/Smolvlm-Compression-Study/main/report/REPORT.zh.pdf)|965639|`30174af0fab9eed0f2461dc574b0bced351fa5f37d5d83f6179719ba3dc48663`|
